@@ -1,27 +1,20 @@
 # grupo_2_zenHogar
 Proyecto integrador
 
-2 categorias
-Cocina
-Comedor
-
 tematicadel sitio: Bazar y cocina
-esstilo Minimalista
+estilo Minimalista
 
-publico objetivo:
-
+Publico objetivo:
 Restautantes
 Cocina profesional
 Amantes de la cocina
-decoradores
-regaleria
+Decoradores
+Regaleria
 
 Definir:
-Paleta de colores
-Estetica
+Paleta de colores: escala de grises
+Estetica: Minimalista
 Tipografia: Raleway
-Categorias:
-Cantidad de categorias:
 
 
 Listado de al menos 5 referentes.
@@ -31,5 +24,4 @@ Listado de al menos 5 referentes.
 4- https://mueblesysillones.com.ar/
 5- https://www.demuebles.com.ar/
 
-Nombres:
--Zen hogar
+Nombre: Zen hogar
