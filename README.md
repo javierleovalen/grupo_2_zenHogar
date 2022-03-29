@@ -33,4 +33,3 @@ Listado de al menos 5 referentes.
 
 Nombres:
 -Zen hogar
--Equilibrio Hogar
