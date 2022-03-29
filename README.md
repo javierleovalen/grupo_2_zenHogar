@@ -19,7 +19,7 @@ regaleria
 Definir:
 Paleta de colores
 Estetica
-Tipografia:
+Tipografia: Raleway
 Categorias:
 Cantidad de categorias:
 
