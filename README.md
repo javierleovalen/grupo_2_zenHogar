@@ -19,9 +19,9 @@ regaleria
 Definir:
 Paleta de colores
 Estetica
-Tipografia
-Categorias
-Cantidad de categorias
+Tipografia:
+Categorias:
+Cantidad de categorias:
 
 
 Listado de al menos 5 referentes.
