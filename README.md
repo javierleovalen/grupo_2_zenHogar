@@ -16,7 +16,7 @@ Tematica del sitio: Bazar y cocina
 Estilo: Minimalista
 Oferta: Articulos de cocina, comedor, salon, recibidor, salon
 Publico objetivo: Restautantes, cocina profesional, amantes de la cocina, decoradores, regaleria
-Paleta de colores: escala de grises
+Paleta de colores: escala de grises https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529
 Tipografia: Raleway
 
 
