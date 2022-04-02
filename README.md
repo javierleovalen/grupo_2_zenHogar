@@ -22,7 +22,7 @@ Tipografia: Raleway
 
 Listado de referentes.
 1- https://www.casaviva.es/  // inspiracion a traves del disenio minimalista, publico objetivo orientado a la sostenibilidad, amplia variedad de productos de bazar y cocina.
-2- https://www.elcorteingles.es/#
+2- https://www.elcorteingles.es/# // inspiracion a traves de las multpiples categorias de productos, orden del carrito de compras y orientacion de las secciones.
 3- https://www.jazmeendeco.com.ar/
 4- https://mueblesysillones.com.ar/
 5- https://www.demuebles.com.ar/
