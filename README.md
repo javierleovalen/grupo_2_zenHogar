@@ -28,5 +28,5 @@ Listado de referentes.
 5- https://www.demuebles.com.ar/
 
 Javier: amante de los videojuegos, la lectura y estoy muy motivado con este programa! Entre a este curso para encontrar un trabajo como programador web.
-Fernando
+Fernando: Entusiasta de tecnologia desde muy pequeño, amante de la música y videojuegos. Encantado con el mundo de la programación y el desarrollo
 Mariano
