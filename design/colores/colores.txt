@@ -1,2 +1,0 @@
-Blanco: #E5E5E5;
-Negro: #1C1C1C;
