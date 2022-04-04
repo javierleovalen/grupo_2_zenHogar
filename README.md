@@ -1,32 +1,35 @@
-# grupo_2_zenHogar
+# Vacaciones.js - Grupo 2 - Digital House
+## Integrantes:
+  **Javier Valencia:**  
+  >Amante de los videojuegos, la lectura y estoy muy motivado con este programa! Entre a este curso para encontrar un trabajo como programador web.  
 
-Nombre: Zen Hogar
-Zen Hogar es un ecommerce orientado a ofrecer todo lo necesario para crear ambientes cómodos, funcionales y con estilo minimalista dentro del hogar, ofreciendo productos para el salón, el comedor, el recibidor, la cocina, ademas de ofrecer inspiracion para los interiores, usando el metodo Zen.
+  **Fernando Gorordo:**
+  > Entusiasta de tecnologia desde muy pequeño, amante de la música y videojuegos. Encantado con el mundo de la programación y el desarrollo.  
 
- 
-Diseño Zen
-La comprensión de la naturaleza de la mente es la principal caracterisca de Zen Hogar, ayudando liberar estrés, ansiedad, frustración e ira, transformandolos en pensamientos positivos y en acciones que te ayuden a relajarte y a responder de una forma equilibrada a los problemas cotidianos. 
+  **Mariano Iodice:**  
+  >Aficionado del futbol y los deportes, incursionando en el mundo del desarollo y programación en busca de ampliar conocimientos.
 
-Valores:
-Cuidado del Medio ambiente
-La sostenibilidad y el cuidado de nuestro planeta es fundamental para Zen Hogar y comienza desde nuestra casa. Estamos comprometidos en ayudar a construir un mundo mejor trabajando con productos sostenibles y procesos más respetuosos con el medio ambiente.
+  ---
+  ## Proyecto integrador: Zen Hogar
+  Zen hogar pertenece al rubro de mubles y decoración de interiores. Ofreciendo tanto un catálogo de sus productos para la venta inmediata (dependiendo stock) y también ofreciendo asesorias a cargo de nuestros profesionales para el diseño de ambientes atraves de un formulario de contacto.
 
+  ## Publico objetivo
+  - Decoradores profesionales.
+  - Decoradores amateurs.
+  - Cliente en busca de muebles.
+  - Empresas que necesiten ayuda con sus diseños interires (oficinas, locales comerciales,etc.)
 
-Tematica del sitio: Bazar y cocina
-Estilo: Minimalista
-Oferta: Articulos de cocina, comedor, salon, recibidor, salon
-Publico objetivo: Restautantes, cocina profesional, amantes de la cocina, decoradores, regaleria
-Paleta de colores: escala de grises https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529
-Tipografia: Raleway
+  ## Referencias utilizadas para el proyecto
+  * [Casaviva](https://www.casaviva.es/)
+  * [El Corte Ingles](https://www.elcorteingles.es/#)
+  * [Jazmeen Deco](https://www.jazmeendeco.com.ar/)
+  * [Muebles y Sillones](https://mueblesysillones.com.ar/)
+  * [De Muebles](https://www.demuebles.com.ar/)
+  * [Bringieri Hogar](https://www.bringerihogar.com.ar/)
+  * [city&country](https://www.cityandcountrymuebles.com/)
 
-
-Listado de referentes.
-1- https://www.casaviva.es/  // inspiracion a traves del disenio minimalista, publico objetivo orientado a la sostenibilidad, amplia variedad de productos de bazar y cocina.
-2- https://www.elcorteingles.es/# // inspiracion a traves de las multpiples categorias de productos, orden del carrito de compras y orientacion de las secciones.
-3- https://www.jazmeendeco.com.ar/
-4- https://mueblesysillones.com.ar/
-5- https://www.demuebles.com.ar/ // Inspiración a traves de la simplicidad en las categorias y la sencillez a la hora de moverse en el site, para realizar las elecciones.
-
-Javier: amante de los videojuegos, la lectura y estoy muy motivado con este programa! Entre a este curso para encontrar un trabajo como programador web.
-Fernando: Entusiasta de tecnologia desde muy pequeño, amante de la música y videojuegos. Encantado con el mundo de la programación y el desarrollo.
-Mariano: Aficionado del futbol y los deportes, incursionando en el mundo del desarollo y programación en busca de ampliar conocimientos.
+  ---
+  ## Links del proyecto:
+  * Prototipo y recursos gráficos : [Click aqui.](https://drive.google.com/drive/folders/18SUJTDAlydAkLCtkEFmB0sS-CYTZuZPU?usp=sharing)  
+  * Tablero de trello: [Click aqui.](https://trello.com/b/QsoOwSGN/digital-house-proyecto-integrador)
+  * Link al repo: [Click Aqui](https://github.com/javierleovalen/grupo_2_zenHogar)
