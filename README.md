@@ -25,8 +25,8 @@ Listado de referentes.
 2- https://www.elcorteingles.es/# // inspiracion a traves de las multpiples categorias de productos, orden del carrito de compras y orientacion de las secciones.
 3- https://www.jazmeendeco.com.ar/
 4- https://mueblesysillones.com.ar/
-5- https://www.demuebles.com.ar/
+5- https://www.demuebles.com.ar/ // Inspiración a traves de la simplicidad en las categorias y la sencillez a la hora de moverse en el site, para realizar las elecciones.
 
 Javier: amante de los videojuegos, la lectura y estoy muy motivado con este programa! Entre a este curso para encontrar un trabajo como programador web.
-Fernando: Entusiasta de tecnologia desde muy pequeño, amante de la música y videojuegos. Encantado con el mundo de la programación y el desarrollo
-Mariano
+Fernando: Entusiasta de tecnologia desde muy pequeño, amante de la música y videojuegos. Encantado con el mundo de la programación y el desarrollo.
+Mariano: Aficionado del futbol y los deportes, incursionando en el mundo del desarollo y programación en busca de ampliar conocimientos.
