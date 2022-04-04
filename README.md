@@ -9,7 +9,6 @@
   **Mariano Iodice:**  
   >Aficionado del futbol y los deportes, incursionando en el mundo del desarollo y programación en busca de ampliar conocimientos.
 
-  ---
   ## Proyecto integrador: Zen Hogar
   Zen hogar pertenece al rubro de mubles y decoración de interiores. Ofreciendo tanto un catálogo de sus productos para la venta inmediata (dependiendo stock) y también ofreciendo asesorias a cargo de nuestros profesionales para el diseño de ambientes atraves de un formulario de contacto.
 
@@ -28,7 +27,6 @@
   * [Bringieri Hogar](https://www.bringerihogar.com.ar/)
   * [city&country](https://www.cityandcountrymuebles.com/)
 
-  ---
   ## Links del proyecto:
   * Prototipo y recursos gráficos : [Click aqui.](https://drive.google.com/drive/folders/18SUJTDAlydAkLCtkEFmB0sS-CYTZuZPU?usp=sharing)  
   * Tablero de trello: [Click aqui.](https://trello.com/b/QsoOwSGN/digital-house-proyecto-integrador)
