@@ -1,0 +1,1 @@
+Retro Javier: por mi parte del primer sprint puedo concluir que las definiciones inciciales son clave para el desarrollo del proyeccto, por otra parte buscar informacion en otras paginas es una fuente muy inportante de inspiracion.
