@@ -1,4 +1,20 @@
 # Vacaciones.js - Grupo 2 - Digital House
+
+## Instrucciones para la descarga.
+Clonar el repo utilizando el siguiente comando  
+ ``` git clone https://github.com/javierleovalen/grupo_2_zenHogar.git```  
+ Ejecutar npm install para que se instalen todas las bibliotecas del proyecto.
+   
+     
+ Si ya posees el repo, por favor, actualizalo ejecutando desde el directorio de trabajo  
+ ``` git pull```  
+  
+    
+Recuerden siempre hacer pull antes de comenzar a trabajar asi no generamos conflictos dentro de git  
+También recuerden realizar commits "pequeños" para evitar los conflicos recurrentes.
+  
+    
+    El servidor de express se ejecuta en el puerto "3030" Se puede cambiar, modificando la variable expressPort en el archivo app.js
 ## Integrantes:
   **Javier Valencia:**  
   >Amante de los videojuegos, la lectura y estoy muy motivado con este programa! Entre a este curso para encontrar un trabajo como programador web.  

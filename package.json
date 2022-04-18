@@ -1,0 +1,16 @@
+{
+  "name": "maqueta_zen_hogar",
+  "version": "1.0.0",
+  "description": "Proyecto integrador para Digital House - Grupo 2.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Javier Valencia, Mariano Iodice, Fernando Gorordo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
