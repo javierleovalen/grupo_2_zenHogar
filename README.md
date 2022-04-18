@@ -3,7 +3,7 @@
 ## Instrucciones para la descarga.
 Clonar el repo utilizando el siguiente comando  
  ``` git clone https://github.com/javierleovalen/grupo_2_zenHogar.git```  
- Ejecutar npm install para que se instalen todas las bibliotecas del proyecto.
+ Ejecutar ```npm install``` para que se instalen todas las bibliotecas del proyecto.
    
      
  Si ya posees el repo, por favor, actualizalo ejecutando desde el directorio de trabajo  
