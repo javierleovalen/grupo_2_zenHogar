@@ -1,1 +1,2 @@
 Retro Javier: por mi parte del primer sprint puedo concluir que las definiciones inciciales son clave para el desarrollo del proyeccto, por otra parte buscar informacion en otras paginas es una fuente muy inportante de inspiracion.
+Retro Mariano: En el primer sprint pude entender la importancia del orden en el desarollo de las tareas, la invesitigación de los temas en multiples paginas para tener distintos puntos de vista, la comunicación entre compañeros y lo importante de asignar a una persona que sea la que lidere el proyecto. 
