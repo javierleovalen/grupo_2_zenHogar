@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/29b5584878.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/product-detail.css">
+    <title>Detalle de producto</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <nav class="navbar">
+              <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/contacto">Quienes somos</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="#">Shop</a></li>
+              </ul>
+            </nav>
+            <div class="logo-container">
+              <img src="/img/logo/logo_zen_hogar.svg" alt="site-logo">
+            </div>
+            <nav class="navbar">
+              <ul>
+                <li><a href="#">Iniciar sesión</a></li>
+                <li><a href="#">Crear cuenta</a></li>
+                <li><a href="#">Mi carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
+              </ul>
+            </nav>
+            <nav class="menu-wrap">
+              <input type="checkbox" class="toggler">
+              <div class="hamburger"><div></div></div>
+              <div class="menu">
+                <div>
+                  <div>
+                    <ul>
+                      <li><a href="/">Home</a></li>
+                      <li><a href="/contacto">Quienes somos</a></li>
+                      <li><a href="/contacto">Contacto</a></li>
+                      <li><a href="#">Shop</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="#">Iniciar sesión</a></li>
+                      <li><a href="#">Crear cuenta</a></li>
+                      <li><a href="#">Mi carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+    </header>
+    <main>
+        <div class="background-detalle">
+        <section class="detalle-prod">
+         <article class="image-prod">
+            <div class="img-big">
+            <img class="img-silla1" src="/img/silla1.jpg" alt="Imagen de silla"
+            style="box-shadow: 0px 0px 0px 1.5px grey;">    
+        </div>
+        <div class="img-small">
+            <img class="img-silla2" src="/img/silla1.jpg" alt="Imagen de silla"
+            style="box-shadow: 0px 0px 0px 1.5px grey;">  
+            <img class="img-silla2" src="/img/silla1.jpg" alt="Imagen de silla"
+            style="box-shadow: 0px 0px 0px 1.5px grey;">  
+            <img class="img-silla2" src="/img/silla1.jpg" alt="Imagen de silla"
+            style="box-shadow: 0px 0px 0px 1.5px grey;">    
+        </div>
+         </article>   
+         <article class="description">
+            <div class="text-prod">      <h2>Silla Nova modelo "Zen Hogar"</h2>
+                <ul class="text-descr"> 
+                <li class="text-descr__li">Envíos gratis en todas las tiendas</li>
+                <li class="text-descr__li">Pago seguro</li>
+                <li class="text-descr__li">Asesoramiento y venta 11xxxxxx</li>
+                <li class="text-descr__li">Devoluciones gratuitas durante 30 días</li></ul>
+                <p class="price">$6.000</p>
+            </div>
+            <section class="count">
+                <div class="count-2">
+                    <button id="decrement"> - </button>   
+                    <input type="number" min="0" max="100" step="5" value="1" id="my-input">
+                    <button id="increament"> + </button>
+                    </div>
+                    <div class="buy">
+                            <input type="submit" value="Añadir al carrito "  >      
+            </section>
+            <section class="desciption-prod">
+                 <ul>
+                 <li class="description-prod__li">Medidas: 70 x 80</li>
+                 <li class="description-prod__li">Colores disponibles: Blanco, negro y azul</li>
+                 <li class="description-prod__li"> Materiales: Madera y Cuero</li>
+                 <li class="description-prod__li"> Materia prima de primera calidad</li>
+                </ul>
+            </section>
+         </article>
+        </section>
+        <section class="back">
+        <a class="back-text" href=""> <i class="fa-solid fa-angle-left"></i> Volver al catálogo </a>
+        </section>
+        </div>
+    </main>
+
+    <footer>
+        
+ <p>&copy;Todos los derechos reservados | Zen Hogar 2022.</p>
+</footer>
+</body>
+
+</html>
