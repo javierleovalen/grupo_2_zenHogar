@@ -9,59 +9,66 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/29b5584878.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/home.css">
   <title>Zen Hogar | Bienvenid@s</title>
 </head>
 <body>
-  <!-- Comienzo del header -->
   <header>
-    <div class="header-container">
-      <nav class="navbar">
-        <ul>
-          <li><a href="/home">Home</a></li>
-          <li><a href="/contacto">Quienes somos</a></li>
-          <li><a href="/contacto">Contacto</a></li>
-          <li><a href="#">Shop</a></li>
-        </ul>
-      </nav>
-      <div class="logo-container">
-        <img src="/img/logo/logo_zen_hogar.svg" alt="site-logo">
-      </div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="#">Iniciar sesión</a></li>
-          <li><a href="#">Crear cuenta</a></li>
-          <li><a href="#">Mi carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
-        </ul>
-      </nav>
-      <nav class="menu-wrap">
-        <input type="checkbox" class="toggler">
-        <div class="hamburger"><div></div></div>
+    <!-- Contenedor del header -->
+    <section class="header__container">
+      <article class="header__logo">
+        <a href="/">
+        <img src="/img/logo/logo_zen_hogar.svg" alt="Logo del sitio">
+      </a>
+      </article>
+      <!-- Menu hamburguesa -->
+      <nav class="h-menu__wrap">
+        <input type="checkbox" class="h-menu__toggler">
+        <div class="hamburger">
+          <div></div>
+        </div>
         <div class="menu">
           <div>
             <div>
+              <img src="/img/logo/logo_zen_hogar.svg" alt="">
               <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/contacto">Quienes somos</a></li>
-                <li><a href="/contacto">Contacto</a></li>
-                <li><a href="#">Shop</a></li>
+                <li><a href="">Quienes somos</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="">Shop</a></li>
               </ul>
               <ul>
-                <li><a href="#">Iniciar sesión</a></li>
+                <li><a href="#">Iniciar sesion</a></li>
                 <li><a href="#">Crear cuenta</a></li>
-                <li><a href="#">Mi carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
               </ul>
             </div>
           </div>
         </div>
       </nav>
-    </div>
+      </nav>
+      <div class="main-menu__container">
+        <nav>
+          <ul>
+            <li><a href="">Quienes somos</a></li>
+            <li><a href="">Contacto</a></li>
+            <li><a href="">Shop</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="user-menu__container">
+        <nav>
+          <ul>
+            <li><a href="#" class="user-menu__btn">Iniciar sesion</a></li>
+            <li><a href="#" class="user-menu__btn">Crear cuenta</a></li>
+            <li><a href="#" class="user-menu__btn"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  <!-- Fin del header -->
   </header>
   <main>
     <section class="main-cta">
-      <div class="main-cta__img-container">
-      <img src="/img/sillon1.jpg" alt="cta_img">
-      </div>
       <div class="main-cta__text-container">
         <h3>Confort</h3>
         <h2>Diseño</h2>

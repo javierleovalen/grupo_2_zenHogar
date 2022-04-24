@@ -29,3 +29,7 @@ app.get('/login', (req, res) => {
 app.get('/product-detail', (req, res) => {
   res.sendFile(path.resolve(__dirname, './views/product-detail.html'))
 })
+
+app.get('/register', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './views/register.html'))
+})
