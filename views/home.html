@@ -32,14 +32,14 @@
             <div>
               <img src="/img/logo/logo_zen_hogar.svg" alt="">
               <ul>
-                <li><a href="">Quienes somos</a></li>
-                <li><a href="">Contacto</a></li>
+                <li><a href="/contacto">Quienes somos</a></li>
+                <li><a href="/contacto#contact-section">Contacto</a></li>
                 <li><a href="">Shop</a></li>
               </ul>
               <ul>
-                <li><a href="#">Iniciar sesion</a></li>
-                <li><a href="#">Crear cuenta</a></li>
-                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="/login">Iniciar sesion</a></li>
+                <li><a href="/register">Crear cuenta</a></li>
+                <li><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
               </ul>
             </div>
           </div>
@@ -49,18 +49,18 @@
       <div class="main-menu__container">
         <nav>
           <ul>
-            <li><a href="">Quienes somos</a></li>
-            <li><a href="">Contacto</a></li>
-            <li><a href="">Shop</a></li>
+            <li><a href="/contacto">Quienes somos</a></li>
+            <li><a href="/contacto#contact-section">Contacto</a></li>
+            <li><a href="/cart">Shop</a></li>
           </ul>
         </nav>
       </div>
       <div class="user-menu__container">
         <nav>
           <ul>
-            <li><a href="#" class="user-menu__btn">Iniciar sesion</a></li>
-            <li><a href="#" class="user-menu__btn">Crear cuenta</a></li>
-            <li><a href="#" class="user-menu__btn"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="/login" class="user-menu__btn">Iniciar sesion</a></li>
+            <li><a href="/register" class="user-menu__btn">Crear cuenta</a></li>
+            <li><a href="/cart" class="user-menu__btn"><i class="fa-solid fa-cart-shopping"></i></a></li>
           </ul>
         </nav>
       </div>
@@ -186,7 +186,22 @@
       </section>
   </main>
   <footer>
-    <p>&copy;Todos los derechos reservados | Zen Hogar 2022.</p>
+    <!-- Contenedor del footer -->
+    <section class="footer__container">
+      <div class="footer__social-media--title">
+        Nuestras redes
+      </div>
+      <!-- Redes sociales -->
+      <article class="footer__social-media">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      </article>
+      <!-- Copyright -->
+      <article class="footer__copyright">
+        <p>&copy; Todos los derechos reservados - 2022</p>
+      </article>
+    </section>
   </footer>
 </body>
 </html>
