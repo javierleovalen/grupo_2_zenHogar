@@ -229,7 +229,7 @@ body {
     justify-content: space-around;
     padding: 10px;
     margin: auto;
-    border-radius: 4px;
+    border-radius: 10px;
     background-color: rgba(235, 235, 235,0.8);
 
 }
@@ -243,17 +243,28 @@ body {
 
 .login__name,
 .login__pwd {
-
-    padding: 10px;
-    text-align: center;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
 }
+
+.login__name>input, .login__pwd>input{
+  padding: 4px;
+  border-radius: 6px;
+}
+
+
 
 .button-submit {
     text-align: center;
 }
 
 .button-submit>button {
-    padding: 5px;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 100px;
+  margin-bottom: 10px;
 }
 
 
