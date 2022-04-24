@@ -374,7 +374,7 @@
 /*####################################  FOOTER ###############################################*/
 
 footer {
-  background-color: var(--color-principal-alpha);
+  background-color: var(--color-principal);
   box-shadow: 0 0 20px var(--color-principal);
 }
 .footer__container {

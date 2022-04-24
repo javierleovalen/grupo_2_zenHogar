@@ -236,22 +236,83 @@
 .register__container {
   background:linear-gradient(var(--gradiente-1), var(--color-principal-alpha)), url('/public/img/cactus.jpg') no-repeat center center /cover;
   width: 100%;
-  height: 100vh;
   padding-top: 7em;
   padding-left: 1em;
   padding-right: 1em;
   padding-bottom: 1em;
 }
 
+.register__container p { 
+  color: var(--color-complementario);
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 24px;
+}
+
+.register__container p a {
+  color: var(--color-complementario);
+  font-weight: bold;
+}
+
 .form__container {
   background-color: var(--color-principal-alpha);
   padding: 12px 24px;
   text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 0 10px var(--color-principal);
+}
+
+.form__container h2 {
+  color: var(--color-complementario);
+  font-weight: 300;
+  font-size: 2.5em;
+}
+
+.form__input-label {
+  color: var(--color-complementario);
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: 200;
+}
+
+.form__input {
+  background-color: var(--color-principal);
+  height: 2.5em;
+  width: 100%;
+  text-align: center;
+  color: var(--color-complementario);
+  border-style: none;
+  border-radius: 6px;
+  border: 1px solid var(--color-complementario)
+}
+
+.checkbox__mail-accept  {
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+.checkbox__mail-accept span {
+  color: var(--color-complementario);
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.form__input-checkbox {
+  margin: 6px 12px;
+  padding: 0;
+}
+
+.form__submit-btn {
+  background-color: var(--color-principal);
+  color: var(--color-complementario);
+  border: 1px solid var(--color-complementario);
+  padding: 12px 24px;
+  border-radius: 6px;
+  margin-bottom: 2em;
 }
 /*####################################  FOOTER ###############################################*/
 
 footer {
-  background-color: var(--color-principal-alpha);
+  background-color: var(--color-principal);
   box-shadow: 0 0 20px var(--color-principal);
 }
 .footer__container {
@@ -310,6 +371,15 @@ footer {
     padding: 12px 24px;
   }
   /* HEADER Y FOOTER MEDIA QUERIES FIN */
+
+  .register__container  {
+    padding-top: 15em;
+  }
+
+  .form__container {
+    width: 60%;
+    margin: auto;
+  }
 
 }
 
@@ -383,6 +453,14 @@ footer {
     padding: 12px 24px;
   }
   /* HEADER Y FOOTER MEDIA QUERIES FIN */
+
+ .form__container {
+   width: 30%;
+ }
+
+ .form__input {
+   width: 80%;
+ }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
@@ -391,7 +469,14 @@ footer {
     max-width: 1200px;
     justify-content: space-evenly;
   }
+
+  .header__logo {
+    width: 15%;
+  }
   /* HEADER Y FOOTER MEDIA QUERIES FIN */
+  .register__container {
+    padding-top: 10em;
+  }
  }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
