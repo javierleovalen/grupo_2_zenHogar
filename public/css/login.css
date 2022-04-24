@@ -15,6 +15,7 @@
 
 body {
     background-color: white;
+    
 }
 
 /* Header styles */
@@ -210,8 +211,6 @@ body {
   }
 
 .main-container {
-
-    border: solid 1px red;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -230,7 +229,9 @@ body {
     padding: 10px;
     margin: auto;
     border-radius: 10px;
-    background-color: rgba(235, 235, 235,0.8);
+    background-color: hsla(0, 0%, 57%, 0.742);
+    max-width: 300px;
+    min-width: 250px
 
 }
 
@@ -251,8 +252,39 @@ body {
 .login__name>input, .login__pwd>input{
   padding: 4px;
   border-radius: 6px;
+
 }
 
+
+/* FOOTER */
+/* Contenedor del footer */
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--blanco);
+  margin-top: 2rem;
+  padding: 24px 12px;
+}
+
+/* Contenedor enlaces redes sociales */
+.footer__social-media {
+  font-size: 2em;
+  padding-bottom: 24px;
+}
+
+/* Referecia a redes sociales */
+.footer__social-media--title {
+  font-size: 1.2em;
+  padding: 12px 6px;
+}
+
+/* Links a redes sociales */
+.footer__social-media > a {
+  color: var(--color-enfasis);
+  margin: 0px 12px
+}
 
 
 .button-submit {
@@ -267,31 +299,15 @@ body {
   margin-bottom: 10px;
 }
 
-
-
-
-@media(min-width:769px) {
-
-    .login-container {
-        width: 35%;
-    }
-
-}
-
-@media (min-width: 992px) {
-    
-    .login-container {
-        width: 30%;
-    }
+.password-reset{
+  padding: 10px;
 }
 
 
-@media (min-width: 1200px) {
 
-    .login-container {
-        width: 25%;
-    }
-}
+
+
+
 
 
 
