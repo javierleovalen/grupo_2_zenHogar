@@ -259,7 +259,7 @@ body {
     text-align: center;
 }
 
-.button-submit>button {
+.button-submit>input {
   padding: 5px;
   font-weight: bold;
   border-radius: 4px;
