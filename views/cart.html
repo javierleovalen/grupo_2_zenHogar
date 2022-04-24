@@ -9,7 +9,8 @@
     <script src="https://kit.fontawesome.com/d85b3fcf3e.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/29b5584878.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/cart.css">
@@ -18,48 +19,8 @@
 <body>
 
     <header>
-        <div class="header-container">
-          <nav class="navbar">
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/contacto">Quienes somos</a></li>
-              <li><a href="/contacto">Contacto</a></li>
-              <li><a href="#">Shop</a></li>
-            </ul>
-          </nav>
-          <div class="logo-container">
-            <img src="/img/logo/logo_zen_hogar.svg" alt="site-logo">
-          </div>
-          <nav class="navbar">
-            <ul>
-              <li><a href="#">Iniciar sesión</a></li>
-              <li><a href="#">Crear cuenta</a></li>
-              <li><a href="#">Mi carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-          </nav>
-          <nav class="menu-wrap">
-            <input type="checkbox" class="toggler">
-            <div class="hamburger"><div></div></div>
-            <div class="menu">
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/contacto">Quienes somos</a></li>
-                    <li><a href="/contacto">Contacto</a></li>
-                    <li><a href="#">Shop</a></li>
-                  </ul>
-                  <ul>
-                    <li><a href="#">Iniciar sesión</a></li>
-                    <li><a href="#">Crear cuenta</a></li>
-                    <li><a href="#">Mi carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
+
+    </header>
 
     <main>
 
@@ -73,11 +34,11 @@
             </article>
 
             <article class="main-sup__emptybutton">
-                <button type="button" \>Vaciar carrito</button>
+                <button type="button">Vaciar carrito</button>
             </article>
 
             <article class="main-sup__backbutton">
-                <button type="button" \><i class="fa-solid fa-chevron-left"></i>Volver al Catalogo</button>
+                <button type="button"><i class="fa-solid fa-chevron-left"></i>Volver al Catalogo</button>
             </article>
 
         </section>
@@ -136,9 +97,6 @@
                                 <button class="decrement"> - </button>
                                 <input type="number" min="0" max="100" step="5" value="2" id="my-input" readonly>
                                 <button class="increment"> + </button>
-
-
-
                             </article>
 
                         </section>
@@ -235,16 +193,6 @@
                     </article>
 
 
-
-
-
-
-
-
-
-
-
-
                 </section>
 
 
@@ -312,16 +260,6 @@
                     </article>
 
 
-
-
-
-
-
-
-
-
-
-
                 </section>
 
 
@@ -340,7 +278,7 @@
 
 
                     <article class="shipping-detail">
-                        <p>shipping</p>
+                        <p>Envio</p>
                         <div class="data-shipping">$3000</div>
                     </article>
 
@@ -362,17 +300,29 @@
 
 
         </section>
-        
-
-
 
 
     </main>
 
 
     <footer>
-        <p>&copy;Todos los derechos reservados | Zen Hogar 2022.</p>
-      </footer>
+        <!-- Contenedor del footer -->
+        <section class="footer__container">
+            <div class="footer__social-media--title">
+                Nuestras redes
+            </div>
+            <!-- Redes sociales -->
+            <article class="footer__social-media">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </article>
+            <!-- Copyright -->
+            <article class="footer__copyright">
+                <p>&copy; Todos los derechos reservados - 2022</p>
+            </article>
+        </section>
+    </footer>
 
 </body>
 
