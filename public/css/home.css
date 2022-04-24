@@ -648,6 +648,7 @@ body {
     display: flex;
     position: unset;
     justify-content: center;
+    position: absolute  ;
   }
   .header__logo img {
     width: 90%;
@@ -720,8 +721,19 @@ body {
   }
 
   /* CTA */
-  .main-cta {
-    height: 90vh;
+
+  .main-cta__text-container{
+    left: 24px;
+    bottom: 24px;
+    width: 30%;
+    height: 50%;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-cta__text-container {
+    margin: 0;
   }
   /* OFERTAS */
   .ofertas-item {

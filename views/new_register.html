@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/29b5584878.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/public/css/normalize.css">
+  <link rel="stylesheet" href="/public/css/new_register.css">
+  <title>Zen Hogar | Bienvenid@s</title>
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <!-- Contenedor del header -->
+    <section class="header__container">
+      <!-- Menu hamburguesa -->
+      <nav class="h-menu__wrap">
+        <input type="checkbox" class="h-menu__toggler">
+        <div class="hamburger">
+          <div></div>
+        </div>
+        <div class="menu">
+          <div>
+            <div>
+              <img src="/public/img/logo/logo_zen_hogar.svg" alt="">
+              <ul>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="/ofertas">Ofertas</a></li>
+                <li><a href="/catalogo">Shop</a></li>
+              </ul>
+              <ul>
+                <li><a href="/login">Cuenta<i class="fa-solid fa-user"></i></a></li>
+                <li><a href="/cart">Carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      </nav>
+      <nav class="menu__container">
+        <ul>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/ofertas">Ofertas</a></li>
+          <li><a href="/catalogo">Shop</a></li>
+        </ul>
+      </nav>
+      <nav class="header__logo">
+        <a href="/">
+        <img src="/public/img/logo/logo_zen_hogar.svg" alt="Logo del sitio">
+      </a>
+      </nav>
+      <nav class="menu__container">
+        <ul>
+          <li><a href="/login">Cuenta<i class="fa-solid fa-user"></i></a></li>
+          <li><a href="/cart">Carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+      </nav>
+    </section>
+  <!-- Fin del header -->
+  </header>
+  <main>
+    <section class="register__container">
+      <!-- Contenedor del formulario -->
+      <article class="form__container">
+        <h2>Bienvenid@</h2>
+        <!-- Formulario -->
+        <form action="#">
+          <label for="name" class="form__input-label">Ingrese su nombre</label><br>
+          <input type="text" id="name" name="name" placeholder="Juan" required class="form__input"><br>
+          <label for="email" class="form__input-label">Correo electrónico</label><br>
+          <input type="email" id="email" name="email" placeholder="juanperez@gmail.com" required
+            class="form__input"><br>
+          <label for="password" class="form__input-label">Ingrese su contraseña</label><br>
+          <input type="password" name="password" id="password" required class="form__input"><br>
+          <label for="password-repeat" class="form__input-label">Repita su contraseña</label><br>
+          <input type="password" name="password-repeat" id="password-repeat" required class="form__input"><br>
+          <div class="checkbox__password-remember">
+            <input type="checkbox" name="remember-passwd" id="remember-passwd"
+              class="form__input-checkbox"><span>Recordar contraseña</span><br>
+          </div>
+          <!-- Boton de formulario -->
+          <button type="submit" class="form__submit-btn">Registrarse</button>
+        </form>
+      </article>
+      <!-- Links de ayuda -->
+      <p>¿Ya tienes cuenta? Ingresa haciendo <a href="#">click aquí.</a></p>
+      <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+    </section>
+  </main>
+  <footer>
+    <section class="footer__container">
+      <article class="social-media__container">
+        <h3>Nuestras redes</h3>
+          <div class="social-media__icons">
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+         </div>
+      </article>
+      <article class="copyright__container">
+        <p>Made with &hearts; by Grupo 2 Digital House;</p>
+      </article>
+    </section>
+  </footer>
+</body>
+</html>
