@@ -459,14 +459,15 @@ footer {
 
  
   .form__input {
-    width: 80%;
+    width: 70%;
   }
 
   .form__container h2 {
     margin-bottom: 24px;
   }
+
   .form__container {
-    width: 50%;
+    width: 40%;
   }
 
   .login__container {
@@ -485,7 +486,8 @@ footer {
   }
   /* HEADER Y FOOTER MEDIA QUERIES FIN */
   .form__container {
-    width: 30%;
+    width: 25%;
+    height: 70vh;
   }
  }
 
