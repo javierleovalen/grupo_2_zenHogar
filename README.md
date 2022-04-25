@@ -47,3 +47,4 @@ También recuerden realizar commits "pequeños" para evitar los conflicos recurr
   * Prototipo y recursos gráficos : [Click aqui.](https://drive.google.com/drive/folders/18SUJTDAlydAkLCtkEFmB0sS-CYTZuZPU?usp=sharing)  
   * Tablero de trello: [Click aqui.](https://trello.com/b/QsoOwSGN/digital-house-proyecto-integrador)
   * Link al repo: [Click Aqui](https://github.com/javierleovalen/grupo_2_zenHogar)
+  * Link al deploy en HEROKU: [Click Aqui](https://zenhogar.herokuapp.com)
