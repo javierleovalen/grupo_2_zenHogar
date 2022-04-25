@@ -9,9 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/29b5584878.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/new_register.css">
+  <link rel="stylesheet" href="/css/new_login.css">
   <title>Zen Hogar | Bienvenid@s</title>
-  <title>Document</title>
 </head>
 <body>
   <header>
@@ -62,35 +61,30 @@
     </section>
   <!-- Fin del header -->
   </header>
-  <main>
-    <section class="register__container">
-      <!-- Contenedor del formulario -->
-      <article class="form__container">
-        <h2>Bienvenid@</h2>
-        <!-- Formulario -->
-        <form action="#">
-          <label for="name" class="form__input-label">Ingrese su nombre</label><br>
-          <input type="text" id="name" name="name" placeholder="Juan" required class="form__input"><br>
-          <label for="email" class="form__input-label">Correo electrónico</label><br>
-          <input type="email" id="email" name="email" placeholder="juanperez@gmail.com" required
-            class="form__input"><br>
-          <label for="password" class="form__input-label">Ingrese su contraseña</label><br>
-          <input type="password" name="password" id="password" required class="form__input"><br>
-          <label for="password-repeat" class="form__input-label">Repita su contraseña</label><br>
-          <input type="password" name="password-repeat" id="password-repeat" required class="form__input"><br>
-          <div class="checkbox__mail-accept">
-            <input type="checkbox" name="mail-accept" id="mail-accept"
-              class="form__input-checkbox"><span>Quiero recibir ofertas y promociones via mail.</span><br>
-          </div>
-          <!-- Boton de formulario -->
-          <button type="submit" class="form__submit-btn">Registrarse</button>
-        </form>
-      </article>
-      <!-- Links de ayuda -->
-      <p>¿Ya tienes cuenta? Ingresa haciendo <a href="/login">click aquí.</a></p>
-      <p><a href="#">¿Olvidaste tu contraseña?</a></p>
-    </section>
-  </main>
+  <!-- main -->
+  <section class="login__container">
+    <!-- Contenedor del formulario -->
+    <article class="form__container">
+      <h2>Bienvenid@ de nuevo.</h2>
+      <!-- Formulario -->
+      <form action="/">
+        <label for="name" class="form__input-label">E-Mail</label><br>
+        <input type="email" id="email" name="email" placeholder="juanperez@gmail.com" required class="form__input"><br>
+        <label for="password" class="form__input-label">Ingrese su contraseña</label><br>
+        <input type="password" class="form__input" id="password" name="password"><br>
+        <div class="checkbox__remember-password">
+          <input type="checkbox" name="remember-password" id="remember-password"
+            class="form__input-checkbox"><span>Recordar contraseña</span><br>
+        </div>
+        <!-- Boton de formulario -->
+        <button type="submit" class="form__submit-btn">Iniciar sesion</button>
+      </form>
+    </article>
+    <!-- Links de ayuda -->
+    <p>¿Aún no tienes cuenta? Crea una haciendo <a href="/register">click aquí.</a></p>
+    <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+  </section>
+  <!-- main end -->
   <footer>
     <section class="footer__container">
       <article class="social-media__container">

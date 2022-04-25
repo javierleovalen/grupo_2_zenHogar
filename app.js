@@ -11,7 +11,7 @@ app.listen(expressPort, () => {
 })
 
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './views/home.html'))
+  res.sendFile(path.resolve(__dirname, './views/new_home.html'))
 })
 
 app.get('/contacto', (req, res) => {
@@ -23,13 +23,13 @@ app.get('/cart', (req, res) => {
 })
 
 app.get('/login', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './views/login.html'))
+  res.sendFile(path.resolve(__dirname, './views/new_login.html'))
 })
 
 app.get('/product-detail', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './views/product-detail.html'))
+  res.sendFile(path.resolve(__dirname, './views/new_product-detail.html'))
 })
 
 app.get('/register', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './views/register.html'))
+  res.sendFile(path.resolve(__dirname, './views/new_register.html'))
 })

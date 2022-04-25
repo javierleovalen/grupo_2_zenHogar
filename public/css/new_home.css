@@ -236,7 +236,7 @@
 /* ################################# MAIN (HOME) ############################################ */
 
 .welcome__container {
-  background: linear-gradient(var(--gradiente-1), var(--color-principal-alpha)),url(/public/img/sillon1.jpg) no-repeat center center /cover;
+  background: linear-gradient(var(--gradiente-1), var(--color-principal-alpha)),url(/img/sillon1.jpg) no-repeat center center /cover;
   width: 100%;
   height: 100vh;
 }
@@ -547,6 +547,9 @@ footer {
   .footer__container {
     max-width: 1200px;
     justify-content: space-evenly;
+  }
+  .ofertas__item {
+    width: 20%;
   }
  }
 

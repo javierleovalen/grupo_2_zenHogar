@@ -223,7 +223,7 @@ header {
 main {
   position: relative;
   z-index: -1;
-  background:url(/public/img/categorias.jpg) no-repeat center center /cover;
+  background:url(/img/categorias.jpg) no-repeat center center /cover;
   padding-top: calc(145px + 1%);
   padding-left:5%;
   padding-right: 5%;

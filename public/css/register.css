@@ -230,7 +230,7 @@ body {
 .register__container {
   width: 100%;
   padding-top: 18vw;
-  /* background:linear-gradient(var(--color-complementario-alpha), var(--color-principal-alpha)), url('/public/img/about_photo_2.jpg') no-repeat center center /cover; */
+  /* background:linear-gradient(var(--color-complementario-alpha), var(--color-principal-alpha)), url('/img/about_photo_2.jpg') no-repeat center center /cover; */
   position: relative;
 }
 
