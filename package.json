@@ -4,7 +4,8 @@
   "description": "Proyecto integrador para Digital House - Grupo 2.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "app.js"
   },
   "keywords": [],
   "author": "Javier Valencia, Mariano Iodice, Fernando Gorordo",
@@ -12,5 +13,13 @@
   "dependencies": {
     "express": "^4.17.3",
     "nodemon": "^2.0.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javierleovalen/grupo_2_zenHogar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/javierleovalen/grupo_2_zenHogar/issues"
+  },
+  "homepage": "https://github.com/javierleovalen/grupo_2_zenHogar#readme"
 }

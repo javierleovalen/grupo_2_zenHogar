@@ -6,9 +6,10 @@ const expressPort = 3030
 
 app.use(express.static(path.resolve(__dirname, './public')))
 
-app.listen(expressPort, () => {
-  console.log(`Servidor escuchando en el puerto ${expressPort}`)
+app.listen(process.env.PORT || expressPort, () => {
+  console.log(`Servidor iniciado`)
 })
+
 
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, './views/new_home.html'))
