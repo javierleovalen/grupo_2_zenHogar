@@ -554,6 +554,10 @@ footer {
   .ofertas__item {
     width: 20%;
   }
+
+  .header__logo {
+    width: 15%;
+  }
  }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
