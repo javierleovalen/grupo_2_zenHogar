@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0
+}
+
+:root {
+    /* Variables Carito compras */
+
+    --main-text-title: 24px;
+
+
+    --alternative-text-color: #1c1c1c;
+    --main-background-color: #1c1c1c;
+    --main-text-color: #e5e5e5;
+    --alternative-background-color: #e5e5e5;
+
+    /* Header variables */
+    /* Color variables */
+    --blanco: #e7e7e7;
+    --color-principal: #000;
+    --color-principal-alpha: rgba(0, 0, 0, 0.7);
+    --menu-principal-alpha: rgba(0, 0, 0, 0.9);
+    --color-complementario: #b9b9b9;
+    --color-complementario-alpha: rgba(185, 185, 185, 0.6);
+    --gradiente-1: rgba(185, 185, 185, 0.3);
+    --color-enfasis: #00AAA9;
+    --color-enfasis-alpha: rgba(0, 170, 169, 0.6);
+
+    /* Transitions variables */
+    --menu-speed: 0.5s
+}
+
+
+/* Contenedor principal */
+.main-container{
+    padding: 20px 0px;
+    border: 1px solid blue;
+}
+
+
+/* Titulo principal */
+.cart-main-title>h2 {
+    font-size: var(--main-text-title);
+    padding: 10px 0px;
+    border: 2px solid black;
+
+}
+
+
+
+/* Contenedor principal detalles del producto */
+.cart-show {
+    border: 2px solid red;
+    padding: 10px 0px;
+    min-width: 360px;
+    display: flex;
+
+}
+
+/* contenedor imagen de producto */
+.cart-show__img {
+    border: 2px solid black;
+    width: 33%;
+}
+
+/* imagen de producto */
+.cart-show__img>img {
+    width: 100%;
+}
+
+/* Contendor detalles del producto */
+.cart-show__detail {
+    border: 2px solid black;
+    width: 33%;
+}
+
+/* titulo del producto */
+.description-product {
+    border: 2px solid green;
+}
+
+/* texto fecha de llegada */
+.shipping-text {
+    border: 2px solid green;
+
+}
+
+/* boton de cantidad */
+.qty-button {
+    border: 2px solid green;
+
+}
+
+/* link para editar producto */
+.edit-details {
+    border: 2px solid green;
+
+}
+
+
+/* bloque con boton para borrar y precio */
+.cart-show__eraseAndPrice {
+    border: 2px solid black;
+    width: 33%;
+}
+
+/* boton borrar producto */
+.erase-button{
+    border: 2px solid green;
+}
+
+
+/* precio */
+.price-product{
+    border: 2px solid green;
+}
+
+
+
+/* Bloque prueba */
+.bloque{
+    border: 2px solid black
+}
