@@ -8,7 +8,7 @@
 :root {
     /* Variables Carito compras */
 
-    --main-text-title: 24px;
+    --main-text-title: 20px;
     --main-view-img: 25%;
     --main-view-detail-product: 55%;
     --main-view-price: 20%;
@@ -40,19 +40,52 @@
 
 
 /* Contenedor principal */
-.main-container{
-    padding: 20px 0px;
+.main-container {
+    
     border: 1px solid blue;
     background: url("/img/about_photo_1.jpg") no-repeat center center /cover;
     min-width: 360px;
 }
 
 
+/* Contenedor titulo y botones superiores*/
+.title-container{
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+
 /* Titulo principal cesta*/
-.cart-main-title>h2 {
+
+.title-container__text>h2 {
     font-size: var(--main-text-title);
+    color: black;
     padding: 10px 0px;
-    border: 2px solid black;
+
+}
+
+/* Boton vaciar carrito*/
+.title-container__emty-cart>button{
+    color: white;
+    background-color: var(--menu-principal-alpha);
+    font-size: 10px;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+
+
+
+/* Bototn volver al catalogo*/
+.title-container__back-button>button{
+    color: white;
+    background-color: var(--menu-principal-alpha);
+    font-size: 10px;
+    padding: 5px;
+    border-radius: 2px;
 
 }
 
@@ -65,6 +98,7 @@
     background-color: var(--menu-principal-alpha);
     box-shadow: 0 0 10px var(--color-principal);
     color: var(--blanco);
+    border-bottom: 1px solid white;
 
 
 }
@@ -72,7 +106,7 @@
 /* contenedor imagen de producto */
 .cart-show__img {
     width: var(--main-view-img);
-    
+
 }
 
 
@@ -81,7 +115,7 @@
 .cart-show__img>img {
     width: 100%;
     border-radius: 3px;
-    
+
 }
 
 
@@ -96,9 +130,9 @@
 
 /* titulo del producto */
 
-.description-product>h3{
-font-size: 12px;
-padding: 10px 0px;
+.description-product>h3 {
+    font-size: 12px;
+    padding: 10px 0px;
 
 }
 
@@ -107,7 +141,7 @@ padding: 10px 0px;
 
 /* texto fecha de llegada */
 
-.shipping-text>h4{
+.shipping-text>h4 {
     font-size: 10px;
     padding-bottom: 10px;
 }
@@ -121,7 +155,7 @@ padding: 10px 0px;
 
 }
 
-.qty-button>input{
+.qty-button>input {
     font-size: 15px;
     text-align: center;
     border: none;
@@ -129,34 +163,34 @@ padding: 10px 0px;
 }
 
 
-.decrement{
+.decrement {
     font-size: 20px;
     padding: 0px 6px;
     border: none;
     background-color: var(--blanco);
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
     cursor: pointer;
 }
 
-.increment{
+.increment {
     font-size: 20px;
     padding: 0px 6px;
     border: none;
     background-color: var(--blanco);
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
     cursor: pointer;
 }
 
 
 
 /* link editar producto */
-.edit-details{
+.edit-details {
     padding-top: 6px;
 }
 
-.edit-details>a{
+.edit-details>a {
     font-size: 9px;
 
     color: var(--blanco);
@@ -172,7 +206,7 @@ padding: 10px 0px;
 }
 
 /* boton borrar producto */
-.erase-button{
+.erase-button {
     padding: 0px 15px 0px 0px;
     text-align: end;
 }
@@ -182,7 +216,62 @@ padding: 10px 0px;
 
 
 
-/* Bloque prueba */
-.bloque{
-    border: 2px solid black
+/* Contenedor Informacion de pago */
+.payment-show {
+
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px var(--color-principal);
+    color: black;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+/* Subtotal */
+.payment-details {
+    display: flex;
+    padding: 6px 0px;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+
+/* Envio */
+.Shipping-details {
+    display: flex;
+    padding: 6px 0px;
+    justify-content: space-between;
+    font-size: 14px;
+
+
+}
+
+
+/* Total */
+.payment-total {
+    display: flex;
+    padding: 6px 0px 10px 0px;
+    justify-content: space-between;
+    font-size: 14px;
+
+}
+
+
+/* Boton finalizar compra */
+.checkout {
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    border-radius: 2px;
+}
+
+
+.checkout__text {
+    color: white;
+    font-size: 10px;
 }

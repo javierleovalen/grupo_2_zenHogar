@@ -23,12 +23,85 @@
 
     <main>
 
-        <div class="cart-main-title">
-            <h2>Mi cesta</h2>
-        </div>
 
         <div class="main-container">
 
+
+            <section class="title-container">
+
+                <article class="title-container__text">
+                    <h2>Mi Carrito</h2>
+                </article>
+
+
+
+                <arrticle class="title-container__emty-cart">
+                    <button>Vaciar Carrito</i></button>
+                </arrticle>
+
+
+
+                <arrticle class="title-container__back-button">
+                    <button type="button"><i class="fa-solid fa-chevron-left"></i> Volver al Catalogo</button>
+                </arrticle>
+
+            </section>
+
+
+            <!--CONTENEDOR PRICIPAL CARRITO-->
+            <section class="cart-show">
+
+
+                <!--Imagen producto-->
+                <article class="cart-show__img">
+                    <img src="img\2019907.1.jpg" alt="silla1">
+                </article>
+
+
+
+                <!--Detalles del producto-->
+                <section class="cart-show__detail">
+
+                    <article class="description-product">
+                        <h3>
+                            Detalle del producto, una silla muy comoda
+                        </h3>
+                    </article>
+
+                    <article class="shipping-text">
+                        <h4>
+                            Informacion envio
+                        </h4>
+                    </article>
+
+                    <article class="qty-button">
+                        <button class="decrement"> - </button>
+                        <input type="number" min="0" max="100" step="5" value="1" id="my-input" readonly>
+                        <button class="increment"> + </button>
+                    </article>
+
+                    <article class="edit-details">
+                        <a href="#">Editar</a>
+                    </article>
+
+                </section>
+
+
+                <!--Contenedor boton de borrar y precio-->
+                <section class="cart-show__eraseAndPrice">
+
+                    <article class="erase-button">
+                        <button><i class="fa-solid fa-trash-can"></i></button>
+                    </article>
+
+                    <article class="price-product">$60000</article>
+                </section>
+
+
+            </section>
+
+
+            <!--SEGUNDO ARTICULO-->
             <section class="cart-show">
 
                 <article class="cart-show__img">
@@ -49,18 +122,18 @@
                         </h4>
                     </article>
 
-                    
+
 
                     <article class="qty-button">
                         <button class="decrement"> - </button>
                         <input type="number" min="0" max="100" step="5" value="1" id="my-input" readonly>
                         <button class="increment"> + </button>
                     </article>
-                    
+
 
                     <article class="edit-details">
                         <a href="#">Editar</a>
-                        </article>
+                    </article>
 
 
                 </section>
@@ -73,16 +146,95 @@
                     <article class="price-product">$60000</article>
                 </section>
 
-               
+
             </section>
 
-            <section>
-                <div class="bloque">
-                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, pariatur ex voluptas animi
-                        explicabo ab. Voluptatem aut aperiam rerum rem dignissimos, dicta distinctio placeat accusantium
-                        eveniet nesciunt, minima, possimus doloremque?</P>
-                </div>
+
+            <!--TERCER ARTICULO-->
+            <section class="cart-show">
+
+                <article class="cart-show__img">
+                    <img src="img\2019907.1.jpg" alt="silla1">
+                </article>
+
+
+                <section class="cart-show__detail">
+                    <article class="description-product">
+                        <h3>
+                            Detalle del producto, una silla muy comoda
+                        </h3>
+                    </article>
+
+                    <article class="shipping-text">
+                        <h4>
+                            Informacion envio
+                        </h4>
+                    </article>
+
+
+
+                    <article class="qty-button">
+                        <button class="decrement"> - </button>
+                        <input type="number" min="0" max="100" step="5" value="1" id="my-input" readonly>
+                        <button class="increment"> + </button>
+                    </article>
+
+
+                    <article class="edit-details">
+                        <a href="#">Editar</a>
+                    </article>
+
+
+                </section>
+
+
+                <section class="cart-show__eraseAndPrice">
+                    <article class="erase-button">
+                        <button><i class="fa-solid fa-trash-can"></i></button>
+                    </article>
+                    <article class="price-product">$60000</article>
+                </section>
+
+
             </section>
+
+
+            <!--Contenedor detalle total de compra-->
+            <div class="payment-show">
+
+
+                <!--SUBTOTAL-->
+                <section class="payment-details">
+                    <article class="payment-details__text">Subtotal</article>
+                    <article class="payment-details__amount">$6000</article>
+                </section>
+
+
+                <!--Costo de envio-->
+                <section class="Shipping-details">
+                    <article class="Shipping-details__text">Envio</article>
+                    <article class="Shipping-details__amount">GRATIS</article>
+                </section>
+
+
+                <!--TOTAL A PAGAR-->
+                <section class="payment-total">
+                    <article class="payment-total__text">TOTAL</article>
+                    <article class="payment-total__amount">$6000</article>
+                </section>
+
+
+                <!--boton finalizar compra-->
+                <section class="checkout">
+                    <article class="checkout__text">
+                        <h3>FINALIZAR COMPRA</h3>
+                    </article>
+                </section>
+
+            </div>
+
+
+
 
         </div>
 
