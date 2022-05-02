@@ -19,7 +19,7 @@ app.get('/contacto', (req, res) => {
   res.sendFile(path.resolve(__dirname, './views/about.html'))
 })
 
-app.get('/new_cart', (req, res) => {
+app.get('/cart', (req, res) => {
   res.sendFile(path.resolve(__dirname, './views/new_cart.html'))
 })
 

@@ -41,15 +41,15 @@
 
 /* Contenedor principal */
 .main-container {
-    
-    border: 1px solid blue;
+
+    border: 1px solid black;
     background: url("/img/about_photo_1.jpg") no-repeat center center /cover;
     min-width: 360px;
 }
 
 
 /* Contenedor titulo y botones superiores*/
-.title-container{
+.title-container {
     background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     align-items: center;
@@ -68,7 +68,7 @@
 }
 
 /* Boton vaciar carrito*/
-.title-container__emty-cart>button{
+.title-container__emty-cart>button {
     color: white;
     background-color: var(--menu-principal-alpha);
     font-size: 10px;
@@ -80,13 +80,16 @@
 
 
 /* Bototn volver al catalogo*/
-.title-container__back-button>button{
+.title-container__back-button>a>p {
     color: white;
     background-color: var(--menu-principal-alpha);
     font-size: 10px;
-    padding: 5px;
+    padding: 7px 8px;
     border-radius: 2px;
+}
 
+.title-container__back-button>a {
+    text-decoration: none;
 }
 
 
@@ -207,11 +210,19 @@
 
 /* boton borrar producto */
 .erase-button {
-    padding: 0px 15px 0px 0px;
+    padding: 10px 15px 0px 0px;
     text-align: end;
 }
 
+.erase-button>button>i {
+    padding: 2px
+}
 
+
+.price-product {
+    padding: 0px 0px 15px 0px;
+    font-size: 16px
+}
 
 
 
@@ -223,10 +234,11 @@
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 10px var(--color-principal);
     color: black;
-    width: 80%;
+    width: 70%;
     margin: auto;
     border-radius: 5px;
     margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 
@@ -236,6 +248,9 @@
     padding: 6px 0px;
     justify-content: space-between;
     font-size: 14px;
+    border-bottom: 1px solid rgba(155, 155, 155, 0.4);
+
+
 }
 
 
@@ -245,6 +260,8 @@
     padding: 6px 0px;
     justify-content: space-between;
     font-size: 14px;
+    border-bottom: 1px solid rgba(155, 155, 155, 0.4);
+
 
 
 }
@@ -256,6 +273,7 @@
     padding: 6px 0px 10px 0px;
     justify-content: space-between;
     font-size: 14px;
+
 
 }
 
@@ -271,7 +289,248 @@
 }
 
 
-.checkout__text {
+.checkout__text>h3 {
     color: white;
-    font-size: 10px;
+    font-size: 14px;
 }
+
+
+
+
+
+@media (min-width:576px) {
+
+    .cart-show__img {
+        width: 25%
+    }
+
+    .cart-show__detail {
+        width: 60%
+    }
+
+    .cart-show__eraseAndPrice {
+        width: 15%
+    }
+
+    .description-product>h3 {
+        font-size: 18px;
+        padding: 10px 0px;
+    }
+
+    .shipping-text>h4 {
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+
+    .erase-button>button>i {
+        font-size: 20px;
+        padding: 5px
+    }
+
+    .edit-details {
+        padding-top: 6px;
+    }
+
+    .edit-details>a {
+        font-size: 12px;
+
+    }
+
+    .qty-button>input {
+        font-size: 18px;
+        text-align: center;
+        border: none;
+        background-color: var(--blanco);
+    }
+
+
+    .decrement,
+    .decrement {
+        font-size: 22px;
+
+    }
+
+    .price-product {
+        font-size: 18px
+    }
+
+
+    .title-container__text>h2 {
+        font-size: 22px;
+    }
+
+
+    .title-container__emty-cart>button {
+        font-size: 12px;
+
+    }
+
+
+    .title-container__back-button>a>p {
+        font-size: 10px;
+
+    }
+
+    .payment-show {
+        width: 60%;
+    }
+
+
+
+    /* Subtotal */
+    .payment-details {
+        font-size: 16px;
+    }
+
+
+    /* Envio */
+    .Shipping-details {
+        font-size: 16px;
+    }
+
+
+    /* Total */
+    .payment-total {
+        font-size: 16px;
+        padding: 6px 0px 15px 0px;
+    }
+
+
+    /* Boton finalizar compra */
+    .checkout {
+        padding: 12px;
+        width: 70%;
+    }
+
+
+    .checkout__text>h3 {
+        font-size: 16px;
+    }
+
+};
+
+
+@media (min-width:768px) {
+
+    .cart-show__img {
+        width: 25%
+    }
+
+
+    .cart-show__detail {
+        width: 65%
+    }
+
+
+    .cart-show__eraseAndPrice {
+        width: 10%
+    }
+
+
+    .description-product>h3 {
+        font-size: 50px;
+        padding: 12px 0px;
+    }
+
+
+    .shipping-text>h4 {
+        font-size: 14px;
+        padding-bottom: 12px;
+    }
+
+
+    .erase-button>button>i {
+        font-size: 22px;
+        padding: 7px
+    }
+
+
+    .edit-details {
+        padding-top: 6px;
+    }
+
+
+    .edit-details>a {
+        font-size: 14px;
+    }
+
+
+    .qty-button>input {
+        font-size: 20px;
+    }
+
+    .decrement, .decrement {
+        font-size: 24px;
+    }
+
+
+    .price-product {
+        font-size: 20px
+    }
+
+
+
+    .title-container__text>h2 {
+        font-size: 24px;
+    }
+
+
+
+    .title-container__emty-cart>button {
+        font-size: 14px;
+
+    }
+
+
+
+    .title-container__back-button>a>p {
+        font-size: 12px;
+
+    }
+
+
+    .payment-show {
+        width: 50%;
+    }
+
+
+
+    /* Subtotal */
+    .payment-details {
+        font-size: 18px;
+    }
+
+
+    /* Envio */
+    .Shipping-details {
+        font-size: 18px;
+    }
+
+
+    /* Total */
+    .payment-total {
+        font-size: 18px;
+        padding: 6px 0px 15px 0px;
+    }
+
+
+    /* Boton finalizar compra */
+    .checkout {
+        padding: 14px;
+        width: 60%;
+    }
+
+
+    .checkout__text>h3 {
+        font-size: 18px;
+    }
+
+
+};
+
+
+
+
+
+
+
