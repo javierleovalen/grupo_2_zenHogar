@@ -1,3 +1,20 @@
+const CartController = {
+
+    index: (req,res) => {
+
+        res.render('new_cart');
+    },
+
+   
+
+}
+
+
+
+
+
+
+
 const items = [
 
     {
@@ -26,3 +43,4 @@ const items = [
 
 
 
+module.exports = CartController;
