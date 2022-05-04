@@ -22,7 +22,6 @@ const MainController = {
             titulo: titulo,
         })
     },
-
 }
 
 
