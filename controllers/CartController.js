@@ -9,12 +9,6 @@ const CartController = {
 
 }
 
-
-
-
-
-
-
 const items = [
 
     {

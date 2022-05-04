@@ -35,29 +35,3 @@ app.use('/product-detail', mainRouter);
 app.use('/register', mainRouter);
 
 
-
-
-// app.get('/', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, './views/new_home.html'))
-// })
-
-// app.get('/contacto', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, './views/about.html'))
-// })
-
-// app.get('/cart', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, './views/new_cart.html'))
-// })
-
-// app.get('/login', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, './views/new_login.html'))
-// })
-
-// app.get('/product-detail', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, './views/new_product-detail.html'))
-// })
-
-// app.get('/register', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, './views/new_register.html'))
-// })
-
