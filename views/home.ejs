@@ -1,206 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/29b5584878.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/home.css">
-  <title>Zen Hogar | Bienvenid@s</title>
+<%- include('./partials/head.ejs') %>
 </head>
 <body>
   <header>
-    <!-- Contenedor del header -->
-    <section class="header__container">
-      <article class="header__logo">
-        <a href="/">
-        <img src="/img/logo/logo_zen_hogar.svg" alt="Logo del sitio">
-      </a>
-      </article>
-      <!-- Menu hamburguesa -->
-      <nav class="h-menu__wrap">
-        <input type="checkbox" class="h-menu__toggler">
-        <div class="hamburger">
-          <div></div>
-        </div>
-        <div class="menu">
-          <div>
-            <div>
-              <img src="/img/logo/logo_zen_hogar.svg" alt="">
-              <ul>
-                <li><a href="/contacto">Quienes somos</a></li>
-                <li><a href="/contacto#contact-section">Contacto</a></li>
-                <li><a href="">Shop</a></li>
-              </ul>
-              <ul>
-                <li><a href="/login">Iniciar sesion</a></li>
-                <li><a href="/register">Crear cuenta</a></li>
-                <li><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </nav>
-      </nav>
-      <div class="main-menu__container">
-        <nav>
-          <ul>
-            <li><a href="/contacto">Quienes somos</a></li>
-            <li><a href="/contacto#contact-section">Contacto</a></li>
-            <li><a href="/new_cart">Shop</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="user-menu__container">
-        <nav>
-          <ul>
-            <li><a href="/login" class="user-menu__btn">Iniciar sesion</a></li>
-            <li><a href="/register" class="user-menu__btn">Crear cuenta</a></li>
-            <li><a href="/new_cart" class="user-menu__btn"><i class="fa-solid fa-cart-shopping"></i></a></li>
-          </ul>
-        </nav>
-      </div>
-    </section>
+   <%- include('./partials/header.ejs') %>
   <!-- Fin del header -->
   </header>
+  <!-- main -->
   <main>
-    <section class="main-cta">
-      <div class="main-cta__text-container">
+    <section class="welcome__container">
+      <article class="welcome__text-container">
         <h3>Confort</h3>
         <h2>Diseño</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis vitae voluptates eveniet quam corrupti eaque nihil voluptas, cum consequatur provident voluptatum hic sint nemo molestias ducimus pariatur assumenda quidem sed?</p>
-        <div class ="main-btn"><a  href="#">Ir al catálogo</a></div>
-      </div>
+        <a href="#">Ir al catálogo<i class="fa-solid fa-arrow-right"></i></a>
+      </article>
     </section>
-    <div class="main-ofertas__title">
-    <h2>Ofertas</h2>
+    <section class="ofertas__section">
+      <h2>Ofertas</h2>
+      <div class="ofertas__container">
+        <!-- ITEM 1 -->
+      <article class="ofertas__item">
+        <div class="item__img">
+          <img src="/img/sillon_verde1.jpg" alt="imagen de oferta">
+        </div>
+        <div class="item__text-container">
+          <h3>Sillon Verde</h3>
+          <p class="price__before">$85.000</p>
+          <p class="price__after">$34.000</p>
+          <p class="price__discount">40% OFF</p>
+          <a href="/product-detail">Más info</a>
+          <button class="ofertas__btn">Añadir al carrito</button>
+          <button class="ofertas__btn btn__alternativo">Comprar ahora</button>
+        </div>
+      </article>
+      <!-- ITEM 2 -->
+      <article class="ofertas__item">
+        <div class="item__img">
+          <img src="/img/sillon_verde1.jpg" alt="imagen de oferta">
+        </div>
+        <div class="item__text-container">
+          <h3>Sillon Verde</h3>
+          <p class="price__before">$85.000</p>
+          <p class="price__after">$34.000</p>
+          <p class="price__discount">40% OFF</p>
+          <a href="/product-detail">Más info</a>
+          <button class="ofertas__btn">Añadir al carrito</button>
+          <button class="ofertas__btn btn__alternativo">Comprar ahora</button>
+        </div>
+      </article>
+      <!-- ITEM 3 -->
+      <article class="ofertas__item">
+        <div class="item__img">
+          <img src="/img/sillon_verde1.jpg" alt="imagen de oferta">
+        </div>
+        <div class="item__text-container">
+          <h3>Sillon Verde</h3>
+          <p class="price__before">$85.000</p>
+          <p class="price__after">$34.000</p>
+          <p class="price__discount">40% OFF</p>
+          <a href="/product-detail">Más info</a>
+          <button class="ofertas__btn">Añadir al carrito</button>
+          <button class="ofertas__btn btn__alternativo">Comprar ahora</button>
+        </div>
+      </article>
+      <!-- ITEM 4 -->
+      <article class="ofertas__item">
+        <div class="item__img">
+          <img src="/img/sillon_verde1.jpg" alt="imagen de oferta">
+        </div>
+        <div class="item__text-container">
+          <h3>Sillon Verde</h3>
+          <p class="price__before">$85.000</p>
+          <p class="price__after">$34.000</p>
+          <p class="price__discount">40% OFF</p>
+          <a href="/product-detail">Más info</a>
+          <button class="ofertas__btn">Añadir al carrito</button>
+          <button class="ofertas__btn btn__alternativo">Comprar ahora</button>
+        </div>
+      </article>
     </div>
-    <section class="main-ofertas">
-      <div class="ofertas-item">
-        <div class="img-container">
-        <img src="/img/sillon_verde1.jpg" alt="" class="item-img">
-        </div>
-        <div class="text-container">
-          <h3 class="text-producto">Sillon Verde</h3>
-          <p class="precio-anterior">$85.000</p>
-          <p class="text-precio">$34.000</p>
-          <p class="text-discount">40% OFF</p>
-          <a href="#">Ver más</a>
-          <button class="ofertas-btn">Añadir al carrito</button>
-          <button class="ofertas-btn-alternativo">Comprar ahora</button>
-        </div>
-      </div>
-      <div class="ofertas-item">
-        <div class="img-container">
-        <img src="/img/sillas_patio.jpg" alt="" class="item-img">
-        </div>
-        <div class="text-container">
-          <h3 class="text-producto">Silla Patio</h3>
-          <p class="precio-anterior">$6.000</p>
-          <p class="text-precio">$5.580</p>
-          <p class="text-discount">7% OFF</p>
-          <button class="ofertas-btn">Añadir al carrito</buttonc>
-          <button class="ofertas-btn-alternativo">Comprar ahora</buttonc>
-        </div>
-      </div>
-      <div class="ofertas-item">
-        <div class="img-container">
-        <img src="/img/relojes.jpg" alt="" class="item-img">
-        </div>
-        <div class="text-container">
-          <h3 class="text-producto">Relojes Deco</h3>
-          <p class="precio-anterior">$2.500</p>
-          <p class="text-precio">$2.425</p>
-          <p class="text-discount">3% OFF</p>
-          <button class="ofertas-btn">Añadir al carrito</buttonc>
-          <button class="ofertas-btn-alternativo">Comprar ahora</buttonc>
-        </div>
-      </div>
-      <div class="ofertas-item">
-        <div class="img-container">
-        <img src="/img/relojes.jpg" alt="" class="item-img">
-        </div>
-        <div class="text-container">
-          <h3 class="text-producto">Relojes Deco</h3>
-          <p class="precio-anterior">$2.500</p>
-          <p class="text-precio">$2.425</p>
-          <p class="text-discount">3% OFF</p>
-          <button class="ofertas-btn">Añadir al carrito</buttonc>
-          <button class="ofertas-btn-alternativo">Comprar ahora</buttonc>
-        </div>
-      </div>
-      <div class="ofertas-item">
-        <div class="img-container">
-        <img src="/img/relojes.jpg" alt="" class="item-img">
-        </div>
-        <div class="text-container">
-          <h3 class="text-producto">Relojes Deco</h3>
-          <p class="precio-anterior">$2.500</p>
-          <p class="text-precio">$2.425</p>
-          <p class="text-discount">3% OFF</p>
-          <button class="ofertas-btn">Añadir al carrito</buttonc>
-          <button class="ofertas-btn-alternativo">Comprar ahora</buttonc>
-        </div>
-      </div>
-      <div class="ofertas-item">
-        <div class="img-container">
-        <img src="/img/relojes.jpg" alt="" class="item-img">
-        </div>
-        <div class="text-container">
-          <h3 class="text-producto">Relojes Deco</h3>
-          <p class="precio-anterior">$2.500</p>
-          <p class="text-precio">$2.425</p>
-          <p class="text-discount">3% OFF</p>
-          <button class="ofertas-btn">Añadir al carrito</buttonc>
-          <button class="ofertas-btn-alternativo">Comprar ahora</buttonc>
-        </div>
-      </div>
-      </section>
-      <div class="ver-mas">
-        <a href="#" class="ver-mas__btn">Ver más</a>
-      </div>
-      <section class="resumen">
-        <article class="resumen_tarjeta">
-          <div class="resumen_tarjeta_img-container">
-          <img src="/img/mesa.jpg" alt="" class="resumen_tarjeta_img">
-        </div>
-          <div class="resumen_tarjeta_texto">
-            <h3>Ambientaciones modernas con diseños únicos se fusionan con colecciones y conceptos italianos modernos</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro minima quod dolorum officiis sed a deserunt omnis adipisci labore? Illum, non dolores odit tempora cum aperiam natus. Veritatis, atque nisi!</p>
-            <p><a href="/contacto#contact-section">Contacto</a></p>
-          </div>
-        </article>
-        <article class="resumen_tarjeta">
-          <div class="resumen_tarjeta_img-container">
-          <img src="/img/home1.jpg" alt="" class="resumen_tarjeta_img">
-        </div>
-          <div class="resumen_tarjeta_texto">
-            <h3>Diseño y fabricación siguiendo cada proceso con énfasis en los detalles y las terminaciones</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro minima quod dolorum officiis sed a deserunt omnis adipisci labore? Illum, non dolores odit tempora cum aperiam natus. Veritatis, atque nisi!</p>
-            <p><a href="/contacto">Nosotros</a></p>
-          </div>
-        </article>
-      </section>
+    </section>
   </main>
   <footer>
-    <!-- Contenedor del footer -->
     <section class="footer__container">
-      <div class="footer__social-media--title">
-        Nuestras redes
-      </div>
-      <!-- Redes sociales -->
-      <article class="footer__social-media">
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <article class="social-media__container">
+        <h3>Nuestras redes</h3>
+          <div class="social-media__icons">
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+         </div>
       </article>
-      <!-- Copyright -->
-      <article class="footer__copyright">
-        <p>&copy; Todos los derechos reservados - 2022</p>
+      <article class="copyright__container">
+        <p>Made with &hearts; by Grupo 2 Digital House;</p>
       </article>
     </section>
   </footer>

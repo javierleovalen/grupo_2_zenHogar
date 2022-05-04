@@ -4,7 +4,7 @@ const CartController = {
 
     index: (req,res) => {
 
-        res.render('new_cart');
+        res.render('cart');
     },
 
    

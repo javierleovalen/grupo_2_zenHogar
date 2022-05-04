@@ -11,6 +11,8 @@ router.get('/login', MainController.login);
 
 router.get('/cart', CartController.index);
 
+router.get('/test', MainController.test)
+
 
 
 
