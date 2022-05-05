@@ -10,7 +10,8 @@ const MainController = {
     },
 
     login: (req,res) => {
-
+        const styles = ['normalize', 'login'];
+        const titulo = 'Zen Hogar | Login'
         res.render('login');
     },
 
