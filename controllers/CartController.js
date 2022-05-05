@@ -3,8 +3,12 @@ const fs = require ('fs');
 const CartController = {
 
     index: (req,res) => {
-
-        res.render('cart');
+        const styles = ['normalize','home', 'cart']
+        const titulo = 'Mi Carrito'
+        res.render('cart', {
+            styles:styles,
+            titulo:titulo,
+        });
     },
 
    
@@ -13,11 +17,8 @@ const CartController = {
 
 const items = JSON.parse(fs.readFileSync ('./productos.json'));
 
-console.log(items[0].nombre);
 
-
-
-
+// console.log(items[0].nombre); // items.find//
 
 // const items = [
 

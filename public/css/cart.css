@@ -45,6 +45,7 @@
     border: 1px solid black;
     background: url("/img/about_photo_1.jpg") no-repeat center center /cover;
     min-width: 360px;
+    padding-top: 12%;
 }
 
 
