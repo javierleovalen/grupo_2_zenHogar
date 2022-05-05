@@ -23,6 +23,14 @@ const MainController = {
             titulo: titulo,
         })
     },
+    productDetail: (req, res) => {
+        const styles = ['normalize','product-detial']
+        const titulo = 'Placeholder: Nombre del producto'
+        res.render('product-detial', {
+            styles: styles,
+            titulo: titulo,
+        })
+    }
 }
 
 
