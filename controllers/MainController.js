@@ -1,6 +1,6 @@
 const MainController = {
 
-    index: (req,res) => {
+    home: (req,res) => {
         const styles = ['normalize', 'home']
         const titulo = 'Zen Hogar'
         res.render('home', {
