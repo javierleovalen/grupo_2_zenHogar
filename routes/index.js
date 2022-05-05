@@ -5,7 +5,7 @@ const CartController = require ('../controllers/CartController');
 
 
 
-router.get('/', MainController.index);
+router.get('/', MainController.home);
 
 router.get('/login', MainController.login);
 
