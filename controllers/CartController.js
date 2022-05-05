@@ -4,7 +4,7 @@ const CartController = {
 
     index: (req,res) => {
         const styles = ['normalize','home', 'cart']
-        const titulo = 'Mi Carrito'
+        const titulo = 'Zen Hogar | Mi Carrito'
         res.render('cart', {
             styles:styles,
             titulo:titulo,

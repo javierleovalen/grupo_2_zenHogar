@@ -17,7 +17,7 @@ const MainController = {
 
     register: (req,res) => {
         const styles = ['normalize', 'home','register']
-        const titulo = 'registro'
+        const titulo = 'Zen Hogar | Registro'
         res.render('register', {
             styles:styles,
             titulo:titulo,
