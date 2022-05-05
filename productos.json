@@ -1,15 +1,9 @@
-
 [
     {
-
-        "id":0,
-        "nombre": "silla",
-        "precio": 6000,
-        "color":"marron"
-        
+        "name":"Sillon Verde",
+        "price": 85000,
+        "img": "/img/sillon_verde1.jpg"
     }
-
-
 ]
 
 
