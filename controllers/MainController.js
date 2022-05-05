@@ -14,6 +14,16 @@ const MainController = {
         res.render('login');
     },
 
+    register: (req,res) => {
+        const styles = ['normalize', 'home','register']
+        const titulo = 'registro'
+        res.render('register', {
+            styles:styles,
+            titulo:titulo,
+        });
+    },
+
+
     test: (req,res) => {
         const styles = ['normalize', 'home']
         const titulo = 'Titulo de prueba'

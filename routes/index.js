@@ -11,7 +11,9 @@ router.get('/login', MainController.login);
 
 router.get('/cart', CartController.index);
 
-router.get('/test', MainController.test)
+router.get('/test', MainController.test);
+
+router.get('/register', MainController.register);
 
 
 
