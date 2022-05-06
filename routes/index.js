@@ -17,6 +17,9 @@ router.get('/register', MainController.register);
 
 router.get('/productDetail', CartController.productDetail);
 
+router.get('/createProduct', CartController.createProduct);
+
+
 
 
 

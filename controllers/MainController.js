@@ -10,15 +10,27 @@ const MainController = {
     },
 
     login: (req,res) => {
-        const styles = ['normalize', 'login'];
+        const styles = ['normalize', 'home', 'login'];
         const titulo = 'Zen Hogar | Login'
-        res.render('login');
+        res.render('login', {
+        styles:styles,
+        titulo:titulo,
+        });
     },
 
     register: (req,res) => {
         const styles = ['normalize', 'home','register']
         const titulo = 'Zen Hogar | Registro'
         res.render('register', {
+            styles:styles,
+            titulo:titulo,
+        });
+    },
+
+    createProduct: (req,res) => {
+        const styles = ['normalize', 'home','register', 'createProduct']
+        const titulo = 'Zen Hogar | Crear Producto'
+        res.render('createProduct', {
             styles:styles,
             titulo:titulo,
         });
