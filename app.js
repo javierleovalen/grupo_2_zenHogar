@@ -30,7 +30,7 @@ app.use('/cart', mainRouter);
 
 app.use('/login', mainRouter);
 
-app.use('/product-detail', mainRouter);
+app.use('/productDetail', mainRouter);
 
 app.use('/register', mainRouter);
 

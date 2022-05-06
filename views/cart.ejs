@@ -19,6 +19,8 @@
             <section class="Items">
 
 
+
+
                 <section class="title-container">
 
                     <article class="title-container__text">
@@ -43,13 +45,16 @@
 
                 </section>
 
+                <% products.forEach(products=> { %>
+
+
                 <!--CONTENEDOR PRICIPAL CARRITO-->
                 <section class="cart-show">
 
 
                     <!--Imagen producto-->
                     <article class="cart-show__img">
-                        <img src="img\2019907.1.jpg" alt="silla1">
+                        <img src="<%= products.img %>" alt="<%= products.name %>">
                     </article>
 
 
@@ -59,8 +64,7 @@
 
                         <article class="description-product">
                             <h3>
-                                Detalle del producto, una silla muy comoda
-                            </h3>
+                                <%= products.name %></h3>
                         </article>
 
                         <article class="shipping-text">
@@ -90,7 +94,7 @@
                         </article>
 
                         <article class="price-product">
-                            <p>$60000</p>
+                            <p>$<%= products.price %></p>
                         </article>
 
                     </section>
@@ -98,107 +102,13 @@
 
                 </section>
 
-
-                <!--SEGUNDO ARTICULO-->
-                <section class="cart-show">
-
-                    <article class="cart-show__img">
-                        <img src="img\2019907.1.jpg" alt="silla1">
-                    </article>
-
-
-                    <section class="cart-show__detail">
-                        <article class="description-product">
-                            <h3>
-                                Detalle del producto, una silla muy comoda
-                            </h3>
-                        </article>
-
-                        <article class="shipping-text">
-                            <h4>
-                                Informacion envio
-                            </h4>
-                        </article>
-
-
-
-                        <article class="qty-button">
-                            <button class="decrement"> - </button>
-                            <input type="number" min="0" max="100" step="5" value="1" id="my-input" readonly>
-                            <button class="increment"> + </button>
-                        </article>
-
-
-                        <article class="edit-details">
-                            <a href="#">Editar</a>
-                        </article>
-
-
-                    </section>
-
-
-                    <section class="cart-show__eraseAndPrice">
-                        <article class="erase-button">
-                            <button><i class="fa-solid fa-trash-can"></i></button>
-                        </article>
-                        <article class="price-product">$60000</article>
-                    </section>
-
-
-                </section>
-
-
-                <!--TERCER ARTICULO-->
-                <section class="cart-show">
-
-                    <article class="cart-show__img">
-                        <img src="img\2019907.1.jpg" alt="silla1">
-                    </article>
-
-
-                    <section class="cart-show__detail">
-                        <article class="description-product">
-                            <h3>
-                                Detalle del producto, una silla muy comoda
-                            </h3>
-                        </article>
-
-                        <article class="shipping-text">
-                            <h4>
-                                Informacion envio
-                            </h4>
-                        </article>
-
-
-
-                        <article class="qty-button">
-                            <button class="decrement"> - </button>
-                            <input type="number" min="0" max="100" step="5" value="1" id="my-input" readonly>
-                            <button class="increment"> + </button>
-                        </article>
-
-
-                        <article class="edit-details">
-                            <a href="#">Editar</a>
-                        </article>
-
-
-                    </section>
-
-
-                    <section class="cart-show__eraseAndPrice">
-                        <article class="erase-button">
-                            <button><i class="fa-solid fa-trash-can"></i></button>
-                        </article>
-                        <article class="price-product">$60000</article>
-                    </section>
-
-
-                </section>
 
 
             </section>
 
+            
+
+            <% }); %>
 
             <section class="payment-container">
                 <!--Contenedor detalle total de compra-->
@@ -236,6 +146,8 @@
                 </section>
 
             </section>
+
+
 
 
         </section>

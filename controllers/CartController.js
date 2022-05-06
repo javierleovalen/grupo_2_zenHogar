@@ -1,5 +1,25 @@
-const fs = require ('fs');
+const products = [
+    {
+        "name":"Sillon living comedor Verde",
+        "price": 85000,
+        "img": "/img/sillon_verde1.jpg"
+    },
+    {
+        "name":"Sillon exterior de jarin",
+        "price": 75000,
+        "img": "/img/2019570.5.jpg"
+    },
+    {
+        "name":"Silla Marron de jardin",
+        "price": 55000,
+        "img": "/img/2019907.1.jpg"
+    }
+]
 
+
+
+
+const fs = require ('fs');
 const CartController = {
 
     index: (req,res) => {
@@ -8,14 +28,37 @@ const CartController = {
         res.render('cart', {
             styles:styles,
             titulo:titulo,
+            products,
         });
     },
+
+    productDetail: (req,res) => {
+        const styles = ['normalize','home', 'product-detail']
+        const titulo = 'Zen Hogar | Detalle del Producto'
+        res.render('product-detail', {
+            styles:styles,
+            titulo:titulo,
+            products,
+        });
+    },
+
+
+
+
+
 
    
 
 }
 
 const items = JSON.parse(fs.readFileSync ('./productos.json'));
+
+
+
+
+
+
+
 
 
 // console.log(items[0].nombre); // items.find//
