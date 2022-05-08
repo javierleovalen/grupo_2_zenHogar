@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <%- include('./partials/head') %>
 </head>
@@ -10,45 +11,54 @@
   </header>
 
   <main>
-  <!-- main -->
-  <section class="login__container">
+    <!-- main -->
+    <section class="login__container">
 
 
-    <!-- Contenedor del formulario -->
-    <article class="form__container">
-      <h2>Bienvenid@ de nuevo.</h2>
+      <!-- Contenedor del formulario -->
+      <article class="form__container">
+        <h2>Bienvenid@ de nuevo.</h2>
 
 
-      <!-- Formulario -->
-      <form action="/">
-        <label for="name" class="form__input-label">E-Mail</label><br>
-        <input type="email" id="email" name="email" placeholder="juanperez@gmail.com" required class="form__input"><br>
-        <label for="password" class="form__input-label">Ingrese su contraseña</label><br>
-        <input type="password" class="form__input" id="password" name="password"><br>
-        <div class="checkbox__remember-password">
-          <input type="checkbox" name="remember-password" id="remember-password"
-            class="form__input-checkbox"><span>Recordar contraseña</span><br>
-        </div>
+        <!-- Formulario -->
+        <form action="/">
+
+          <!-- Email -->
+          <label for="name" class="form__input-label">E-Mail</label><br>
+          <input type="email" id="email" name="email" placeholder="juanperez@gmail.com" required
+            class="form__input"><br>
+
+          <!-- Contrasena -->
+          <label for="password" class="form__input-label">Ingrese su contraseña</label><br>
+          <input type="password" class="form__input" id="password" name="password"><br>
 
 
-        <!-- Boton de formulario -->
-        <button type="submit" class="form__submit-btn">Iniciar sesion</button>
-      </form>
-    </article>
+          <!-- recordar contrasena -->
+          <section class="checkbox__remember-password">
+            <input type="checkbox" name="remember-password" id="remember-password"
+              class="form__input-checkbox"><span>Recordar contraseña</span><br>
+          </section>
 
 
-    <!-- Links de ayuda -->
-    <p>¿Aún no tienes cuenta? Crea una haciendo <a href="/register">click aquí.</a></p>
-    <p><a href="#">¿Olvidaste tu contraseña?</a></p>
-  </section>
+          <!-- Boton de formulario -->
+          <button type="submit" class="form__submit-btn">Iniciar sesion</button>
+        </form>
+      </article>
 
-  
-  <!-- main end -->
+
+      <!-- Links de ayuda -->
+      <p>¿Aún no tienes cuenta? Crea una haciendo <a href="/register">click aquí.</a></p>
+      <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+    </section>
+
+
+    <!-- main end -->
   </main>
 
   <footer>
-       <%- include('./partials/footer') %>
+    <%- include('./partials/footer') %>
   </footer>
-  
+
 </body>
+
 </html>

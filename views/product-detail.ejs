@@ -48,7 +48,7 @@
           <p class="price__off">
             <%= item.discount %>% OFF
           </p>
-          <p class="price__before">$<%= (item.price)*(1-(item.discount/100)) %>
+          <p class="price__before">$<%= item.price*(1-(item.discount/100)) %>
           </p>
         </article>
 
@@ -62,8 +62,8 @@
 
         <!-- detalle del producto del producto -->
         <article class="info__etc">
+
           <ul>
-            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio obcaecati aliquam quod.</li>
             <li>Facilis rem eos nostrum quas fugit ut perferendis delectus illum, cumque dolorum?</li>
             <li>Unde esse expedita sit necessitatibus facilis vitae asperiores voluptas laborum libero delectus?</li>
             <li>Perferendis quo, ullam dolor tempore consequatur nostrum! Quos animi tempore sunt molestiae?</li>
