@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+</head>
+<body>
+<header>
+    <%- include('./partials/header') %>
+</header>
+
+<section class="create-container">
+
+    <!-- Contenedor del formulario -->
+    <article class="create-container__form">
+      <h2>CREAR PRODUCTO</h2>
+      <!-- Formulario -->
+      <form action="#">
+        <label for="code" class="form__input-label">Codigo</label><br>
+        <input type="text" id="code" name="code" placeholder="" required class="form__input"><br>
+
+        <label for="description" class="form__input-label">Descripcion</label><br>
+        <input type="text" id="description" name="description" placeholder="" required class="form__input"><br>
+
+        <label for="color" class="form__input-label">Color</label><br>
+        <input type="text" id="color" name="color" placeholder="" required class="form__input"><br>
+
+
+        <label for="price" class="form__input-label">Precio</label><br>
+        <input type="number" id="price" name="price" placeholder="" required class="form__input"><br>
+
+
+        <label for="images" class="form__input-label">Imagenes</label><br>        
+        <input type="file" name="images" class="file" accept=".jpg" multiple>
+
+
+        <section class="checkbox__categories">
+            
+            <label for="categories" class="form__input-label">Categorias</label><br>
+
+            <input type="checkbox" name="categories" id="categories"
+              class="form__input-checkbox"><span>Living</span><br>
+
+              <input type="checkbox" name="categories" id="categories"
+              class="form__input-checkbox"><span>Comedor</span><br>
+
+              <input type="checkbox" name="categories" id="categories"
+              class="form__input-checkbox"><span>Jardin</span><br>
+
+              <input type="checkbox" name="categories" id="categories"
+              class="form__input-checkbox"><span>Decoracaion</span><br>
+
+            
+        </section>
+
+
+   
+        
+        <!-- Boton de formulario -->
+        <button type="submit" class="form__submit-btn">CREAR</button>
+      </form>
+    </article>
+
+
+
+
+
+<footer>
+    <%- include('./partials/footer') %>
+</footer>
+    
+    
+</body>
+</html>
