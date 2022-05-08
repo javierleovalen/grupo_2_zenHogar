@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <%- include('./partials/head') %>
 </head>
+
 <body>
   <header>
     <%- include('./partials/header') %>
@@ -10,30 +12,56 @@
   <!-- main -->
   <main>
 
-    <article class="product-detail__container">
-      <div class="product-detail__img">
+    <!-- contenedor principal -->
+    <section class="product-detail__container">
+
+
+      <!-- Imagen del producto -->
+      <article class="product-detail__img">
         <img src="<%= item.img %>" alt="<%= item.name %>">
-      </div>
-      <div class="product-detail__info">
-        <div class="info__title">
-          <h2><%= item.name %></h2>
+      </article>
+
+
+      <!-- Nombre del producto -->
+      <section class="product-detail__info">
+        <article class="info__title">
+          <h2>
+            <%= item.name %>
+          </h2>
           <p>Colores disponibles</p>
-        </div>
-        <div class="info__colors">
-          <div class="colors__1"></div>
-          <div class="colors__2"></div>
-          <div class="colors__3"></div>
-        </div>
-        <div class="info__price">
-          <p class="price__after"><%= item.price %></p>
-          <p class="price__off"><%= item.discount %>% OFF</p>
-          <p class="price__before">$<%= (item.price)*(1-(item.discount/100)) %></p>
-        </div>
-        <div class="info__actions">
+        </article>
+
+
+        <!-- Colores disponibles -->
+        <section class="info__colors">
+          <article class="colors__1"></article>
+          <article class="colors__2"></article>
+          <article class="colors__3"></article>
+        </section>
+
+
+        <!-- Precio del producto -->
+        <article class="info__price">
+          <p class="price__after">
+            <%= item.price %>
+          </p>
+          <p class="price__off">
+            <%= item.discount %>% OFF
+          </p>
+          <p class="price__before">$<%= (item.price)*(1-(item.discount/100)) %>
+          </p>
+        </article>
+
+
+        <!-- botones de accion -->
+        <article class="info__actions">
           <button class="cashout__btn">Comprar ahora</button>
           <button class="cart__btn">Enviar al carrito</button>
-        </div>
-        <div class="info__etc">
+        </article>
+
+
+        <!-- detalle del producto del producto -->
+        <article class="info__etc">
           <ul>
             <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio obcaecati aliquam quod.</li>
             <li>Facilis rem eos nostrum quas fugit ut perferendis delectus illum, cumque dolorum?</li>
@@ -41,9 +69,12 @@
             <li>Perferendis quo, ullam dolor tempore consequatur nostrum! Quos animi tempore sunt molestiae?</li>
             <li>Ab dicta enim excepturi facere quod deserunt, tenetur nesciunt fuga! Doloremque, soluta!</li>
           </ul>
-        </div>
-      </div>
-    </article>
+        </article>
+
+      </section>
+
+    </section>
+
   </main>
   <!-- main end -->
   <footer>
@@ -51,4 +82,5 @@
 
   </footer>
 </body>
+
 </html>

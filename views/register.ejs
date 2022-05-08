@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <%- include('./partials/head') %>
 </head>
+
 <body>
   <header>
     <%- include('./partials/header') %>
   </header>
   <main>
     <section class="register__container">
+
       <!-- Contenedor del formulario -->
       <article class="form__container">
         <h2>Bienvenid@</h2>
+
+
         <!-- Formulario -->
         <form action="#">
+
+          <!-- Nombre -->
           <label for="name" class="form__input-label">Ingrese su nombre</label><br>
           <input type="text" id="name" name="name" placeholder="Juan" required class="form__input"><br>
+
+          <!-- Correo -->
           <label for="email" class="form__input-label">Correo electrónico</label><br>
           <input type="email" id="email" name="email" placeholder="juanperez@gmail.com" required
             class="form__input"><br>
+
+          <!-- Contrasena -->
           <label for="password" class="form__input-label">Ingrese su contraseña</label><br>
           <input type="password" name="password" id="password" required class="form__input"><br>
+
+          <!-- repetir contrasena -->
           <label for="password-repeat" class="form__input-label">Repita su contraseña</label><br>
           <input type="password" name="password-repeat" id="password-repeat" required class="form__input"><br>
-          <div class="checkbox__mail-accept">
-            <input type="checkbox" name="mail-accept" id="mail-accept"
-              class="form__input-checkbox"><span>Quiero recibir ofertas y promociones via mail.</span><br>
-          </div>
+
+          <!-- checkbox -->
+          <section class="checkbox__mail-accept">
+            <input type="checkbox" name="mail-accept" id="mail-accept" class="form__input-checkbox"><span>Quiero recibir
+              ofertas y promociones via mail.</span><br>
+          </section>
+
           <!-- Boton de formulario -->
           <button type="submit" class="form__submit-btn">Registrarse</button>
         </form>
       </article>
+
       <!-- Links de ayuda -->
       <p>¿Ya tienes cuenta? Ingresa haciendo <a href="/login">click aquí.</a></p>
       <p><a href="#">¿Olvidaste tu contraseña?</a></p>
@@ -42,4 +59,5 @@
 
   </footer>
 </body>
+
 </html>
