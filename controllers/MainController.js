@@ -5,7 +5,10 @@ const products = [
         "price": 85000,
         "img": "/img/sillon_verde1.jpg",
         "discount": 40,
-        
+        "medidas": "120 x 103 x 190 CM",
+        "peso": "31 KG",
+        "material": "Madera"
+
     },
     {
         "id": "002",
@@ -13,7 +16,10 @@ const products = [
         "price": 75000,
         "img": "/img/2019570.5.jpg",
         "discount": 30,
-        
+        "medidas": "110 x 95 x 150 CM",
+        "peso": "15 KG",
+        "material": "Madera"
+
     },
     {
         "id": "003",
@@ -21,7 +27,10 @@ const products = [
         "price": 55000,
         "img": "/img/2019907.1.jpg",
         "discount": 20,
-    
+        "medidas": "60 x 100 x 160 CM",
+        "peso": "5 KG",
+        "material": "Madera"
+
 
     }
 ]
