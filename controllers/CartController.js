@@ -38,7 +38,6 @@ const CartController = {
         res.render('product-detail', {
             styles:styles,
             titulo:titulo,
-            products,
         });
     },
 

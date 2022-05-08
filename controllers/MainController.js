@@ -52,6 +52,14 @@ const MainController = {
             styles: styles,
             titulo: titulo,
         })
+    },
+    modifyProduct: (req,res) => {
+        const styles=['normalize','modify-product','partials/header','partials/footer']
+        const titulo= 'Modificar : Placeholder nombre de producto'
+        res.render('modify-product', {
+            styles:styles,
+            titulo:titulo,
+        })
     }
 }
 

@@ -1,8 +1,23 @@
 [
     {
-        "name":"Sillon Verde",
+        "name":"Silla de comedor - Pampa",
         "price": 85000,
-        "img": "/img/sillon_verde1.jpg"
+        "cover": "/img/sillon_verde1.jpg",
+        "discount:": false,
+        "stock": 20,
+        "extra_info": ["Silla con estructura de madera de paraíso.","Disponible en: lustre natural (color paraíso), tabaco (tinte oscuro) o crudo (laca blanca).","Tapizadas en lino de diversos colores.","Tapizado desmontable y lavable, se desmontan fácilmente gracias al sistema de bulones allen y desenfundan, ya que cada respaldo y asiento poseen cierres de fácil apertura, lo cual permite quitar solo la funda de tela para lavar en un lavarropas doméstico.","Las patas poseen felpas que no rayan los pisos parquet y permiten que se absorban cualquier desnivel mínimo propio del piso."],
+        "item_imgs":[]
+
+    },
+    {
+        "name":"Sofa 2 cuerpos - CARBAN",
+        "price": 33500,
+        "cover": "/img/sillon_verde1.jpg",
+        "discount:": false,
+        "stock": 20,
+        "extra_info": ["Estructura madera saligna encolada y encastrada.","Placa espuma 26 kg alta densidad.","Tapizadas en lino de diversos colores.","Detalles costura doble.","TELA PANA ,CHENILLE, Antidesgarro."],
+        "item_imgs":[]
+
     }
 ]
 
