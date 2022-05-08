@@ -14,7 +14,7 @@ router.get('/test', MainController.test);
 
 router.get('/register', MainController.register);
 
-router.get('/productDetail', MainController.productDetail);
+router.get('/productDetail/:item', MainController.productDetail);
 
 router.get('/create', MainController.create);
 

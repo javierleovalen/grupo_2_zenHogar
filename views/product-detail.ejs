@@ -9,13 +9,14 @@
   </header>
   <!-- main -->
   <main>
+
     <article class="product-detail__container">
       <div class="product-detail__img">
-        <img src="/img/sillon_verde1.jpg" alt="sillon_verde">
+        <img src="<%= item.img %>" alt="<%= item.name %>">
       </div>
       <div class="product-detail__info">
         <div class="info__title">
-          <h2>Sillon verde</h2>
+          <h2><%= item.name %></h2>
           <p>Colores disponibles</p>
         </div>
         <div class="info__colors">
@@ -24,9 +25,9 @@
           <div class="colors__3"></div>
         </div>
         <div class="info__price">
-          <p class="price__after">$85.000</p>
-          <p class="price__off">40% OFF</p>
-          <p class="price__before">$30.000</p>
+          <p class="price__after"><%= item.price %></p>
+          <p class="price__off"><%= item.discount %>% OFF</p>
+          <p class="price__before">$<%= (item.price)*(1-(item.discount/100)) %></p>
         </div>
         <div class="info__actions">
           <button class="cashout__btn">Comprar ahora</button>

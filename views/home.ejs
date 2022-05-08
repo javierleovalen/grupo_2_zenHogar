@@ -24,20 +24,20 @@
       <div class="ofertas__container">
 
         <!-- EJS-->
-        <% products.forEach(products=> { %>
+        <% products.forEach(item=> { %>
 
 
         <!-- ITEMS -->
       <article class="ofertas__item">
         <div class="item__img">
-          <img src="<%= products.img %>" alt="<%= products.name %>a">
+          <img src="<%= item.img %>" alt="<%= item.name %>a">
         </div>
         <div class="item__text-container">
-          <h3><%= products.name %></h3>
-          <p class="price__before">$<%= products.price %></p>
-          <p class="price__after">$<%= (products.price)*(1-(products.discount/100)) %></p>
-          <p class="price__discount"><%= products.discount %>% OFF</p>
-          <a href="/productDetail">Más info</a>
+          <h3><%= item.name %></h3>
+          <p class="price__before">$<%= item.price %></p>
+          <p class="price__after">$<%= (item.price)*(1-(item.discount/100)) %></p>
+          <p class="price__discount"><%= item.discount %>% OFF</p>
+          <a href="/productDetail/<%= item.id %>">Más info</a>
           <button class="ofertas__btn">Añadir al carrito</button>
           <button class="ofertas__btn btn__alternativo">Comprar ahora</button>
         </div>

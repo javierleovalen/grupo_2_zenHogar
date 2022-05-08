@@ -1,11 +1,13 @@
 const products = [
     {
+        "id":"001",
         "name":"Sillon living comedor Verde",
         "price": 85000,
         "img": "/img/sillon_verde1.jpg",
         "discount":40,
     },
     {
+        "id":"002",
         "name":"Sillon exterior de jarin",
         "price": 75000,
         "img": "/img/2019570.5.jpg",
@@ -13,6 +15,7 @@ const products = [
 
     },
     {
+        "id":"003",
         "name":"Silla Marron de jardin",
         "price": 55000,
         "img": "/img/2019907.1.jpg",
@@ -73,12 +76,16 @@ const MainController = {
     },
 
     productDetail: (req,res) => {
+        const item = products.find(item=> {
+            return item.id === req.params.item;
+
+        });
         const styles = ['normalize','home', 'product-detail']
         const titulo = 'Zen Hogar | Detalle del Producto'
         res.render('product-detail', {
             styles:styles,
             titulo:titulo,
-            products:products,
+            item:item,
         });
     },
 
