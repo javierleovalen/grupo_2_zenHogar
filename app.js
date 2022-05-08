@@ -9,31 +9,41 @@ const mainRouter = require('./routes/index')
 app.use(express.static(path.resolve(__dirname, './public')))
 
 
-
 // levantando el servidor //
 app.listen(process.env.PORT || expressPort, () => {
   console.log(`Servidor inciado en puerto ${expressPort}`)
 })
 
 
-
 // seteando el uso de plantillas ejs //
 app.set('view engine', 'ejs');
 
 
-
+// HOME //
 app.use('/', mainRouter);
 
+
+// Contacto //
 app.use('/contacto', mainRouter);
 
+
+// CARRITO DE COMPRAS //
 app.use('/cart', mainRouter);
 
+
+// FORMULARIO LOGIN //
 app.use('/login', mainRouter);
 
+
+// DETALLE DE PRODUCTO //
 app.use('/productDetail', mainRouter);
 
+
+// FORMULARIO DE REGISTO //
 app.use('/register', mainRouter);
 
+
+// CREAR PRODUCTO //
 app.use('/create', mainRouter);
 
 
