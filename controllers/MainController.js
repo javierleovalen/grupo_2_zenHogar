@@ -45,14 +45,6 @@ const MainController = {
             titulo: titulo,
         })
     },
-<<<<<<< HEAD
-
-
-
-    
-
-
-=======
     productDetail: (req, res) => {
         const styles = ['normalize','product-detial']
         const titulo = 'Placeholder: Nombre del producto'
@@ -69,9 +61,7 @@ const MainController = {
             titulo:titulo,
         })
     }
->>>>>>> e32b085536841face78b3171c72c99dbb9e3093a
 }
-
 
 
 
