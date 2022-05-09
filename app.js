@@ -19,10 +19,9 @@ app.listen(process.env.PORT || expressPort, () => {
 app.set('view engine', 'ejs');
 
 
-// MAIN ROUTer //
-app.use( mainRouter);
+// ROUTER PRINCIPAL //
 
-
+app.use(mainRouter);
 
 
 
