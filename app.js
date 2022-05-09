@@ -19,32 +19,9 @@ app.listen(process.env.PORT || expressPort, () => {
 app.set('view engine', 'ejs');
 
 
-// HOME //
-app.use('/', mainRouter);
+// ROUTER PRINCIPAL //
 
-
-// Contacto //
-app.use('/contacto', mainRouter);
-
-
-// CARRITO DE COMPRAS //
-app.use('/cart', mainRouter);
-
-
-// FORMULARIO LOGIN //
-app.use('/login', mainRouter);
-
-
-// DETALLE DE PRODUCTO //
-app.use('/productDetail', mainRouter);
-
-
-// FORMULARIO DE REGISTO //
-app.use('/register', mainRouter);
-
-
-// CREAR PRODUCTO //
-app.use('/create', mainRouter);
+app.use(mainRouter);
 
 
 
