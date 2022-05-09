@@ -12,6 +12,7 @@ app.use(express.static(path.resolve(__dirname, './public')))
 // levantando el servidor //
 app.listen(process.env.PORT || expressPort, () => {
   console.log(`Servidor inciado en puerto ${expressPort}`)
+  console.log(`Link al sitio: http://localhost:3030`)
 })
 
 
