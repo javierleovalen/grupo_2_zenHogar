@@ -32,6 +32,10 @@ router.get('/productDetail/:item', MainController.productDetail);
 router.get('/create', MainController.create);
 
 
+// MODIFICAR PRODUCTO //
+router.get('/modifyproduct', MainController.modifyproduct);
+
+
 
 
 

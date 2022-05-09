@@ -111,6 +111,15 @@ const MainController = {
         })
     },
 
+    modifyproduct: (req, res) => {
+        const styles = ['normalize', 'home','modifyproduct']
+        const titulo = 'modifyproduct'
+        res.render('modifyproduct', {
+            styles: styles,
+            titulo: titulo,
+        })
+    },
+
 }
 
 
