@@ -88,6 +88,9 @@
 /* PRODUCT DETAIL VIEW */
 /* CART VIEW */
 /* LOGIN VIEW */
+
+
+
 /* REGISTER VIEW */
 
 .register__text-title {
@@ -128,3 +131,25 @@
   font-weight: bold;
 }
 
+.register__success {
+  padding: 10%;
+  color: var(--gris-400);
+  text-align: center;
+}
+
+.register__success h2 {
+  margin-bottom: 0.7em;
+  font-weight: 300;
+  font-size: 3em;
+}
+
+.register__success h3 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+.register__success a {
+  font-size: 1.5em;
+  color: var(--gris-400);
+  font-weight: bold;
+}
