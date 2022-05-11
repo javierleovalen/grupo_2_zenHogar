@@ -99,6 +99,7 @@
   padding-bottom: 1em;
   border-bottom: 1px solid var(--gris-200);
   margin-bottom: 1em;
+  width: 100%;
 }
 
 .register__text-title h3 {
@@ -109,6 +110,7 @@
 
 .register__text-title p {
   font-weight: 200;
+
 }
 
 .register__help-text {
