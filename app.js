@@ -9,6 +9,10 @@ const methodOverride = require('method-override');
 // Argumento para usar put y delete //
 app.use(methodOverride('_method'));
 
+// Argumento para usar post
+app.use(express.urlencoded({extended:false}));
+app.use(express.json())
+
   
 // asignando la ruta para archivos publicos //
 app.use(express.static(path.resolve(__dirname, './public')))
