@@ -1,8 +1,12 @@
-const express = require('express')
-const path = require('path')
-const app = express()
+const express = require('express');
+const path = require('path');
+const app = express();
 const expressPort = 3030
-const mainRouter = require('./routes/index')
+const mainRouter = require('./routes/index');
+const methodOverride = require('method-override');
+
+// Argumento para usar put y delete //
+app.use(methodOverride('_method'));
 
   
 // asignando la ruta para archivos publicos //
