@@ -1,10 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --gris-200: #F2F3F4;
+  --gris-400: #A7AFB2;
+  --gris-600: #555F61;
+  --gris-800: #131516;
+}
 .desktop__menu {
   display: none;
 }
 header {
-  background-color: var(--negro-800);
-  box-shadow: 0 0 10px var(--negro-800);
-  border-bottom: 1px solid var(--blanco-800);
+  background-color: var(--gris-800);
+  box-shadow: 0 0 10px var(--gris-800);
+  border-bottom: 1px solid var(--gris-200);
   padding: 1em;
   display: flex;
   justify-content: center;
@@ -34,9 +44,9 @@ header {
 .menu__btn {
   width: 40px;
   height: 40px;
-  background-color: var(--negro-800);
+  background-color: var(--gris-800);
   border: none;
-  color: var(--blanco-800);
+  color: var(--gris-200);
   font-size: 2em;
   cursor: pointer;
   box-shadow: 0 0 10px var(--gris-200);
