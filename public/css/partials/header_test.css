@@ -46,7 +46,7 @@ header {
   height: 40px;
   background-color: var(--gris-800);
   border: none;
-  color: var(--gris-200);
+  color: var(--gris-400);
   font-size: 2em;
   cursor: pointer;
   box-shadow: 0 0 10px var(--gris-200);

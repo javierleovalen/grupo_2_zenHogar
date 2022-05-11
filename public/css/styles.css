@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --gris-200: #F2F3F4;
+  --gris-400: #A7AFB2;
+  --gris-600: #555F61;
+  --gris-800: #131516;
+}
+
+/* REGISTER VIEW */
