@@ -17,6 +17,11 @@ footer {
 .social-media__icons a {
   font-size: 1.5em;
   color: var(--gris-600);
+  margin: 6px;
+  transition: color 0.3s ease;
+}
+.social-media__icons a:hover {
+  color: var(--gris-200);
 }
 
 
