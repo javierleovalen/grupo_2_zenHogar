@@ -10,6 +10,8 @@
   --gris-400: #A7AFB2;
   --gris-600: #555F61;
   --gris-800: #131516;
+  --green-600: #40826D;
+  --green-800: #4F7942;
 }
 
 /* BUTTONS */
@@ -17,18 +19,21 @@
   font-size: 1.3em;
   padding: 12px 24px;
   font-weight: bold;
-  background-color: var(--gris-800);
+  /* background-color: var(--gris-800); */
+  background-color: var(--green-600);
   border: 1px solid var(--gris-200);
   color: var(--gris-200);
   box-shadow: 0 0 10px var(--gris-600);
   display: block;
   margin: auto;
   transition: all 0.3s ease;
+  border-radius: 6px;
+  font-weight: 300;
 }
 
 .main__btn:hover {
-  background-color: var(--gris-200);
-  color: var(--gris-800);
+  background-color: var(--gris-600);
+  font-weight: bold;
 }
 
 /* MAIN SECTIONS */
@@ -37,8 +42,8 @@
   min-height: 70vh;
   padding: 1em;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 @media (min-width: 768px) {
   .section__container {
@@ -47,8 +52,8 @@
 }
 
 
-/* FORM CONTAINERS */
-  .form__container {
+/* ARTICLE CONTAINERS */
+  .article__container {
     background-color: var(--gris-800);
     display: flex;
     justify-content: center;
@@ -83,6 +88,142 @@
 
 
 /* HOME VIEW */
+
+
+.welcome__article {
+  background: url('/img/sillon1.jpg') no-repeat center center /cover;
+  max-width: unset;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.welcome-text__container {
+  font-weight: 300;
+  font-size: 2em;
+  color: var(--gris-200);
+}
+.welcome-text__container h3 {
+  background: -webkit-linear-gradient(var(--gris-200), var(--gris-400));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 300;
+}
+.welcome-text__container p {
+  font-size: 0.8em;
+  inline-size: 60%;
+  margin-bottom: 1em;
+}
+
+.welcome__btn {
+  display: inline-block;
+  background-color: var(--gris-800);
+  font-size: 0.8em;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+.welcome-text__container{
+    padding:2em;
+  }
+}
+@media (min-width: 992px) {
+  .welcome-text__container{
+    padding:1em;
+  }
+}
+
+/* OFFERS */
+.offers__section {
+  display: block;
+  min-height: unset;
+}
+
+
+.offers__list {
+  max-width: unset;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.offers__title {
+  color: var(--gris-200);
+  margin-bottom: 1em;
+  display: block;
+  max-width: unset;
+  text-align: center;
+}
+
+.product__card {
+  background-color: var(--gris-400);
+  box-shadow:0 0 10px var(--gris-400);
+  border: 1px solid var(--gris-200);
+  padding: 1em;
+}
+
+.product__card h3 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.price__before {
+  text-decoration: line-through;
+  display: inline-block;
+  margin-right: 1em;
+  margin-bottom: 0.3em;
+  font-size: 1em;
+}
+
+.price__final {
+  font-size: 1.3em;
+}
+.product__card span {
+  font-size: 1.2em;
+  color: var(--green-800);
+  font-weight: bold;
+}
+
+.product__card a {
+  /* MODULARIZAR ESTE BOTÓN */
+  background-color: var(--gris-800);
+  padding: 6px 6px;
+  border-radius: 6px;
+  display: block;
+  margin:1em 0;
+  width: 48%;
+  height: 20%;
+  color: var(--gris-400);
+  text-decoration: none;
+  box-shadow: 0 0 10px var(--gris-800);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.product__card a:hover{
+  /* ESTADO HOVER DEL BOTÓN */
+  background-color: var(--gris-200);
+  color: var(--gris-800);
+  font-weight: bold;
+}
+
+.card__btn {
+  width: 100%;
+  margin-bottom: 1em;
+  color: var(--gris-200);
+  border: 1px solid var(--gris-200);
+  background-color: var(--gris-800);
+}
+
+.card__btn-green {
+  background-color: var(--green-800);
+}
+
+.card__btn-green:hover {
+  background-color: #355E3B;
+  color: var(--gris-200);
+}
 /* CATALOG VIEW */
 /* PRODUCT SEARCH VIEW */
 /* PRODUCT DETAIL VIEW */

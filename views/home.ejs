@@ -1,50 +1,70 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<%- include('./partials/head.ejs') %>
-</head>
+<html lang="en">
+  <%- include('./partials/head', {title:'Zen Hogar | Bienvenid@s', styles:['normalize','styles','partials/footer','partials/header_test']}) %>
 <body>
-  <header>
-   <%- include('./partials/header.ejs') %>
-  <!-- Fin del header -->
-  </header>
-  <!-- main -->
-  <main>
-    <section class="welcome__container">
-      <article class="welcome__text-container">
-        <h3>Confort</h3>
-        <h2>Diseño</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis vitae voluptates eveniet quam corrupti eaque nihil voluptas, cum consequatur provident voluptatum hic sint nemo molestias ducimus pariatur assumenda quidem sed?</p>
-        <a href="#">Ir al catálogo<i class="fa-solid fa-arrow-right"></i></a>
+    <%- include('./partials/header_test') %>
+    <main>
+    <section class="section__container">
+      <article class="article__container welcome__article">
+        <div class="welcome-text__container">
+        <h3>Lorem ipsum dolor sit.</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, quidem magnam molestiae quis laboriosam quas.</p>
+        <a href="#" class="main__btn welcome__btn">Ir al catálogo</i></a>
+      </div>
       </article>
     </section>
-    <!-- Implementar funcionalidad de vista dinamica en ofertas -->
-    <section class="ofertas__section">
-      <h2>Ofertas</h2>
-      <div class="ofertas__container">
+    <section class="section__container offers__section">
+      <div class="article__container offers__title">
+        <h2>Ofertas rápidas.</h2>
+      </div>
+      <article class="article__container offers__list">
+        <div class="product__card">
+          <img src="" alt="PRODUCTNAME">
+          <h3>TITULO</h3>
+          <p class="price__before">$PRECIO</p>
+          <span>%DESCUENTO</span>
+          <p class="price__final">$PRECIOFINAL</p>
+          <a href="#">+ Más info...</a>
+          <button class="main__btn card__btn">Añadir al carrito</button>
+          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
+        </div>
+        <!-- Insertadas a modo de prueba -->
+        <div class="product__card">
+          <img src="" alt="PRODUCTNAME">
+          <h3>TITULO</h3>
+          <p class="price__before">$PRECIO</p>
+          <span>%DESCUENTO</span>
+          <p class="price__final">$PRECIOFINAL</p>
+          <a href="#">+ Más info...</a>
+          <button class="main__btn card__btn">Añadir al carrito</button>
+          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
+        </div>
 
-        <!-- EJS-->
-        <% products.forEach(item=> { %>
-        <!-- ITEMS -->
-      <article class="ofertas__item">
-        <div class="item__img">
-          <img src="<%= item.img %>" alt="<%= item.name %>a">
+        <div class="product__card">
+          <img src="" alt="PRODUCTNAME">
+          <h3>TITULO</h3>
+          <p class="price__before">$PRECIO</p>
+          <span>%DESCUENTO</span>
+          <p class="price__final">$PRECIOFINAL</p>
+          <a href="#">+ Más info...</a>
+          <button class="main__btn card__btn">Añadir al carrito</button>
+          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
         </div>
-        <div class="item__text-container">
-          <h3><%= item.name %></h3>
-          <p class="price__before">$<%= item.price %></p>
-          <p class="price__after">$<%= (item.price)*(1-(item.discount/100)) %></p>
-          <p class="price__discount"><%= item.discount %>% OFF</p>
-          <a href="/productDetail/<%= item.id %>">Más info</a>
-          <button class="ofertas__btn">Añadir al carrito</button>
-          <button class="ofertas__btn btn__alternativo">Comprar ahora</button>
+
+        <div class="product__card">
+          <img src="" alt="PRODUCTNAME">
+          <h3>TITULO</h3>
+          <p class="price__before">$PRECIO</p>
+          <span>%DESCUENTO</span>
+          <p class="price__final">$PRECIOFINAL</p>
+          <a href="#">+ Más info...</a>
+          <button class="main__btn card__btn">Añadir al carrito</button>
+          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
         </div>
+        <!-- Eliminar hasta aqui -->
       </article>
-    <% }); %>
-  </div>
-  </section>
+    </section>
   </main>
-  <footer>
-    <%- include('./partials/footer') %>)
+    <%- include('./partials/footer') %>
 </body>
 </html>
