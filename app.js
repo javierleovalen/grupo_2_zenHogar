@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 const expressPort = 3030
 const mainRouter = require('./routes/index');
+const userRouter = require('./routes/users')
 const methodOverride = require('method-override');
 
 // Argumento para usar put y delete //
@@ -27,6 +28,7 @@ app.set('view engine', 'ejs');
 // ROUTER PRINCIPAL //
 
 app.use(mainRouter);
+app.use(userRouter)
 
 
 
