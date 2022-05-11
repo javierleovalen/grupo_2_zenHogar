@@ -12,4 +12,119 @@
   --gris-800: #131516;
 }
 
+/* BUTTONS */
+.main__btn {
+  font-size: 1.3em;
+  padding: 12px 24px;
+  font-weight: bold;
+  background-color: var(--gris-800);
+  border: 1px solid var(--gris-200);
+  color: var(--gris-200);
+  box-shadow: 0 0 10px var(--gris-600);
+  display: block;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+
+.main__btn:hover {
+  background-color: var(--gris-200);
+  color: var(--gris-800);
+}
+
+/* MAIN SECTIONS */
+.section__container {
+  background-color: var(--gris-600);
+  min-height: 70vh;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .section__container {
+    min-height: 80vh;
+  }
+}
+
+
+/* FORM CONTAINERS */
+  .form__container {
+    background-color: var(--gris-800);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    border: 1px solid var(--gris-200);
+    box-shadow: 0 0 10px var(--gris-800);
+    max-width: 1200px;
+  }
+/* FORM INPUTS STYLES */
+.form__input {
+  font-size: 1.5em;
+  color: var(--gris-200);
+  border: 1px solid var(--gris-400);
+  /* box-shadow: 0 0 10px var(--gris-200); */
+  background-color: var(--gris-800);
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin-right: 6px;
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+/* FORM LABELS */
+.form__label {
+  color: var(--gris-200);
+  font-size: 1.2em;
+  align-self: flex-start;
+}
+
+
+/* HOME VIEW */
+/* CATALOG VIEW */
+/* PRODUCT SEARCH VIEW */
+/* PRODUCT DETAIL VIEW */
+/* CART VIEW */
+/* LOGIN VIEW */
 /* REGISTER VIEW */
+
+.register__text-title {
+  color: var(--gris-200);
+  text-align: center;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--gris-200);
+  margin-bottom: 1em;
+}
+
+.register__text-title h3 {
+  font-weight: 300;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.register__text-title p {
+  font-weight: 200;
+}
+
+.register__help-text {
+  color: var(--gris-200);
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.register__utility-links {
+  border-top: 1px solid var(--gris-200);
+  padding-top: 1em;
+  margin-top: 1em;
+  width: 100%;
+  text-align: center;
+  color: var(--gris-200);
+}
+
+.register__utility-links a {
+  color: var(--gris-600);
+  font-weight: bold;
+}
+

@@ -2,11 +2,21 @@ footer {
   background-color: var(--gris-800);
   color: var(--gris-200);
   text-align: center;
-  padding: 1em;
   border-top: 1px solid var(--gris-200);
   box-shadow: 0 0 10px var(--gris-800);
-}
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 
+}
+.footer__container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}
 .social-media__container {
   margin-bottom: 1em;
 }
@@ -28,15 +38,15 @@ footer {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 10vh;
   }
   .footer__container {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-around;
-    max-width: 1200px;
-    width: 100%;
+    align-items: center;
+  }
+
+  .social-media__container h3  {
+    margin-top: 1em;
   }
 }
