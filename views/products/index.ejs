@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs', {title:'Zen Hogar | Bienvenid@s', styles:['normalize','styles','partials/footer','partials/header_test']}) %>
+<body>
+  <%- include('../partials/header_test') %>
+  <main>
+    <section class="section__container products__section-container">
+      <article class="article__container search-bar__container">
+        <form action="/products/search" method="get">
+          <input type="text" placeholder="¿ Buscas algo en particular... ? :)" class="search__input">
+          <button type="submit" class="search__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </article>
+      <section class="article__container categories__container">
+        <article class="categories__card-container">
+          <a href="#">
+          <img src="https://picsum.photos/200" alt="">
+          <h2>CATEGORIA</h2>
+          </a>
+        </article>
+        <article class="categories__card-container">
+          <a href="#">
+            <img src="https://picsum.photos/200" alt="">
+            <h2>CATEGORIA</h2>
+            </a>
+        </article>
+        <article class="categories__card-container">
+          <a href="#">
+            <img src="https://picsum.photos/200" alt="">
+            <h2>CATEGORIA</h2>
+            </a>
+        </article>
+        <article class="categories__card-container">
+          <a href="#">
+            <img src="https://picsum.photos/200" alt="">
+            <h2>CATEGORIA</h2>
+            </a>
+        </article>
+      </section>
+      <h3 class="products-area__text">Tal vez te interesen estos productos: <span>BUSQUEDA DE USUARIO</span></h3>
+      
+      <section class="products__list">
+        <div class="product__card">
+          <img src="https://picsum.photos/200" alt="PRODUCTNAME">
+          <h3>TITULO</h3>
+          <p class="price__before">$PRECIO</p>
+          <span>%5 OFF</span>
+          <p class="price__final">$PRECIOFINAL</p>
+          <a href="#" class="mini__btn">+ Más info...</a>
+          <button class="main__btn card__btn">Añadir al carrito</button>
+          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
+        </div>
+        <div class="product__card">
+          <img src="https://picsum.photos/200" alt="PRODUCTNAME">
+          <h3>TITULO</h3>
+          <p class="price__before">$PRECIO</p>
+          <span>%5 OFF</span>
+          <p class="price__final">$PRECIOFINAL</p>
+          <a href="#" class="mini__btn">+ Más info...</a>
+          <button class="main__btn card__btn">Añadir al carrito</button>
+          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
+        </div>
+        <div class="product__card">
+          <img src="https://picsum.photos/200" alt="PRODUCTNAME">
+          <h3>TITULO</h3>
+          <p class="price__before">$PRECIO</p>
+          <span>%5 OFF</span>
+          <p class="price__final">$PRECIOFINAL</p>
+          <a href="#" class="mini__btn">+ Más info...</a>
+          <button class="main__btn card__btn">Añadir al carrito</button>
+          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
+        </div>
+        <div class="product__card">
+          <img src="https://picsum.photos/200" alt="PRODUCTNAME">
+          <h3>TITULO</h3>
+          <p class="price__before">$PRECIO</p>
+          <span>%5 OFF</span>
+          <p class="price__final">$PRECIOFINAL</p>
+          <a href="#" class="mini__btn">+ Más info...</a>
+          <button class="main__btn card__btn">Añadir al carrito</button>
+          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
+        </div>
+        <div class="product__card">
+          <img src="https://picsum.photos/200" alt="PRODUCTNAME">
+          <h3>TITULO</h3>
+          <p class="price__before">$PRECIO</p>
+          <span>%5 OFF</span>
+          <p class="price__final">$PRECIOFINAL</p>
+          <a href="#" class="mini__btn">+ Más info...</a>
+          <button class="main__btn card__btn">Añadir al carrito</button>
+          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
+        </div>
+        <div class="product__card">
+          <img src="https://picsum.photos/200" alt="PRODUCTNAME">
+          <h3>TITULO</h3>
+          <p class="price__before">$PRECIO</p>
+          <span>%5 OFF</span>
+          <p class="price__final">$PRECIOFINAL</p>
+          <a href="#" class="mini__btn">+ Más info...</a>
+          <button class="main__btn card__btn">Añadir al carrito</button>
+          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
+        </div>
+        <div class="product__card">
+          <img src="https://picsum.photos/200" alt="PRODUCTNAME">
+          <h3>TITULO</h3>
+          <p class="price__before">$PRECIO</p>
+          <span>%5 OFF</span>
+          <p class="price__final">$PRECIOFINAL</p>
+          <a href="#" class="mini__btn">+ Más info...</a>
+          <button class="main__btn card__btn">Añadir al carrito</button>
+          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
+        </div>
+      </section>
+    </section>
+  </main>
+  <%- include('../partials/footer') %>
+</body>
+</html>

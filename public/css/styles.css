@@ -41,8 +41,8 @@
   background-color: var(--gris-600);
   min-height: 70vh;
   padding: 1em;
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
 }
 @media (min-width: 768px) {
   .section__container {
@@ -88,13 +88,18 @@
 
 /* HOME VIEW */
 
-
+.welcome__container {
+  display: flex;
+  justify-content: center;
+  
+}
 .welcome__article {
   background: url('/img/sillon1.jpg') no-repeat center center /cover;
   max-width: unset;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
+  max-width: 1200px;
 }
 
 .welcome-text__container {
@@ -135,8 +140,10 @@
 
 /* OFFERS */
 .offers__section {
-  display: block;
+  display: flex;
   min-height: unset;
+  justify-content: center;
+  
 }
 
 
@@ -146,19 +153,21 @@
   flex-direction: row;
   gap: 1em;
   flex-wrap: wrap;
+  align-items: stretch;
+  max-width: 1200px;
 }
 
 .offers__title {
   background: rgb(19,21,22);
-  margin-bottom: 1em;
-  display: block;
   max-width: unset;
   text-align: center;
   color: var(--gris-200);
+
 }
 
 .offers__title h2 {
   font-weight: 300;
+  max-width: 1200px;
 }
 
 .product__card {
@@ -167,6 +176,11 @@
   border: 1px solid var(--gris-200);
   padding: 1em;
   width: 275px;
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+.product__card:hover {
+  transform: scale(1.05);
 }
 
 .product__card img {
@@ -202,7 +216,7 @@
   text-align: right;
 }
 
-.product__card a {
+.mini__btn {
   /* MODULARIZAR ESTE BOTÓN */
   background-color: var(--gris-800);
   padding: 6px 6px;
@@ -210,7 +224,6 @@
   display: block;
   margin:1em 0;
   width: 48%;
-  height: 20%;
   color: var(--gris-400);
   text-decoration: none;
   box-shadow: 0 0 10px var(--gris-800);
@@ -218,7 +231,7 @@
   transition: all 0.3s ease;
 }
 
-.product__card a:hover{
+.mini__btn:hover{
   /* ESTADO HOVER DEL BOTÓN */
   background-color: var(--gris-200);
   color: var(--gris-800);
@@ -242,6 +255,100 @@
   color: var(--gris-200);
 }
 /* CATALOG VIEW */
+.products__section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: center;
+  gap: 1em;
+}
+.search-bar__container {
+  display: block;
+  max-width: 1200px;
+  width: 100%;
+}
+.search-bar__container form {
+  display: flex;
+  justify-content: center;
+}
+.search-bar__container form> input {
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.4s ease;
+}
+
+.search-bar__container form> input:hover {
+  background-color: var(--gris-200);
+  color: var(--gris-800);
+  font-weight: bold;
+}
+
+.categories__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+@media (min-width: 768px) {
+  .categories__container {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+.categories__card-container {
+  position: relative;
+  box-shadow: 0 0 10px var(--gris-400);
+  border: 1px solid var(--gris-200);
+}
+
+.categories__card-container a h2 {
+  transition: all 0.3s ease;
+}
+.categories__card-container a:hover > h2 {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.categories__card-container img {
+  width: 150px;
+  height: 150px;
+}
+.categories__card-container h2 {
+  font-weight: 300;
+  color: var(--gris-200);
+  background-color: var(--gris-800);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 12px 12px;
+  border: 1px solid var(--gris-200);
+  font-size: 1em;
+  box-shadow: 0 0 10px var(--gris-400);
+
+}
+
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.products-area__text {
+  text-align: left;
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  font-size: 2em;
+  border-bottom: 1px solid var(--gris-400);
+  padding: 1em;
+  margin-bottom: 1em;
+  font-weight: 300;
+}
+.products-area__text > span {
+  color: var(--gris-400);
+}
+
 /* PRODUCT SEARCH VIEW */
 /* PRODUCT DETAIL VIEW */
 /* CART VIEW */
@@ -250,6 +357,8 @@
 /* LOGIN VIEW */
 .login__section {
   align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .login__container {
   width: 100%;
@@ -260,6 +369,12 @@
 
 
 /* REGISTER VIEW */
+
+.register__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .register__text-title {
   color: var(--gris-200);

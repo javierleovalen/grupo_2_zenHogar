@@ -1,1 +1,29 @@
-[{"id":781,"firstName":"Pedro","lastName":"Grillo","email":"pgrillo@gmail.com","password":"123456","isAdmin":false,"image":"Placeholder de url p/ img"},{"id":33,"firstName":"Prueba123","lastName":"Prueba123123","email":"prueba123@prueba123.com","password":"prueba123","isAdmin":false,"image":"Placeholder de url p/ img"}]
+[
+  {
+    "id": 781,
+    "firstName": "Pedro",
+    "lastName": "Grillo",
+    "email": "pgrillo@gmail.com",
+    "password": "123456",
+    "isAdmin": false,
+    "image": "Placeholder de url p/ img"
+  },
+  {
+    "id": 33,
+    "firstName": "Prueba123",
+    "lastName": "Prueba123123",
+    "email": "prueba123@prueba123.com",
+    "password": "prueba123",
+    "isAdmin": false,
+    "image": "Placeholder de url p/ img"
+  },
+  {
+    "id": 775,
+    "firstName": "Rodrigo",
+    "lastName": "Cepeda",
+    "email": "rodrigocepeda@gmail.com",
+    "password": "123456",
+    "isAdmin": false,
+    "image": "Placeholder de url p/ img"
+  }
+]
