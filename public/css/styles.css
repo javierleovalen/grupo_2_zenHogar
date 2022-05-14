@@ -380,7 +380,27 @@ textarea {
 
 /* PRODUCT SEARCH VIEW */
 /* PRODUCT DETAIL VIEW */
-/* CART VIEW */
+/* PRODUCT MODIFY */
+.modify__product-container {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.modify__product-img__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--gris-200);
+  padding: 1em;
+}
+  .modify__product-img { 
+    width: 250px;
+    height: 250px;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 0 0 10px var(--gris-400);
+
+  }
 
 
 /* LOGIN VIEW */
