@@ -30,11 +30,11 @@ router.put('/products/modifyproduct/:id', ProductsController.update);
 
 
 // DETALLE DEL PRODUCTO //
-router.get('/products/product-detail/:id', ProductsController.productDetail);
+router.get('/products/detail/:id', ProductsController.productDetail);
 
 
 /*** DELETE ONE PRODUCT***/ 
-// router.delete('/products/delete/:id', productsController.destroy); 
+router.delete('/products/delete/:id', ProductsController.destroy); 
 
 
 module.exports = router;

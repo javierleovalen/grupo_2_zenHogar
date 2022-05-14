@@ -1,83 +1,82 @@
 [
-	{
-		"id": 1,
-		"productName": "Sillon living comedor Verde",
-		"price": 85000,
-		"img": "/img/sillon_verde1.jpg",
-		"discount": 40,
-		"productSize": "120 x 103 x 190 CM",
-		"peso": "31 KG",
-		"material": "Madera",
-		"productCategory": "sillas",
+    {
+        "id": 1,
+        "productName": "Sillon living comedor Verde",
+        "price": 85000,
+        "img": "/img/sillon_verde1.jpg",
+        "discount": 40,
+        "productSize": "120 x 103 x 190 CM",
+        "peso": "31 KG",
+        "material": "Madera",
+        "productCategory": "sillas",
         "productDescription": "Prueba de creacion"
-
-	},
-	{
-		"id": 2,
-		"productName": "Sillon exterior de jarin",
-		"price": 75000,
-		"img": "/img/2019570.5.jpg",
-		"discount": 30,
-		"productSize": "110 x 95 x 150 CM",
-		"peso": "15 KG",
-		"material": "Madera"
-	},
-	{
-		"id": 3,
-		"productName": "Silla Marron de jardin",
-		"price": 52000,
-		"img": "/img/2019907.1.jpg",
-		"discount": 15,
-		"medidas": "60 x 100 x 160 CM",
-		"peso": "5 KG",
-		"material": "Madera"
-	},
-	{
-		"id": 1652503888667,
-		"productName": "Test",
-		"productCategory": "sillas",
-		"productSize": "120 x 90 x 12",
-		"productDescription": "Prueba de creacion"
-	},
-	{
-		"id": 1652503983398,
-		"productName": "Test 1",
-		"productCategory": "sofa-L",
-		"productSize": "120 x 90 x 10",
-		"productDescription": "d.sajdjoashjdnaskldmnsañdasdasdasdas"
-	},
-	{
-		"id": 1652504100998,
-		"productName": "Prueba final verdadera",
-		"productCategory": "iluminacion",
-		"productSize": "120 x 90 x 10",
-		"productImg": "1652504100979-img.jpg",
-		"productDescription": "jhasdjadjksasdnasdbsa.dnaskjdhsahdsa,dasjdhjsadhasdmasdsa\r\ndasdhjasdsa,asdhjsapd"
-	},
-	{
-		"id": 1652504176006,
-		"productName": "asñdkakdjsakdklsadad",
-		"productCategory": "iluminacion",
-		"productSize": "120 x 90 x 65",
-		"productImg": "1652504176001-img.jpeg",
-		"productDescription": "asd45sa4d5sad6sadas"
-	},
-	{
-		"id": 1652504276409,
-		"productName": "madsajkdhsjakhdjksada",
-		"productCategory": "sillon",
-		"productSize": "120 x 32 x 65",
-		"productImg": "1652504276386-img.jpg",
-		"productPrice": 456456,
-		"productDescription": "asdsadjasjhdnjosadas"
-	},
-	{
-		"id": 1652528339288,
-		"productName": "Sillon living comedor TEST",
-		"productCategory": "sillas",
-		"productSize": "100x100x100",
-		"productImg": "1652528339257-img.jpg",
-		"productPrice": 5000,
-		"productDescription": "Test"
-	}
+    },
+    {
+        "id": 2,
+        "productName": "Sillon exterior de jarin",
+        "price": 75000,
+        "img": "/img/2019570.5.jpg",
+        "discount": 30,
+        "productSize": "110 x 95 x 150 CM",
+        "peso": "15 KG",
+        "material": "Madera"
+    },
+    {
+        "id": 3,
+        "productName": "Silla Marron de jardin",
+        "price": 52000,
+        "img": "/img/2019907.1.jpg",
+        "discount": 15,
+        "medidas": "60 x 100 x 160 CM",
+        "peso": "5 KG",
+        "material": "Madera"
+    },
+    {
+        "id": 1652503888667,
+        "productName": "Test",
+        "productCategory": "sillas",
+        "productSize": "120 x 90 x 12",
+        "productDescription": "Prueba de creacion"
+    },
+    {
+        "id": 1652503983398,
+        "productName": "Test 1",
+        "productCategory": "sofa-L",
+        "productSize": "120 x 90 x 10",
+        "productDescription": "d.sajdjoashjdnaskldmnsañdasdasdasdas"
+    },
+    {
+        "id": 1652504100998,
+        "productName": "Prueba final verdadera",
+        "productCategory": "iluminacion",
+        "productSize": "120 x 90 x 10",
+        "productImg": "1652504100979-img.jpg",
+        "productDescription": "jhasdjadjksasdnasdbsa.dnaskjdhsahdsa,dasjdhjsadhasdmasdsa\r\ndasdhjasdsa,asdhjsapd"
+    },
+    {
+        "id": 1652504176006,
+        "productName": "asñdkakdjsakdklsadad",
+        "productCategory": "iluminacion",
+        "productSize": "120 x 90 x 65",
+        "productImg": "1652504176001-img.jpeg",
+        "productDescription": "asd45sa4d5sad6sadas"
+    },
+    {
+        "id": 1652504276409,
+        "productName": "madsajkdhsjakhdjksada",
+        "productCategory": "sillon",
+        "productSize": "120 x 32 x 65",
+        "productImg": "1652504276386-img.jpg",
+        "productPrice": 456456,
+        "productDescription": "asdsadjasjhdnjosadas"
+    },
+    {
+        "id": 1652528339288,
+        "productName": "Sillon living comedor TEST",
+        "productCategory": "sillas",
+        "productSize": "100x100x100",
+        "productImg": "1652528339257-img.jpg",
+        "productPrice": 5000,
+        "productDescription": "Test"
+    }
 ]

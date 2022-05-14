@@ -2,13 +2,13 @@ const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/products/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 
 const productController = {
   index: (req, res) => {
-    res.render('products/index',{
+    res.render('products/index', {
     })
   },
 
@@ -69,31 +69,31 @@ const productController = {
     })
   },
 
-    /*** ACTUALIZAR DETALLE PRODUCTO ***/
+  /*** ACTUALIZAR DETALLE PRODUCTO ***/
   update: (req, res) => {
+    // buscando el archivo a actualizar
+    let productAct = products.find(element => { return element.id === parseInt(req.params.id) })
+    // validando el archivo actualizar
+
+
+    //actualizando el producto
+    productAct.productName = req.body.productName === "" ? productAct.productName : req.body.productName
+
     products.forEach(element => {
 
-      if (element.id === parseInt(req.params.id)) {
-
-        element.productName = req.body.productName
-
-        // element.productName = req.body.productName.length ? == 0 ? element.productName : req.body.productName;
-        // element.price = req.body.price > 0 ? parseInt(req.body.price) : element.price;
-        // element.discount = req.body.discount > 0 ? parseInt(req.body.discount) : element.price;
-        // element.description = req.body.description.length == 0 ? element.description : req.body.description;
-
-      };
-
-      fs.writeFileSync(productsFilePath, JSON.stringify(products));
+      if (element.id === productAct.id) {
+        element.productName = productAct.productName
+      }
 
     });
 
-    res.redirect('/products');
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, '\t'));
 
-
+    res.redirect('/products/detail/' + element.id);
   },
 
-/*** DETALLE DE PRODUCTO ***/
+
+  /*** DETALLE DE PRODUCTO ***/
   productDetail: (req, res) => {
     let productForDetail = products.find(element => { return element.id === parseInt(req.params.id) })
 
@@ -117,7 +117,7 @@ const productController = {
     res.redirect('/product')
 
   }
-  
+
 
 };
 
