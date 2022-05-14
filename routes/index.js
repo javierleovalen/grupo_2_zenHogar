@@ -7,25 +7,25 @@ const MainController = require ('../controllers/MainController');
 router.get('/', MainController.home);
 
 // FORMULARIO LOGIN //
-router.get('/login', MainController.login);
+// router.get('/login', MainController.login);
 
 // CARRITO DE COMPRAS //
-router.get('/cart', MainController.cart);
+// router.get('/cart', MainController.cart);
 
 // HOJA DE PRUEBA //
-router.get('/test', MainController.test);
+// router.get('/test', MainController.test);
 
 // FORMULARIO DE REGISTO //
-router.get('/register', MainController.register);
+// router.get('/register', MainController.register);
 
 // DETALLE DE PRODUCTO //
-router.get('/productDetail/:item', MainController.productDetail);
+// router.get('/productDetail/:item', MainController.productDetail);
 
 // CREAR PRODUCTO //
-router.get('/create', MainController.create);
+// router.get('/create', MainController.create);
 
 // MODIFICAR PRODUCTO //
-router.get('/modifyproduct', MainController.modifyproduct);
+// router.get('/modifyproduct', MainController.modifyproduct);
 
 
 

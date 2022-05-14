@@ -3,13 +3,7 @@
 const MainController = {
 
     home: (req, res) => {
-        const styles = ['normalize', 'home']
-        const titulo = 'Zen Hogar'
-        res.render('home', {
-            styles: styles,
-            titulo: titulo,
-            products: products,
-        });
+        res.render('home');
     },
 
     login: (req, res) => {

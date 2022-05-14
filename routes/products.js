@@ -7,7 +7,8 @@ router.get('/products', ProductsController.index)
 router.get('/cart', ProductsController.cart)
 
 // CREAR PRODUCTO //
-router.get('/create', ProductsController.create);
+router.get('/products/create', ProductsController.create);
+router.get('/products/create/dev', ProductsController.createDev);
 
 // MODIFICAR PRODUCTO //
 router.get('/modifyproduct', ProductsController.modifyproduct);
