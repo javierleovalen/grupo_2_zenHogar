@@ -25,7 +25,9 @@ router.get('/products/create/dev', ProductsController.createDev);
 router.post('/products/create/dev',upload.single('productImg'), ProductsController.createDevResponse)
 
 // MODIFICAR PRODUCTO //
-router.get('/modifyproduct', ProductsController.modifyproduct);
+router.get('/products/modifyproduct/:id', ProductsController.modifyproduct);
+
+
 
 
 

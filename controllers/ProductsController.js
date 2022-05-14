@@ -49,14 +49,22 @@ create: (req, res) => {
   });
 },
 
+/*** EDIT ONE PRODUCT ***/ 
+
 modifyproduct: (req, res) => {
-  const styles = ['normalize', 'home','modifyproduct']
-  const titulo = 'modifyproduct'
+
+let productToEdit = products.find(element => {return element.id === parseInt (req.params.id)})
+
   res.render('modifyproduct', {
-      styles: styles,
-      titulo: titulo,
+    productToEdit:productToEdit,
+ 
   })
 },
+
+
+
+
+
 
 productDetail: (req, res) => {
   const item = products.find(item => {
