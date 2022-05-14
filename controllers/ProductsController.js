@@ -1,8 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-// const productsFilePath = path.join(__dirname, '../data/products/products');
-// const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const productsFilePath = path.join(__dirname, '../data/products/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
 
 const productController = {
   index : (req, res) => {
@@ -11,6 +13,21 @@ const productController = {
 
   createDev: (req,res) => {
     res.render('create_products-v2')
+  },
+
+  createDevResponse: (req,res) => {
+    let newProduct = {
+      id: Date.now(),
+      productName: req.body.productName,
+      productCategory: req.body.productCategory,
+      productSize: req.body.productSize,
+      productImg: req.file.filename,
+      productPrice: parseInt(req.body.productPrice),
+      productDescription: req.body.productDescription
+    }
+    products.push(newProduct)
+    fs.writeFileSync(productsFilePath,JSON.stringify(products, null,'\t'));
+    res.redirect('/products')
   },
 
   cart: (req, res) => {

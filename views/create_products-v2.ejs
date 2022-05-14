@@ -4,8 +4,59 @@
   <body>
     <%- include('./partials/header_test') %>
     <main>
-      <section class="section__container">
-        
+      <section class="section__container crate__product-section">
+         <article class="article__container product__article">
+          <div class="register__text-title">
+            <h3>Formulario: Creación de producto</h3>
+            <p>Las caracteristicas ingresadas pueden ser modificadas en cualquier momento</p>
+            </div>
+            <form action="/products/create/dev" method="POST" enctype="multipart/form-data" class="create__product-form">
+              <!-- Nombre del producto -->
+              <div>
+              <label for="productName" class="form__label">Nombre del producto:</label>
+              <input type="text" name="productName" placeholder="Complete este campo" class ="form__input" required><br>
+            </div>
+            <!-- Categoria del producto -->
+              <div>
+              <label for="productCategory" class="form__label" placeholder="Seleccione una categoria">Categoria:</label>
+              <select name="productCategory" id="productCategory" class="form__input">
+                <option value="" disabled selected hidden>Seleccione una categoria</option>
+                <option value="sillon">Sillon individual</option>
+                <option value="sofa-L">Sofa L</option>
+                <option value="iluminacion">Iluminación</option>
+                <option value="sillas">Sillas</option>
+                <option value="deco">Deco</option>
+              </select>
+            </div>
+              <!-- Medidas del producto -->
+                <div>
+              <label for="productSize" class="form__label">Medidas del producto:</label>
+              <input type="text" name="productSize" placeholder="120 x 90 x 50" class ="form__input"><br>
+            </div>
+            
+              <!-- Img del producto -->
+              <div>
+              <label for="productImg" class="form__label">Elige una imagen:</label>
+              <input type="file" name="productImg" id="productImg" class ="form__input" accept="image/*"><br>
+            </div>
+              <!-- Precio del producto -->
+              <div>
+              <label for="productPrice" class="form__label">Precio:</label>
+              <input type="text" name="productPrice" id="productPrice" class ="form__input" placeholder="$"><br>
+            </div>
+              <!-- Descripción del producto -->
+              <div>
+              <label for="productDescription" class="form__label">Escriba una descripción del producto</label>
+              <textarea maxlength="500" type="text" name="productDescription" id="productDescription" class ="form__input" placeholder="Escriba su texto aqui. (Máximo 500 caracteres)"></textarea>
+            </div>
+
+
+              <div class="create__products-btn">
+              <input type="submit" value="Crear" class="main__btn card__btn-green">
+              <a href="/products" class="main__btn card__btn cancel__btn"> Cancelar </a>
+              </div>
+            </form>
+         </article>
       </section>
     </main>
     <%- include('./partials/footer') %>
