@@ -9,7 +9,7 @@
 		"peso": "31 KG",
 		"material": "Madera",
 		"productCategory": "sillas",
-        "productDescription": "Prueba de creacion"
+        "roductDescription": "Prueba de creacion"
 
 	},
 	{
@@ -25,9 +25,9 @@
 	{
 		"id": 3,
 		"productName": "Silla Marron de jardin",
-		"price": 52000,
+		"price": 55000,
 		"img": "/img/2019907.1.jpg",
-		"discount": 15,
+		"discount": 20,
 		"medidas": "60 x 100 x 160 CM",
 		"peso": "5 KG",
 		"material": "Madera"

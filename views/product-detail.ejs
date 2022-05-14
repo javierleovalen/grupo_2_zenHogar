@@ -2,12 +2,14 @@
 <html lang="en">
 
 <head>
-  <%- include('./partials/head') %>
+  <%- include('./partials/head', {title:'Zen Hogar | Bienvenid@s',
+    styles:['normalize','styles','partials/footer','partials/header_test','create','modifyproduct', 'product-detail' ]})
+    %>
 </head>
 
 <body>
   <header>
-    <%- include('./partials/header') %>
+    <%- include('./partials/header_test') %>
   </header>
   <!-- main -->
   <main>
@@ -15,10 +17,10 @@
     <!-- contenedor principal -->
     <section class="product-detail__container">
 
-
+  
       <!-- Imagen del producto -->
       <article class="product-detail__img">
-        <img src="<%= item.img %>" alt="<%= item.name %>">
+        <img src="<%= productForDetail.img %>" alt="<%= productForDetail.productName %>">
       </article>
 
 
@@ -26,7 +28,7 @@
       <section class="product-detail__info">
         <article class="info__title">
           <h2>
-            <%= item.name %>
+            <%= productForDetail.productName %>
           </h2>
           <p>Colores disponibles</p>
         </article>
@@ -43,12 +45,12 @@
         <!-- Precio del producto -->
         <article class="info__price">
           <p class="price__after">
-            <%= item.price %>
+            <%= productForDetail.price %>
           </p>
           <p class="price__off">
-            <%= item.discount %>% OFF
+            <%= productForDetail.discount %>% OFF
           </p>
-          <p class="price__before">$<%= item.price*(1-(item.discount/100)) %>
+          <p class="price__before">$<%= productForDetail.price*(1-(productForDetail.discount/100)) %>
           </p>
         </article>
 
@@ -59,14 +61,21 @@
           <button class="cart__btn">Enviar al carrito</button>
         </article>
 
+        <form action="/products/delete/<%= productForDetail.id %>?_method=DELETE" method="POST" class="info__actions">
+          <button class="cashout__btn">ELIMINAR</button>
+        </form>
+
 
         <!-- detalle del producto del producto -->
         <article class="info__etc">
 
           <ul>
-            <li>Medidas: <%= item.medidas %> </li>
-            <li>Peso: <%= item.peso %></li>
-            <li>Material: <%= item.material%></li>
+            <li>Medidas: <%= productForDetail.medidas %>
+            </li>
+            <li>Peso: <%= productForDetail.peso %>
+            </li>
+            <li>Material: <%= productForDetail.material%>
+            </li>
           </ul>
         </article>
 
