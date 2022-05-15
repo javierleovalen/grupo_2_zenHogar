@@ -57,12 +57,8 @@ const productController = {
 
   /*** CARRITO DE COMPRAS ***/
   cart: (req, res) => {
-    const styles = ['normalize', 'home', 'cart']
-    const titulo = 'Zen Hogar | Mi Carrito'
-    res.render('cart', {
-      styles: styles,
-      titulo: titulo,
-      products: products,
+    res.render('products/cart', {
+      products:products
     });
   },
 

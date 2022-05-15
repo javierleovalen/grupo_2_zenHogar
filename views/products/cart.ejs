@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/head') %>
+    <%- include('../partials/head', {title: product.productName, styles:['normalize','styles','partials/footer','partials/header_test', 'cart']}) %>
 </head>
 
 <body>
     <header>
-        <%- include('./partials/header') %>
+        <%- include('../partials/header_test') %>
     </header>
 
 
