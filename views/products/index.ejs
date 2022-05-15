@@ -27,6 +27,9 @@
         <h3 class="products-area__text">Tal vez te interesen estos productos:</h3>
       <% } %>
       <section class="products__list">
+        <% if (products.length === 0) { %>
+          <h3 class="search__not-found">No se encontraron resultados para: <span><%= userSearch %></span></h3>
+        <% }else { %>
         <% products.forEach(product => { %>
         <div class="product__card">
           <img src="/img/uploads/products/<%= product.productImg %>" alt="<%= product.productName %>">
@@ -37,6 +40,7 @@
           <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
         </div>
         <% }) %>
+        <% } %>
       </section>
     </section>
   </main>

@@ -314,6 +314,16 @@ textarea {
   gap: 1em;
 }
 
+.search__not-found {
+  border-bottom: none;
+  font-weight: 300;
+  font-size: 1.3em;
+  color: rgb(96,0,0);
+}
+.search__not-found > span {
+  font-weight: 600;
+}
+
 @media (min-width: 768px) {
   .categories__container {
     width: 100%;
