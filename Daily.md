@@ -21,5 +21,5 @@ Fernando: En el dia de hoy estuve trabajando en terminar la funcionalidad de cre
 ***
 ## 15/02/2022:
 Javier:  
-Fernando:  
+Fernando: Estuve trabajando en la implementación de la barra de busqueda y agregando contenido dinamicamente en las diferentes vistas
 ***
