@@ -20,6 +20,6 @@ Javier: Agregue la ruta para la vista de modificar producto, tuve problemas en r
 Fernando: En el dia de hoy estuve trabajando en terminar la funcionalidad de creación de productos,mañana estare trabajando en vistas restantes. Sin problemas de momento;
 ***
 ## 15/02/2022:
-Javier:  
+Javier:  Intentando hacer que grabe las modificaciones en el json /agrando rutas al carrito de  compras
 Fernando: Estuve trabajando en la implementación de la barra de busqueda y agregando contenido dinamicamente en las diferentes vistas
 ***
