@@ -45,7 +45,6 @@
     border: 1px solid black;
     background: url("/img/about_photo_1.jpg") no-repeat center center /cover;
     min-width: 360px;
-    padding-top: 25%;
 }
 
 
@@ -309,12 +308,6 @@
 @media (min-width:576px) {
 
 
-    .main-container {
-        padding-top: 23%;
-
-    }
-
-
     .cart-show__img {
         width: 25%
     }
@@ -428,10 +421,6 @@
 
 @media (min-width:768px) {
 
-    .main-container {
-        padding-top: 21%;
-
-    }
 
     .cart-show__img {
         width: 25%
@@ -559,10 +548,6 @@
 
 @media (min-width: 992px){
 
-.main-container {
-    padding-top: 8%;
-
-}
 
 .cart-show__img>img {
 
@@ -570,9 +555,10 @@ border-radius: 20px;
 
 }
 
+};
 
 
-}
+
 
 
 

@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/head') %>
+    <%- include('../partials/head', {title: products.productName, styles:['normalize','styles','partials/footer','partials/header_test', 'cart']}) %>
 </head>
 
 <body>
     <header>
-        <%- include('./partials/header') %>
+        <%- include('../partials/header_test') %>
     </header>
 
 
@@ -45,7 +45,7 @@
                 </section>
 
                 <!-- Vista dinamica -->
-                <% products.forEach(products=> { %>
+                <% products.forEach(element=> { %>
 
 
                     <!--CONTENEDOR PRICIPAL MOSTRAR CARRITO-->
@@ -54,7 +54,7 @@
 
                         <!--Imagen producto-->
                         <article class="cart-show__img">
-                            <img src="<%= products.img %>" alt="<%= products.name %>">
+                            <img src="/img/uploads/products/<%= element.productImg %>" alt="<%= element.name %>">
                         </article>
 
 
@@ -65,7 +65,7 @@
                             <!-- Nombre del producto -->
                             <article class="description-product">
                                 <h3>
-                                    <%= products.name %>
+                                    <%= element.productName %>
                                 </h3>
                             </article>
 
@@ -105,7 +105,7 @@
 
                             <!-- precio del producto -->
                             <article class="price-product">
-                                <p>$<%= products.price %>
+                                <p>$<%= element.price %>
                                 </p>
                             </article>
 
@@ -176,7 +176,7 @@
 
     <footer>
 
-        <%- include('./partials/footer') %>
+        <%- include('../partials/footer') %>
 
 
 

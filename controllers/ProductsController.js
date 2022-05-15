@@ -21,11 +21,12 @@ const productController = {
   },
 
 
-
+/*** CREAR PRODUCTO ***/
   createProduct: (req, res) => {
     res.render('create_products-v2')
   },
 
+  /*** ACTUALIZAR PRODUCTO ***/
   uploadProduct: (req, res) => {
     let newProduct = {
       id: Date.now(),
@@ -41,6 +42,7 @@ const productController = {
     res.redirect('/products')
   },
 
+  /*** BARRA BUSQUEDA ***/
   search: (req,res) => {
     let search = true
     let searchResults = products.filter (element => {
@@ -57,23 +59,8 @@ const productController = {
 
   /*** CARRITO DE COMPRAS ***/
   cart: (req, res) => {
-    const styles = ['normalize', 'home', 'cart']
-    const titulo = 'Zen Hogar | Mi Carrito'
-    res.render('cart', {
-      styles: styles,
-      titulo: titulo,
-      products: products,
-    });
-  },
-
-
-
-  create: (req, res) => {
-    const styles = ['normalize', 'home', 'create']
-    const titulo = 'Zen Hogar | Crear Producto'
-    res.render('create', {
-      styles: styles,
-      titulo: titulo,
+    res.render('products/cart', {
+      products:products
     });
   },
 
