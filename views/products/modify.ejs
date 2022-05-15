@@ -12,11 +12,11 @@
           <h3>Formulario: Modificación de producto</h3>
           <p><%= product.productName %></p>
           </div>
-        <form action="/products/modify/dev" method="POST" enctype="multipart/form-data" class="create__product-form">
+        <form action="/products/modify/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data" class="create__product-form">
           <!-- Nombre del producto -->
           <div>
           <label for="productName" class="form__label">Nombre del producto:</label>
-          <input type="text" name="productName" placeholder="<%= product.productName %>" class ="form__input" required><br>
+          <input type="text" name="productName" placeholder="<%= product.productName %>" class ="form__input"><br>
         </div>
         <!-- Categoria del producto -->
           <div>

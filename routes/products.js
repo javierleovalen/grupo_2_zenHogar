@@ -29,7 +29,7 @@ router.post('/products/create',upload.single('productImg'), ProductsController.u
 
 // MODIFICAR PRODUCTO //
 router.get('/products/modify/:id', ProductsController.modifyproduct);
-router.put('/products/modify/', ProductsController.update); 
+router.put('/products/modify/:id', upload.single('productImg'),ProductsController.update); 
 
 
 // DETALLE DEL PRODUCTO //

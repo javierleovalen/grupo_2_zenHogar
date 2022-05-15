@@ -81,18 +81,22 @@ const productController = {
 
   /*** EDITAR UN PRODUCTO ***/
   modifyproduct: (req, res) => {
-    let productToModify = products.find(product => {
-      return product.id === parseInt(req.params.id);
-    })
+    let productToModify = products.find( element => {return element.id === parseInt(req.params.id)})
     res.render('./products/modify',{product: productToModify})
   },
 
   /*** ACTUALIZAR DETALLE PRODUCTO ***/
   update: (req, res) => {
-  //  PRIMERO BUSCAR EL PRODUCT A MODIFICAR
-  // VALIDAR LA INFO DEL FORMULARIO (SI ES UN STRING VACIO NO REEMPLAZAR VALOR) EN PRECIOS E ID TIENE QUE SER NUMEROS ENTEROS (PARSE INT)
-  // REEMPLAZAR EL VALOR EN LA VARIABLE GLOBAL(PRODUCTS) QUE NOS TRAE TODA LA INFO (MODELO)
-  // ESCRIBIR EN EL JSON EL NUEVO VALOR DE PRODUCTS CON EL PRODUCTO MODIFICADO
+    let product = products.findIndex((element => {
+      return element.id === parseInt(req.params.id)
+    }))
+    products[product].productName = req.body.productName === "" ? products[product].productName : req.body.productName;
+    products[product].productCategory = req.body.productCategory === "" ? products[product].productCategory : req.body.productCategory;
+    products[product].productSize = req.body.productSize === "" ? products[product].productSize : req.body.productSize;
+    products[product].productPrice = req.body.productPrice === "" ? products[product].productPrice : parseInt(req.body.productPrice);
+    products[product].productDescription = req.body.productDescription === "" ? products[product].productDescription : req.body.productDescription;
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, '\t'));
+    res.redirect('/products/detail/' + req.params.id)
   },
 
 
