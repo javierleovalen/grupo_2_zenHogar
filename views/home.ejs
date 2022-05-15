@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head', {title:'Titulo de web', styles:['normalize','styles','partials/footer','partials/header_test']}) %>
+  <%- include('./partials/head', {title:'Zen Hogar | Welcome', styles:['normalize','styles','partials/footer','partials/header_test']}) %>
 <body>
     <%- include('./partials/header_test') %>
     <main>
@@ -18,57 +18,19 @@
     </div>
     <section class="section__container offers__section">
       <article class="article__container offers__list">
-        <div class="product__card">
-          <img src="https://picsum.photos/200" alt="PRODUCTNAME">
-          <h3>TITULO</h3>
-          <p class="price__before">$PRECIO</p>
-          <span>%5 OFF</span>
-          <p class="price__final">$PRECIOFINAL</p>
-          <a href="#" class="mini__btn">+ Más info...</a>
+        <% promoProducts.forEach(product => { %>
+          <div class="product__card">
+          <img src="/img/uploads/products/<%= product.productImg %>" alt="<%= product.productName %>">
+          <h3><%= product.productName %></h3>
+          <p class="price__before">$ <%= product.productPrice %></p>
+          <span>% <%= product.productDiscount %> OFF</span>
+          <% let finalPrice = product.productPrice  * ( (100-product.productDiscount) / 100 ) %>
+          <p class="price__final">$ <%= finalPrice.toFixed(2)%></p>
+          <a href="/products/detail/<%= product.id %>" class="mini__btn">+ Más info...</a>
           <button class="main__btn card__btn">Añadir al carrito</button>
           <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
         </div>
-        <!-- Insertadas a modo de prueba -->
-        <div class="product__card">
-          <img src="https://picsum.photos/200" alt="PRODUCTNAME">
-          <h3>TITULO</h3>
-          <p class="price__before">$PRECIO</p>
-          <span>%5 OFF</span>
-          <p class="price__final">$PRECIOFINAL</p>
-          <a href="#" class="mini__btn">+ Más info...</a>
-          <button class="main__btn card__btn">Añadir al carrito</button>
-          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
-        </div>
-        <div class="product__card">
-          <img src="https://picsum.photos/200" alt="PRODUCTNAME">
-          <h3>TITULO</h3>
-          <p class="price__before">$PRECIO</p>
-          <span>%5 OFF</span>
-          <p class="price__final">$PRECIOFINAL</p>
-          <a href="#" class="mini__btn">+ Más info...</a>
-          <button class="main__btn card__btn">Añadir al carrito</button>
-          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
-        </div>
-        <div class="product__card">
-          <img src="https://picsum.photos/200" alt="PRODUCTNAME">
-          <h3>TITULO</h3>
-          <p class="price__before">$PRECIO</p>
-          <span>%5 OFF</span>
-          <p class="price__final">$PRECIOFINAL</p>
-          <a href="#" class="mini__btn">+ Más info...</a>
-          <button class="main__btn card__btn">Añadir al carrito</button>
-          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
-        </div>
-        <div class="product__card">
-          <img src="https://picsum.photos/200" alt="PRODUCTNAME">
-          <h3>TITULO</h3>
-          <p class="price__before">$PRECIO</p>
-          <span>%5 OFF</span>
-          <p class="price__final">$PRECIOFINAL</p>
-          <a href="#" class="mini__btn">+ Más info...</a>
-          <button class="main__btn card__btn">Añadir al carrito</button>
-          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
-        </div>
+        <% }) %>   
       </article>
     </section>
   </main>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head.ejs', {title: product.productName, styles:['normalize','styles','partials/footer','partials/header_test']}) %>
+<body>
+    <%- include('../partials/header_test') %>
+  <!-- main -->
+  <main>
+    <section class="section__container detail-product__section">
+      <article class="article__container product__view-container">
+        <div class="product__img-container">
+        <img src="/img/uploads/products/<%= product.productImg %>" alt="">
+      </div>
+      <div class="product__details-container">
+        <h2><%= product.productName %></h2>
+        <p><%= product.productSize %></p>
+        <h3>$ <%= product.productPrice %></h3>
+        <div class="product__speech">
+          <p><%= product.productDescription %></p>
+        </div>
+        <div class="detail-btns">
+        <button class="main__btn card__btn buy-now__btn">Añadir al carrito</button>
+          <button class="main__btn card__btn card__btn-green cart-now__btn">Comprar ahora</button>
+        </div>
+      </div>
+
+      </article>
+    </section>
+  </main>
+  <!-- main end -->
+    <%- include('../partials/footer') %>
+</body>
+</html>

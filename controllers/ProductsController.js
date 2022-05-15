@@ -2,24 +2,31 @@ const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/products/products.json');
+const categoriesFilePath = path.join(__dirname, '../data/products/categories.json');
 // Base de datos
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let categories = JSON.parse(fs.readFileSync(categoriesFilePath, 'utf-8'))
 
 
 
 const productController = {
   index: (req, res) => {
+    let search = false
+    let categoriesList = categories[0]
     res.render('products/index', {
+      products: products,
+      categories: categoriesList,
+      search: search
     })
   },
 
 
 
-  createDev: (req, res) => {
+  createProduct: (req, res) => {
     res.render('create_products-v2')
   },
 
-  createDevResponse: (req, res) => {
+  uploadProduct: (req, res) => {
     let newProduct = {
       id: Date.now(),
       productName: req.body.productName,
@@ -32,6 +39,19 @@ const productController = {
     products.push(newProduct)
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, '\t'));
     res.redirect('/products')
+  },
+
+  search: (req,res) => {
+    let search = true
+    let searchResults = products.filter (element => {
+			return element.productName.toLowerCase().includes(req.query.keyword.toLowerCase()) === true
+		})
+		res.render('products/index', {
+			products: searchResults,
+			userSearch: req.query.keyword,
+      categories: categories[0],
+      search: search
+		})
   },
 
 
@@ -78,11 +98,9 @@ const productController = {
 
   /*** DETALLE DE PRODUCTO ***/
   productDetail: (req, res) => {
-    let productForDetail = products.find(element => { return element.id === parseInt(req.params.id) })
-
-    res.render('product-detail', {
-      productForDetail: productForDetail,
-
+    let productToShow = products.find(product => { return product.id === parseInt(req.params.id)})
+    res.render('./products/detail', {
+      product: productToShow
     })
   },
 

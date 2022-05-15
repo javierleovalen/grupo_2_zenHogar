@@ -1,82 +1,47 @@
 [
-    {
-        "id": 1,
-        "productName": "Sillon living comedor Verde",
-        "price": 85000,
-        "img": "/img/sillon_verde1.jpg",
-        "discount": 40,
-        "productSize": "120 x 103 x 190 CM",
-        "peso": "31 KG",
-        "material": "Madera",
-        "productCategory": "sillas",
-        "productDescription": "Prueba de creacion"
-    },
-    {
-        "id": 2,
-        "productName": "Sillon exterior de jarin",
-        "price": 75000,
-        "img": "/img/2019570.5.jpg",
-        "discount": 30,
-        "productSize": "110 x 95 x 150 CM",
-        "peso": "15 KG",
-        "material": "Madera"
-    },
-    {
-        "id": 3,
-        "productName": "Silla Marron de jardin",
-        "price": 52000,
-        "img": "/img/2019907.1.jpg",
-        "discount": 15,
-        "medidas": "60 x 100 x 160 CM",
-        "peso": "5 KG",
-        "material": "Madera"
-    },
-    {
-        "id": 1652503888667,
-        "productName": "Test",
-        "productCategory": "sillas",
-        "productSize": "120 x 90 x 12",
-        "productDescription": "Prueba de creacion"
-    },
-    {
-        "id": 1652503983398,
-        "productName": "Test 1",
-        "productCategory": "sofa-L",
-        "productSize": "120 x 90 x 10",
-        "productDescription": "d.sajdjoashjdnaskldmnsañdasdasdasdas"
-    },
-    {
-        "id": 1652504100998,
-        "productName": "Prueba final verdadera",
-        "productCategory": "iluminacion",
-        "productSize": "120 x 90 x 10",
-        "productImg": "1652504100979-img.jpg",
-        "productDescription": "jhasdjadjksasdnasdbsa.dnaskjdhsahdsa,dasjdhjsadhasdmasdsa\r\ndasdhjasdsa,asdhjsapd"
-    },
-    {
-        "id": 1652504176006,
-        "productName": "asñdkakdjsakdklsadad",
-        "productCategory": "iluminacion",
-        "productSize": "120 x 90 x 65",
-        "productImg": "1652504176001-img.jpeg",
-        "productDescription": "asd45sa4d5sad6sadas"
-    },
-    {
-        "id": 1652504276409,
-        "productName": "madsajkdhsjakhdjksada",
-        "productCategory": "sillon",
-        "productSize": "120 x 32 x 65",
-        "productImg": "1652504276386-img.jpg",
-        "productPrice": 456456,
-        "productDescription": "asdsadjasjhdnjosadas"
-    },
-    {
-        "id": 1652528339288,
-        "productName": "Sillon living comedor TEST",
-        "productCategory": "sillas",
-        "productSize": "100x100x100",
-        "productImg": "1652528339257-img.jpg",
-        "productPrice": 5000,
-        "productDescription": "Test"
-    }
+	{
+		"id": 1652576870441,
+		"productName": "Sofa 2 Cuerpos Sillon Italiano",
+		"productCategory": "sofa-L",
+		"productSize": "1.6m x 0.8m x 0.7m",
+		"productImg": "1652576870437-img.jpg",
+		"productPrice": 38500,
+		"productDescription": "Estructura madera saligna encolada y encastrada\r\n\r\nPlaca espuma 26 kg alta densidad\r\n\r\nDetalles costura doble\r\n\r\nTELA PANA ,CHENILLE, Antidesgarro"
+	},
+	{
+		"id": 1652577047810,
+		"productName": "Silla Plastica Italiano P/ Metálicas X2 Unidades",
+		"productCategory": "sillas",
+		"productSize": "81cm x 59cm x 54cm",
+		"productImg": "1652577047806-img.jpg",
+		"productPrice": 19410,
+		"productDescription": "Sillón Italiano Patas Metalicas x 2 unidades Colombraro\r\nMedidas del producto: Alto 81cm - Ancho 59cm - Profundidad 54cm\r\n\r\nColores disponibles: Negro - Blanco\r\n\r\nLas sillas vienen desarmadas. Se les tiene que incrustar las patas"
+	},
+	{
+		"id": 1652577107753,
+		"productName": "Silla De Comedor Madera Paraiso Tapi",
+		"productCategory": "sillas",
+		"productSize": "85cm x 45cm x 50cm",
+		"productImg": "1652577107748-img.jpg",
+		"productPrice": 56000,
+		"productDescription": "Silla De Comedor Madera Paraiso Tapi - Pampa X2 24 Cuotas\r\n-Silla con estructura de madera de paraíso\r\n-Disponible en: lustre natural (color paraíso), tabaco (tinte oscuro) o crudo (laca blanca).\r\n-Tapizadas en lino de diversos colores.\r\nEstos tres colores de patas combinados con los seis colores de lino posibilita una gran cantidad de combinaciones adaptables cómodamente a cualquier ambiente.\r\n-Tapizado desmontable y lavable, se desmontan fácilmente gracias al sistema de bulones allen y desenfundan,"
+	},
+	{
+		"id": 1652577165487,
+		"productName": "Mesa Ratona 85cm X 50cm Linea Burano",
+		"productCategory": "deco",
+		"productSize": "85 cm x 50cm x 40cm",
+		"productImg": "1652577165483-img.jpg",
+		"productPrice": 7500,
+		"productDescription": "Mesa ratona linea Burano de Peccare Muebles\r\n\r\nPráctica, ligera y desarmable.\r\n\r\nDiseño propio, elegante moderno y firme."
+	},
+	{
+		"id": 1652577217300,
+		"productName": "Sofa Cama 3 Cuerpos 3 Posiciones Sillon",
+		"productCategory": "sofa-L",
+		"productSize": "1.8 m x 1.1 m x 0.7 m",
+		"productImg": "1652577217296-img.jpg",
+		"productPrice": 46500,
+		"productDescription": "Estructura madera saligna encolada y encastrada\r\n\r\nPlaca espuma 26 kg alta densidad\r\n\r\nDetalles costura doble\r\n\r\nTELA PANA , LINO ANTIDESGARRO"
+	}
 ]

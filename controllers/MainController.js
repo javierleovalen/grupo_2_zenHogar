@@ -1,9 +1,14 @@
-
+const fs = require('fs');
+const path = require('path');
+const promoProductsFilePath = path.join(__dirname, '../data/products/promoProducts.json');
+let promoProducts = JSON.parse(fs.readFileSync(promoProductsFilePath, 'utf-8'));
 
 const MainController = {
 
     home: (req, res) => {
-        res.render('home');
+        res.render('home', {
+            promoProducts: promoProducts
+        });
     },
 
     login: (req, res) => {

@@ -19,10 +19,13 @@ router.get('/products', ProductsController.index)
 
 router.get('/cart', ProductsController.cart)
 
+
+// BUSCAR PRODUCTO
+
+router.get('/products/search', ProductsController.search)
 // CREAR PRODUCTO //
-router.get('/products/create', ProductsController.create);
-router.get('/products/create/dev', ProductsController.createDev);
-router.post('/products/create/dev',upload.single('productImg'), ProductsController.createDevResponse)
+router.get('/products/create', ProductsController.createProduct);
+router.post('/products/create',upload.single('productImg'), ProductsController.uploadProduct)
 
 // MODIFICAR PRODUCTO //
 router.get('/products/modify/:id', ProductsController.modifyproduct);
