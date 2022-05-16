@@ -23,7 +23,7 @@ const productController = {
 
 /*** CREAR PRODUCTO ***/
   createProduct: (req, res) => {
-    res.render('create_products-v2')
+    res.render('./products/create')
   },
 
   /*** ACTUALIZAR PRODUCTO ***/
@@ -77,6 +77,7 @@ const productController = {
     let product = products.findIndex((element => {
       return element.id === parseInt(req.params.id)
     }))
+
     products[product].productName = req.body.productName === "" ? products[product].productName : req.body.productName;
     products[product].productCategory = req.body.productCategory === "" ? products[product].productCategory : req.body.productCategory;
     products[product].productSize = req.body.productSize === "" ? products[product].productSize : req.body.productSize;
