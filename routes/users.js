@@ -3,12 +3,12 @@ const router = express.Router();
 const UsersController = require('../controllers/UsersController')
 
 // HTTP: GET
-router.get('/users/login', UsersController.login)
-router.get('/users/register', UsersController.register)
-router.get('/users/register/success', UsersController.registerSuccessful)
+router.get('/login', UsersController.login)
+router.get('/register', UsersController.register)
+router.get('/register/success', UsersController.registerSuccessful)
 
 //HTTP: POST
-router.post('/users/register', UsersController.create)
-router.post('/users/login', UsersController.loginValidation)
+router.post('/register', UsersController.create)
+router.post('/login', UsersController.loginValidation)
 
 module.exports = router;

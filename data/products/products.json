@@ -1,8 +1,7 @@
 [
 	{
 		"id": 1652576870441,
-		"productName": "Sofa 2 Cuerpos Sillon Italiano",
-		"productCategory": "sofa-L",
+		"productName": "dsadasdas",
 		"productSize": "1.6m x 0.8m x 0.7m",
 		"productImg": "1652576870437-img.jpg",
 		"productPrice": 38500,
@@ -40,5 +39,14 @@
 		"productImg": "1652577217296-img.jpg",
 		"productPrice": 46500,
 		"productDescription": "Estructura madera saligna encolada y encastrada\r\n\r\nPlaca espuma 26 kg alta densidad\r\n\r\nDetalles costura doble\r\n\r\nTELA PANA , LINO ANTIDESGARRO"
+	},
+	{
+		"id": 1652740861257,
+		"productName": "ASDSADASD",
+		"productCategory": "sillas",
+		"productSize": "120 x 60 x 90",
+		"productImg": "1652740861235-img.jpg",
+		"productPrice": 50000,
+		"productDescription": "daskhdj9asydjisahdjoasdklsahjkdhasjkdhasd\r\nasda\r\nsd\r\nasd\r\nas\r\ndas\r\ndas"
 	}
 ]
