@@ -21,54 +21,56 @@ const productController = {
   },
 
 
-/*** CREAR PRODUCTO ***/
+  /*** CREAR PRODUCTO ***/
   createProduct: (req, res) => {
-    res.render('./products/create')
+    res.render('./products/create', {
+      categories:categories[0]
+    })
   },
 
   /** CREATE PRODUCT: Upload product **/
   uploadProduct: (req, res) => {
-    let results = validationResult(req);
-    if(results.errors.length > 0) {
-        return res.render('./products/create', {
+    const results = validationResult(req);
+    if (results.errors.length > 0) {
+      return res.render('./products/create', {
         errors: results.mapped(),
-        oldData: req.body
+        oldData: req.body,
+        categories:categories[0]
       });
-    } else {
-      let newProduct = {
-        id: Date.now(),
-        productName: req.body.productName,
-        productCategory: req.body.productCategory,
-        productSize: req.body.productSize,
-        productImg: req.file.filename,
-        productPrice: parseInt(req.body.productPrice),
-        productDescription: req.body.productDescription
-      }
-      products.push(newProduct)
-      fs.writeFileSync(productsFilePath, JSON.stringify(products, null, '\t'));
-      res.redirect('/products')
-    } 
+    }
+    let newProduct = {
+      id: Date.now(),
+      productName: req.body.productName,
+      productCategory: req.body.productCategory,
+      productSize: req.body.productSize,
+      productImg: req.file.filename,
+      productPrice: parseInt(req.body.productPrice),
+      productDescription: req.body.productDescription
+    }
+    products.push(newProduct)
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, '\t'));
+    res.redirect('/products')
   },
 
   /*** BARRA BUSQUEDA ***/
-  search: (req,res) => {
+  search: (req, res) => {
     let search = true
-    let searchResults = products.filter (element => {
-			return element.productName.toLowerCase().includes(req.query.keyword.toLowerCase()) === true
-		})
-		res.render('products/index', {
-			products: searchResults,
-			userSearch: req.query.keyword,
+    let searchResults = products.filter(element => {
+      return element.productName.toLowerCase().includes(req.query.keyword.toLowerCase()) === true
+    })
+    res.render('products/index', {
+      products: searchResults,
+      userSearch: req.query.keyword,
       categories: categories[0],
       search: search
-		})
+    })
   },
 
 
   /*** CARRITO DE COMPRAS ***/
   cart: (req, res) => {
     res.render('products/cart', {
-      products:products
+      products: products
     });
   },
 
@@ -76,8 +78,8 @@ const productController = {
 
   /*** EDITAR UN PRODUCTO ***/
   modifyproduct: (req, res) => {
-    let productToModify = products.find( element => {return element.id === parseInt(req.params.id)})
-    res.render('./products/modify',{product: productToModify})
+    let productToModify = products.find(element => { return element.id === parseInt(req.params.id) })
+    res.render('./products/modify', { product: productToModify })
   },
 
   /*** ACTUALIZAR DETALLE PRODUCTO ***/
@@ -98,7 +100,7 @@ const productController = {
 
   /*** DETALLE DE PRODUCTO ***/
   productDetail: (req, res) => {
-    let productToShow = products.find(product => { return product.id === parseInt(req.params.id)})
+    let productToShow = products.find(product => { return product.id === parseInt(req.params.id) })
     res.render('./products/detail', {
       product: productToShow
     })

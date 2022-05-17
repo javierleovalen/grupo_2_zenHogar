@@ -15,6 +15,17 @@ const storage = multer.diskStorage({
   }
 })
 
+const multerFileFilter = (req, file, cb) => { 
+  let ext = path.extname(file.originalname)
+  let acceptedExtensions = ['.jpg', '.png', '.jpeg']
+  if(!acceptedExtensions.includes(ext)) {
+    return cb(null,false)
+  }
+  return cb(null,true)
+}
+
+// Cargando variables de entorno de multer
+const upload = multer({ storage,fileFilter: multerFileFilter });
 
 /** CREATE PRODUCT: Validations **/
 const createProductsValidations = [
@@ -25,22 +36,15 @@ const createProductsValidations = [
   body('productDescription').notEmpty().withMessage('Por favor escriba una descripción para su producto.'),
   body('productImg').custom((value, { req }) => {
     let file = req.file;
-    let acceptedExtensions = ['.jpg', '.png', '.jpeg'] //RESOLVER LO DE LAS EXTENSIONES
 
     if (!file) {
-      throw new Error('Tienes que elegir una imagen para tu producto');
-    } else {
-      let fileExtension = path.extname(file.originalname)
-      if (!acceptedExtensions.includes(fileExtension)) {
-        throw new Error(`Las extensiones de archivos permitidas son ${acceptedExtensions.join(', ')}`)
-      }
+      throw new Error('Debes elegir un tipo de archivo valido');
     }
-    return true
+      return true
     })
 ]
 
-// Cargando variables de entorno de multer
-const upload = multer({ storage });
+
 
 // INDEX DE PRODUCTOS
 router.get('/', ProductsController.index);
@@ -48,10 +52,10 @@ router.get('/', ProductsController.index);
 // BUSCAR PRODUCTO
 router.get('/search', ProductsController.search);
 
-// CREAR PRODUCTO //
+/** CREATE PRODUCT: Sending form to view **/ 
 router.get('/create', ProductsController.createProduct);
 
-
+/** CREATE PRODUCT: Process product **/
 router.post('/create',upload.single('productImg'),createProductsValidations,ProductsController.uploadProduct);
 
 // MODIFICAR PRODUCTO //

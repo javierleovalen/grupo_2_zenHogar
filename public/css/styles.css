@@ -58,6 +58,10 @@ textarea {
 }
 
 
+.error-msg__text {
+  color: #ff0000;
+}
+
 /* ARTICLE CONTAINERS */
 .article__container {
   background-color: var(--gris-800);

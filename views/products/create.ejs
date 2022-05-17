@@ -31,12 +31,12 @@
               <div>
               <label for="productCategory" class="form__label" placeholder="Seleccione una categoria">Categoria:</label>
               <select name="productCategory" id="productCategory" class="form__input">
-                <option value="" disabled selected hidden>Seleccione una categoria</option>
-                <option value="sillon">Sillon individual</option>
-                <option value="sofa-L">Sofa L</option>
-                <option value="iluminacion">Iluminación</option>
-                <option value="sillas">Sillas</option>
-                <option value="deco">Deco</option>
+                <option value="">Seleccione una categoria</option>
+                <% for (category in categories) { %>
+                  <option value ="<%= category%>"
+                    <%= locals.oldData && (category === oldData.productCategory) ? 'selected' : null %> 
+                    ><%=categories[category]%></option>
+                <% } %>
               </select>
             </div>
               <!-- Medidas del producto -->
