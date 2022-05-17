@@ -26,3 +26,6 @@ Fernando: Estuve trabajando en la implementación de la barra de busqueda y agre
 ## 16/02/2022:
 Javier:  
 Fernando: Clase en vivo, estuvimos viendo algo de las validaciones con express
+## 17/02/2022:
+Javier:  
+Fernando: Terminada validación del formulario de "crear productos", se añadio también backgrounds a las secciones.
