@@ -10,11 +10,22 @@
             <h3>Formulario: Creación de producto</h3>
             <p>Las caracteristicas ingresadas pueden ser modificadas en cualquier momento</p>
             </div>
+            <!-- ERRORS -->
+            <% if (locals.errors) { %>
+            <div class="errors__container">
+              <ul>
+                <% for (let error in errors) {%>
+                  <li class="error-msg__text"><%= errors[error].msg%></li>
+                <% } %>
+              </ul>
+            </div>
+            <% } %>
+            <!-- ERRORS END -->
             <form action="/products/create" method="POST" enctype="multipart/form-data" class="create__product-form">
               <!-- Nombre del producto -->
               <div>
               <label for="productName" class="form__label">Nombre del producto:</label>
-              <input type="text" name="productName" placeholder="Complete este campo" class ="form__input" required><br>
+              <input type="text" name="productName" placeholder="Complete este campo" class ="form__input" value="<%= locals.oldData? oldData.productName : null%>"><br>
             </div>
             <!-- Categoria del producto -->
               <div>
@@ -31,23 +42,23 @@
               <!-- Medidas del producto -->
                 <div>
               <label for="productSize" class="form__label">Medidas del producto:</label>
-              <input type="text" name="productSize" placeholder="120 x 90 x 50" class ="form__input"><br>
+              <input type="text" name="productSize" placeholder="120 x 90 x 50" class ="form__input" value="<%= locals.oldData? oldData.productSize : null%>"><br>
             </div>
             
               <!-- Img del producto -->
               <div>
               <label for="productImg" class="form__label">Elige una imagen:</label>
-              <input type="file" name="productImg" id="productImg" class ="form__input" accept="image/*"><br>
+              <input type="file" name="productImg" id="productImg" class ="form__input" accept="image/*" value="<%= locals.oldData? oldData.productImg : null%>"><br>
             </div>
               <!-- Precio del producto -->
               <div>
               <label for="productPrice" class="form__label">Precio:</label>
-              <input type="text" name="productPrice" id="productPrice" class ="form__input" placeholder="$"><br>
+              <input type="text" name="productPrice" id="productPrice" class ="form__input" placeholder="$" value="<%= locals.oldData? oldData.productPrice: null%>"><br>
             </div>
               <!-- Descripción del producto -->
               <div>
               <label for="productDescription" class="form__label">Escriba una descripción del producto</label>
-              <textarea maxlength="500" type="text" name="productDescription" id="productDescription" class ="form__input" placeholder="Escriba su texto aqui. (Máximo 500 caracteres)"></textarea>
+              <textarea type="text" name="productDescription" id="productDescription" class ="form__input" placeholder="Escriba su texto aqui."><%= locals.oldData? oldData.productDescription : null%></textarea>
             </div>
 
 

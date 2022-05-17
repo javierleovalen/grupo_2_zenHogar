@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+const { validationResult } = require('express-validator')
 const productsFilePath = path.join(__dirname, '../data/products/products.json');
 const categoriesFilePath = path.join(__dirname, '../data/products/categories.json');
 // Base de datos
@@ -26,20 +26,28 @@ const productController = {
     res.render('./products/create')
   },
 
-  /*** ACTUALIZAR PRODUCTO ***/
+  /** CREATE PRODUCT: Upload product **/
   uploadProduct: (req, res) => {
-    let newProduct = {
-      id: Date.now(),
-      productName: req.body.productName,
-      productCategory: req.body.productCategory,
-      productSize: req.body.productSize,
-      productImg: req.file.filename,
-      productPrice: parseInt(req.body.productPrice),
-      productDescription: req.body.productDescription
-    }
-    products.push(newProduct)
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, '\t'));
-    res.redirect('/products')
+    let results = validationResult(req);
+    if(results.errors.length > 0) {
+        return res.render('./products/create', {
+        errors: results.mapped(),
+        oldData: req.body
+      });
+    } else {
+      let newProduct = {
+        id: Date.now(),
+        productName: req.body.productName,
+        productCategory: req.body.productCategory,
+        productSize: req.body.productSize,
+        productImg: req.file.filename,
+        productPrice: parseInt(req.body.productPrice),
+        productDescription: req.body.productDescription
+      }
+      products.push(newProduct)
+      fs.writeFileSync(productsFilePath, JSON.stringify(products, null, '\t'));
+      res.redirect('/products')
+    } 
   },
 
   /*** BARRA BUSQUEDA ***/
