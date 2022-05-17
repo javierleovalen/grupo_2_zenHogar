@@ -560,6 +560,12 @@ textarea {
   font-weight: bold;
 }
 
+.register__sucess-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .register__success {
   padding: 10%;
   color: var(--gris-400);

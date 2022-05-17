@@ -32,9 +32,6 @@ app.set('view engine', 'ejs');
 
 // ROUTER PRINCIPAL //
 
-app.use(mainRouter);
-app.use(userRouter);
-app.use(productsRouter);
-
+app.use(mainRouter); 
 
 

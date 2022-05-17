@@ -1,6 +1,21 @@
 const express = require ('express');
 const router = express.Router();
 const UsersController = require('../controllers/UsersController')
+const registerValidator = require('../middlewares/users/registerValidation')
+
+
+// VALIDACIONES
+const {check, body} = require('express-validator');
+
+const validations = [
+  check('firstName').notEmpty().withMessage('Por favor completa este campo'),
+  check('lastName').notEmpty().withMessage('Por favor completa este campo'),
+  check('email').toLowerCase().isEmail().normalizeEmail().withMessage('El email ingresado no es valido'),
+  check('password').isLength({min:8, max:16})
+]
+
+
+
 
 // HTTP: GET
 router.get('/login', UsersController.login)

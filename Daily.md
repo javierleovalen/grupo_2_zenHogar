@@ -23,3 +23,6 @@ Fernando: En el dia de hoy estuve trabajando en terminar la funcionalidad de cre
 Javier:  Intentando hacer que grabe las modificaciones en el json /agrando rutas al carrito de  compras
 Fernando: Estuve trabajando en la implementación de la barra de busqueda y agregando contenido dinamicamente en las diferentes vistas
 ***
+## 16/02/2022:
+Javier:  
+Fernando: Clase en vivo, estuvimos viendo algo de las validaciones con express

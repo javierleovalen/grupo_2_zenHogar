@@ -11,4 +11,6 @@ router.get('/', MainController.home);
 router.use('/products',productsRouter)
 router.use('/users', usersRouter)
 
+// 404 si la ruta no existe
+
 module.exports = router;

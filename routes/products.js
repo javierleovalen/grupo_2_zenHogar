@@ -18,14 +18,14 @@ const storage = multer.diskStorage({
 const upload = multer({storage});
 
 // INDEX DE PRODUCTOS
-router.get('/', ProductsController.index)
+router.get('/', ProductsController.index);
 
 // BUSCAR PRODUCTO
-router.get('/search', ProductsController.search)
+router.get('/search', ProductsController.search);
 
 // CREAR PRODUCTO //
 router.get('/create', ProductsController.createProduct);
-router.post('/create',upload.single('productImg'), ProductsController.uploadProduct)
+router.post('/create',upload.single('productImg'), ProductsController.uploadProduct);
 
 // MODIFICAR PRODUCTO //
 router.get('/modify/:id', ProductsController.modifyproduct);
