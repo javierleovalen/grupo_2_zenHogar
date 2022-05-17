@@ -22,13 +22,13 @@
         <% }%>
       </section>
       <% if (search) { %>
-        <h3 class="products-area__text">Resultados de la búsqueda para: <span><%= userSearch %></span></h3>
+        <h3 class="products-area__text article__container">Resultados de la búsqueda para: <span><%= userSearch %></span></h3>
       <% }else { %>
-        <h3 class="products-area__text">Tal vez te interesen estos productos:</h3>
+        <h3 class="products-area__text article__container">Tal vez te interesen estos productos:</h3>
       <% } %>
       <section class="products__list">
         <% if (products.length === 0) { %>
-          <h3 class="search__not-found">No se encontraron resultados para: <span><%= userSearch %></span></h3>
+          <h3 class="search__not-found article__container">No se encontraron resultados para: <span><%= userSearch %></span></h3>
         <% }else { %>
         <% products.forEach(product => { %>
         <div class="product__card">

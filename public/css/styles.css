@@ -16,6 +16,12 @@ textarea {
   --gris-400: #A7AFB2;
   --gris-600: #555F61;
   --gris-800: #131516;
+
+  --gris-200-a: rgba(242, 243, 244,0.5);
+  --gris-400-a: rgba(167, 175, 178,0.8);
+  --gris-600-a: rgba(85, 96, 98,0.5);
+  --gris-800-a: rgba(19, 21, 22,0.5);
+
   --green-600: #40826D;
   --green-800: #4F7942;
 }
@@ -46,7 +52,7 @@ textarea {
 .section__container {
   background-color: var(--gris-600);
   min-height: 70vh;
-  padding: 1em;
+  padding: 3em 1em;
   /* display: flex; */
   /* justify-content: center; */
 }
@@ -64,7 +70,7 @@ textarea {
 
 /* ARTICLE CONTAINERS */
 .article__container {
-  background-color: var(--gris-800);
+  background-color: var(--gris-800-a);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,6 +79,7 @@ textarea {
   border: 1px solid var(--gris-200);
   box-shadow: 0 0 10px var(--gris-800);
   max-width: 1200px;
+  border-radius: 6px;
 }
 
 /* FORM INPUTS STYLES */
@@ -107,8 +114,10 @@ textarea {
 .welcome__container {
   display: flex;
   justify-content: center;
-
+  background: url('/img/backgrounds/background_9.jpg') no-repeat center center /cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
 }
+
 
 .welcome__article {
   background: url('/img/sillon1.jpg') no-repeat center center /cover;
@@ -164,6 +173,8 @@ textarea {
   display: flex;
   min-height: unset;
   justify-content: center;
+  background: url('/img/backgrounds/background_10.jpg') no-repeat center center /cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
 
 }
 
@@ -192,7 +203,7 @@ textarea {
 }
 
 .product__card {
-  background-color: var(--gris-400);
+  background-color: var(--gris-400-a);
   box-shadow: 0 0 10px var(--gris-400);
   border: 1px solid var(--gris-200);
   padding: 1em;
@@ -286,6 +297,9 @@ textarea {
   justify-content: unset;
   align-items: center;
   gap: 1em;
+  background: url('/img/backgrounds/background_6.jpg') no-repeat center center /cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+
 }
 
 .search-bar__container {
@@ -319,8 +333,7 @@ textarea {
 }
 
 .search__not-found {
-  border-bottom: none;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 1.3em;
   color: rgb(96,0,0);
 }
@@ -386,10 +399,12 @@ textarea {
   padding: 1em;
   margin-bottom: 1em;
   font-weight: 300;
+  color: var(--gris-200);
 }
 
 .products-area__text>span {
-  color: var(--gris-400);
+  color: var(--gris-200);
+  font-weight: bolder;
 }
 
 
@@ -483,6 +498,8 @@ textarea {
   display: flex;
   justify-content: center;
   align-items:center;
+  background: url('/img/backgrounds/background_7.jpg') no-repeat center center /cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
 }
 .modify__product-img__container {
   display: flex;
@@ -506,6 +523,8 @@ textarea {
   align-items: center;
   display: flex;
   justify-content: center;
+  background: url('/img/backgrounds/background_5.jpg') no-repeat center center /cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
 }
 
 .login__container {
@@ -522,6 +541,9 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url('/img/backgrounds/background_4.jpg') no-repeat center center /cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+  
 }
 
 .register__text-title {
@@ -560,7 +582,7 @@ textarea {
 }
 
 .register__utility-links a {
-  color: var(--gris-600);
+  color: var(--gris-200);
   font-weight: bold;
 }
 
@@ -568,6 +590,8 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url('/img/backgrounds/background_4.jpg') no-repeat center center /cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
 }
 
 .register__success {
@@ -598,6 +622,8 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url('/img/backgrounds/background_7.jpg') no-repeat center center /cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
 }
 .product__article{
   padding: 2em;
