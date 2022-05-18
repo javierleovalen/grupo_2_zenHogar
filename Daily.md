@@ -29,3 +29,6 @@ Fernando: Clase en vivo, estuvimos viendo algo de las validaciones con express
 ## 17/02/2022:
 Javier:  
 Fernando: Terminada validación del formulario de "crear productos", se añadio también backgrounds a las secciones.
+## 18/02/2022:
+Javier:  
+Fernando: Casi nada de trabajo en el proyecto integrador, repasando para la clase en vivo.

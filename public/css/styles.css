@@ -173,6 +173,9 @@ textarea {
   min-height: unset;
   justify-content: center;
   background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),url('/img/backgrounds/background_10.jpg') no-repeat center center /cover;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
 
 }
 
@@ -192,12 +195,13 @@ textarea {
   max-width: unset;
   text-align: center;
   color: var(--gris-200);
-
+  display: block;
+  width: 100%;
 }
 
 .offers__title h2 {
   font-weight: 300;
-  max-width: 1200px;
+  text-align: center;
 }
 
 .product__card {
@@ -295,7 +299,7 @@ textarea {
   justify-content: unset;
   align-items: center;
   gap: 1em;
-  background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),url('/img/backgrounds/background_6.jpg') no-repeat center center /cover;
+  background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),url('/img/backgrounds/background_8.jpg') no-repeat center center /cover;
 
 
 }
@@ -333,7 +337,7 @@ textarea {
 .search__not-found {
   font-weight: 600;
   font-size: 1.3em;
-  color: rgb(96,0,0);
+  color: rgb(196,0,0);
 }
 .search__not-found > span {
   font-weight: 600;
@@ -382,9 +386,12 @@ textarea {
 
 .products__list {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 1em;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: stretch;
+
 }
 
 .products-area__text {
