@@ -24,11 +24,14 @@ Javier:  Intentando hacer que grabe las modificaciones en el json /agrando rutas
 Fernando: Estuve trabajando en la implementación de la barra de busqueda y agregando contenido dinamicamente en las diferentes vistas
 ***
 ## 16/02/2022:
-Javier:  
+Javier: No trabaje el proyecto
 Fernando: Clase en vivo, estuvimos viendo algo de las validaciones con express
 ## 17/02/2022:
 Javier:  
 Fernando: Terminada validación del formulario de "crear productos", se añadio también backgrounds a las secciones.
 ## 18/02/2022:
-Javier:  
+Javier: No trabaje el proyecto
 Fernando: Casi nada de trabajo en el proyecto integrador, repasando para la clase en vivo.
+## 19/02/2022:
+Javier: Trabaje en el carrito de compras, hice de nuevo la estructura para que sea responsive
+Fernando:

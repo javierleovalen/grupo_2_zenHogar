@@ -69,8 +69,19 @@ const productController = {
 
   /*** CARRITO DE COMPRAS ***/
   cart: (req, res) => {
+    let cartItem = [{
+        "id": 1652576870441,
+        "productName": "SILLON L",
+        "productSize": "1.6m x 0.8m x 0.7m",
+        "productImg": "1652576870437-img.jpg",
+        "productPrice": 38500,
+        "productDescription": "Estructura madera saligna encolada "
+      }]
+      
+
     res.render('products/cart', {
-      products: products
+      products: products,
+      cartItem:cartItem
     });
   },
 
