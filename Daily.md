@@ -35,3 +35,6 @@ Fernando: Casi nada de trabajo en el proyecto integrador, repasando para la clas
 ## 19/02/2022:
 Javier: Trabaje en el carrito de compras, hice de nuevo la estructura para que sea responsive
 Fernando:
+## 20/02/2022:
+Javier: Iniciando logica para el carrito de compras
+Fernando:

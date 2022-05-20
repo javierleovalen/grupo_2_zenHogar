@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head', {title: products.productName, styles:['normalize','styles','partials/footer','partials/header_test', 'cart']}) %>
+    <%- include('../partials/head', {title: products.productName,
+        styles:['normalize','styles','partials/footer','partials/header_test', 'cart' ]}) %>
 </head>
 
 <body>
@@ -12,7 +13,7 @@
 
 
     <main>
-        <!-- Contenedor info superior y botones -->
+
         <section class="title-container">
 
 
@@ -38,142 +39,89 @@
 
         </section>
 
-        <!-- contenedor principal productos -->
         <section class="main-container">
 
-            <section class="Items">
+
+            <section class="main-container__item-list">
+                <% cartItem.forEach(element=> { %>
+
+                    <!--Imagen producto-->
+                    <article class="main-container__item-list__img">
+                        <img src="/img/uploads/products/<%= element.productImg %>" alt="">
+                    </article>
 
 
-                <!-- Vista dinamica -->
-                <% products.forEach(element=> { %>
+                    <!--Detalles del producto-->
+                    <section class="main-container__item-list__details">
 
-
-                    <!--CONTENEDOR PRICIPAL MOSTRAR CARRITO-->
-                    <section class="cart-show">
-
-
-                        <!--Imagen producto-->
-                        <article class="cart-show__img">
-                            <img src="/img/uploads/products/<%= element.productImg %>" alt="<%= element.name %>">
+                        <!-- Nombre del producto -->
+                        <article class="item-description">
+                            <h3>
+                                <%= element.productName %>
+                            </h3>
                         </article>
 
 
-
-                        <!--Detalles del producto-->
-                        <section class="cart-show__detail">
-
-                            <!-- Nombre del producto -->
-                            <article class="description-product">
-                                <h3>
-                                    <%= element.productName %>
-                                </h3>
-                            </article>
+                        <!-- informacion de envio -->
+                        <article class="shipping-text">
+                            <h4>
+                                Informacion envio
+                            </h4>
+                        </article>
 
 
-                            <!-- informacion de envio -->
-                            <article class="shipping-text">
-                                <h4>
-                                    Informacion envio
-                                </h4>
-                            </article>
+                        <!-- boton de cantidad -->
+                        <article class="qty-button">
+                            <button class="decrement"> - </button>
+                            <input type="number" min="0" max="100" step="5" value="1" id="my-input" readonly>
+                            <button class="increment"> + </button>
+                        </article>
 
 
-                            <!-- boton de cantidad -->
-                            <article class="qty-button">
-                                <button class="decrement"> - </button>
-                                <input type="number" min="0" max="100" step="5" value="1" id="my-input" readonly>
-                                <button class="increment"> + </button>
-                            </article>
+                        <!-- Link para editar -->
+                        <article class="edit-details">
+                            <a href="#">Editar</a>
+                        </article>
+
+                    </section>
 
 
-                            <!-- Link para editar -->
-                            <article class="edit-details">
-                                <a href="#">Editar</a>
-                            </article>
+                    <!--Contenedor boton de borrar y precio-->
+                    <section class="main-container__item-list__eraseAndPrice">
 
-                        </section>
-
-
-                        <!--Contenedor boton de borrar y precio-->
-                        <section class="cart-show__eraseAndPrice">
-
-                            <!-- boton borrar producto -->
-                            <article class="erase-button">
-                                <button><i class="fa-solid fa-trash-can"></i></button>
-                            </article>
+                        <!-- boton borrar producto -->
+                        <article class="erase-button">
+                            <button><i class="fa-solid fa-trash-can"></i></button>
+                        </article>
 
 
-                            <!-- precio del producto -->
-                            <article class="price-product">
-                                <p>$<%= element.productPrice %>
-                                </p>
-                            </article>
-
-                        </section>
-
+                        <!-- precio del producto -->
+                        <article class="price">
+                            <p>$<%= element.productPrice%></p>
+                        </article>
 
                     </section>
 
 
 
-            </section>
 
+
+
+            </section>
             <% }); %>
 
 
-            <section class="payment-container">
-                <!--Contenedor detalle total de compra-->
-                <section class="payment-show">
-    
-    
-                    <!--SUBTOTAL-->
-                    <section class="payment-details">
-                        <article class="payment-details__text">Subtotal</article>
-                        <article class="payment-details__amount">$6000</article>
-                    </section>
-    
-    
-                    <!--Costo de envio-->
-                    <section class="Shipping-details">
-                        <article class="Shipping-details__text">Envio</article>
-                        <article class="Shipping-details__amount">GRATIS</article>
-                    </section>
-    
-    
-                    <!--TOTAL A PAGAR-->
-                    <section class="payment-total">
-                        <article class="payment-total__text">TOTAL</article>
-                        <article class="payment-total__amount">$6000</article>
-                    </section>
-    
-    
-                    <!--boton finalizar compra-->
-                    <section class="checkout">
-                        <article class="checkout__text">
-                            <h3>FINALIZAR COMPRA</h3>
-                        </article>
-                    </section>
-    
+
+                <section class="main-container__payment-detail">
+
+                    <p>TOTAL</p>
+
                 </section>
-    
-            </section>
-
-
 
 
         </section>
 
-        
-    
-
-
-
     </main>
-
-
-
-
-
 
 
     <footer>
