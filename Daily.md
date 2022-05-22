@@ -38,3 +38,9 @@ Fernando:
 ## 20/02/2022:
 Javier: Iniciando logica para el carrito de compras
 Fernando:
+## 21/02/2022:
+Javier: No trabaje en el proyecto
+Fernando:
+## 20/02/2022:
+Javier: Continuando en la elaboracion de la logica del carrito de compras, mirando videos turoriales, mi conclusion, el carrito es 90% JS y 10% flexbox
+Fernando:
