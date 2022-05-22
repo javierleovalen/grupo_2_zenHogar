@@ -71,6 +71,7 @@ const productController = {
   cart: (req, res) => {
    
     res.render('products/cart', {
+      products: products
      
     });
   },
