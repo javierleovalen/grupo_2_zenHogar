@@ -666,3 +666,83 @@ textarea {
 }
 
 /* CART VIEW */
+
+/* ADMIN DASHBOARD */
+.admin__section {
+  display: flex;
+  justify-content: center;
+}
+.admin__menu {
+  text-align: center;
+  gap: 1em;
+  justify-content: flex-start;
+}
+
+.admin__search > h2 {
+  color: var(--gris-400);
+  margin-bottom: 0.7em;
+}
+
+.admin__search-input {
+  width: 80%;
+}
+
+.admin__shortcuts li {
+  list-style: none;
+}
+.admin__shortcuts a {
+  text-decoration: none;
+}
+
+.admin__shortcuts ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* Product dashboard */
+.admin__list-section {
+  display: flex;
+  justify-content: center;
+}
+.admin__list-article {
+  display: block;
+  width: 100%;
+}
+
+.admin__list-article > form {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.admin-product__list {
+  margin-top: 1em;
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.admin__list-article > h2 {
+  text-align: center;
+  color: var(--gris-400);
+  margin-bottom: 1em;
+}
+
+.card__btn-red {
+  background-color: #850404;
+}
+
+.card__btn-red:hover{
+  background-color: #c00505;
+}
+
+.product__card > a {
+text-align: center;
+text-decoration: none;
+}
+
