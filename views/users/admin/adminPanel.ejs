@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../../partials/head', {title:'Panel de administrador', styles:['normalize','styles','partials/footer','partials/header_test']}) %>
+</head>
+
+<body>
+    <%- include('../../partials/header_test') %>
+    <main>
+     <section class="section__container admin__section">
+       <article class="article__container admin__menu">
+         <div class="admin__search">
+           <h2>¿Buscas algun producto en particular?</h2>
+          <form action="/products/search" method="GET">
+            <input type="search" name ="keyword" placeholder="Ingresa el nombre del producto" class="search__input admin__search-input">
+            <button type="submit" class="search__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+         </div>
+         <div class="admin__shortcuts">
+           <ul>
+             <li><a href="/admin/products" class="main__btn card__btn card__btn-green">Listar productos</a></li>
+             <li><a href="/admin/users" class="main__btn card__btn card__btn-green">Listar usuarios</a></li>
+             <li><a href="/products/create" class="main__btn card__btn card__btn-green">Crear producto</a></li>
+             <li><a href="#" class="main__btn card__btn card__btn-green">Crear categoria</a></li>
+           </ul>
+         </div>
+       </article>
+     </section>
+    </main>
+    <%- include('../../partials/footer') %>
+</body>
+
+</html>

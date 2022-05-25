@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../../partials/head', {title:'Panel de administrador | Productos', styles:['normalize','styles','partials/footer','partials/header_test']}) %>
+</head>
+<body>
+  <%- include('../../partials/header_test') %>
+  <main>
+    <section class="section__container admin__list-section">
+      <article class="article__container admin__list-article">
+        <h2>Todos los usuarios</h2>
+        <form action="/products/search" method="GET">
+          <input type="search" name ="keyword" placeholder="Filtrar usuarios" class="search__input admin__search-input">
+          <button type="submit" class="search__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <div class="admin-product__list">
+          <% users.forEach(user => { %>
+            <div class="product__card">
+              <img src="/img/uploads/users/avatars/<%= user.avatar %>" alt="asd">
+              <h3>Nombre: <%= user.firstName %></h3>
+              <h3>Apellido: <%= user.lastName %></h3>
+              <p style="margin-bottom: 1em">ID: <%= user.id %></p>
+              <a href="/users/profile/<%=user.id%>"class="main__btn card__btn">Modificar</a>
+              <form action="/admin/delete/user/<%= user.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="main__btn card__btn card__btn-red">Eliminar</button>
+              </form>
+            </div>
+            <% }) %>
+        </div>
+      </article>
+    </section>
+  </main>
+  <%- include('../../partials/footer') %>
+</body>
+
+</html>

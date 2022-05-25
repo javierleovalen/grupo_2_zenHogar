@@ -1,5 +1,15 @@
 [
 	{
+		"id": 1652576870441,
+		"productName": "Sofa 2 Cuerpos Sillon Italiano",
+		"productCategory": "sofa-L",
+		"productSize": "1.6m x 0.8m x 0.7m",
+		"productImg": "1652576870437-img.jpg",
+		"productPrice": 38500,
+    "productDiscount":7,
+		"productDescription": "Estructura madera saligna encolada y encastrada\r\n\r\nPlaca espuma 26 kg alta densidad\r\n\r\nDetalles costura doble\r\n\r\nTELA PANA ,CHENILLE, Antidesgarro"
+	},
+	{
 		"id": 1,
 		"productName": "Sillon living comedor Verde",
 		"price": 85000,

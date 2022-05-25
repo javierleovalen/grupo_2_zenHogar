@@ -1,10 +1,12 @@
 [
 	{
 		"id": 1652576870441,
-		"productName": "dsadasdas",
+		"productName": "Sofa 2 Cuerpos Sillon Italiano",
+		"productCategory": "sofa-L",
 		"productSize": "1.6m x 0.8m x 0.7m",
 		"productImg": "1652576870437-img.jpg",
 		"productPrice": 38500,
+    "productDiscount":7,
 		"productDescription": "Estructura madera saligna encolada y encastrada\r\n\r\nPlaca espuma 26 kg alta densidad\r\n\r\nDetalles costura doble\r\n\r\nTELA PANA ,CHENILLE, Antidesgarro"
 	},
 	{
@@ -14,14 +16,6 @@
 		"productImg": "1652577047806-img.jpg",
 		"productPrice": 19410,
 		"productDescription": "Sillón Italiano Patas Metalicas x 2 unidades Colombraro\r\nMedidas del producto: Alto 81cm - Ancho 59cm - Profundidad 54cm\r\n\r\nColores disponibles: Negro - Blanco\r\n\r\nLas sillas vienen desarmadas. Se les tiene que incrustar las patas"
-	},
-	{
-		"id": 1652577107753,
-		"productName": "Silla De Comedor Madera Paraiso Tapi",
-		"productSize": "85cm x 45cm x 50cm",
-		"productImg": "1652577107748-img.jpg",
-		"productPrice": 56000,
-		"productDescription": "Silla De Comedor Madera Paraiso Tapi - Pampa X2 24 Cuotas\r\n-Silla con estructura de madera de paraíso\r\n-Disponible en: lustre natural (color paraíso), tabaco (tinte oscuro) o crudo (laca blanca).\r\n-Tapizadas en lino de diversos colores.\r\nEstos tres colores de patas combinados con los seis colores de lino posibilita una gran cantidad de combinaciones adaptables cómodamente a cualquier ambiente.\r\n-Tapizado desmontable y lavable, se desmontan fácilmente gracias al sistema de bulones allen y desenfundan,"
 	},
 	{
 		"id": 1652577165487,
@@ -39,23 +33,5 @@
 		"productImg": "1652577217296-img.jpg",
 		"productPrice": 46500,
 		"productDescription": "Estructura madera saligna encolada y encastrada\r\n\r\nPlaca espuma 26 kg alta densidad\r\n\r\nDetalles costura doble\r\n\r\nTELA PANA , LINO ANTIDESGARRO"
-	},
-	{
-		"id": 1652740861257,
-		"productName": "ASDSADASD",
-		"productCategory": "sillas",
-		"productSize": "120 x 60 x 90",
-		"productImg": "1652740861235-img.jpg",
-		"productPrice": 50000,
-		"productDescription": "daskhdj9asydjisahdjoasdklsahjkdhasjkdhasd\r\nasda\r\nsd\r\nasd\r\nas\r\ndas\r\ndas"
-	},
-	{
-		"id": 1652811156319,
-		"productName": "Prueba de archivo",
-		"productCategory": "sofa-l",
-		"productSize": "30 x 11 x 20",
-		"productImg": "1652811156304-img.png",
-		"productPrice": 3000,
-		"productDescription": "dasdjasgdhyasghdas\r\ndsas\r\ndas\r\nd\r\nasd\r\nas\r\ndas\r\ndasdasdjaskdjkas\r\ndasldasjkdas\r\ndaskdas\r\nasddaas"
 	}
 ]
