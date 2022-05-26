@@ -6,7 +6,7 @@
 		"productSize": "1.6m x 0.8m x 0.7m",
 		"productImg": "1652576870437-img.jpg",
 		"productPrice": 38500,
-    "productDiscount":7,
+		"productDiscount": 7,
 		"productDescription": "Estructura madera saligna encolada y encastrada\r\n\r\nPlaca espuma 26 kg alta densidad\r\n\r\nDetalles costura doble\r\n\r\nTELA PANA ,CHENILLE, Antidesgarro"
 	},
 	{
@@ -33,5 +33,14 @@
 		"productImg": "1652577217296-img.jpg",
 		"productPrice": 46500,
 		"productDescription": "Estructura madera saligna encolada y encastrada\r\n\r\nPlaca espuma 26 kg alta densidad\r\n\r\nDetalles costura doble\r\n\r\nTELA PANA , LINO ANTIDESGARRO"
+	},
+	{
+		"id": 1653523995277,
+		"productName": "Test123",
+		"productCategory": "iluminacion",
+		"productSize": "120 x 60 x 180",
+		"productImg": "1653523995274-img.jpg",
+		"productPrice": 800,
+		"productDescription": "validación 123"
 	}
 ]

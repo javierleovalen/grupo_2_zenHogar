@@ -32,7 +32,7 @@ const usersController = {
     res.send('Login exitoso')
   },
   profile: (req,res) => {
-    let currentUser= users.find(user => {
+    let currentUser = users.find(user => {
       return user.id == req.params.id
     })
     res.render('./users/profile', {user:currentUser})

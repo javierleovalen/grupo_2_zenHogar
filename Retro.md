@@ -1,18 +1,15 @@
-# Retroespectiva Sprint 2
-## Personales:
-### Retro Javier: 
-  Por mi parte del primer sprint puedo concluir que las definiciones inciciales son clave para el desarrollo del proyeccto, por otra parte buscar informacion en otras paginas es una fuente muy inportante de inspiracion.
-### Retro Mariano:
-  En el primer sprint pude entender la importancia del orden en el desarollo de las tareas, la invesitigación de los temas en multiples paginas para tener distintos puntos de vista, la comunicación entre compañeros y lo importante de asignar a una persona que sea la que lidere el proyecto. 
-### Retro Fernando:
-   Siento que en este sprint pudimos haber mantenido una comunicación mas fluida y aprender a manejar mejor nuestros tiempos. Por el lado positivo, podemos encontrar que el grupo posee una gran flexibilidad y excelente predisposición. Muy contento con el grupo!
+# Retroespectiva Sprint 4
+### Comenzar a hacer ?
+  Plantearnos que pequeñas cosas podemos realizar que realza la presentación de nuestro proyecto.
 
-## Grupal:
-### Que hicimos bien ?
-  La flexibilidad, la comunicación(pero, puede mejorar), la predisposición y el trabajo en equipo.
+### Que debemos hacer más ?
+  Organiar las tareas de forma efectiva en nuestro tablero de trabajo para que podemos facilmente consultar que tenemos terminado, que falta por hacer, que debemos modificar,etc.
 
-### Que hicimos mal ?
-  La planificación del proyecto, el tiempo invertido, la constancia en el mismo y la definición de roles dentro de el.
+### Que debemos continuar haciendo ?
+  Nos encontramos en una situacion en la cual uno de los compañeros no pudo estar 100% disponible para el proyecto, en el sprint anterior nos sucedio lo mismo pero a la inversa y a pesar de eso pudimos entregar el proyecto a tiempo manteniendo una comunicación fluida y sincera con nuestros compañeros. En momentos de falencias como grupo pudimos sobreponernos a la adversidad y entregar el sprint en tiempo y forma.
+
+### Que debemos dejar de hacer ?
+  Mala seleccion de funcionalidades a realizar, no priorizar el sprint por sobre lo que queriamos hacer.
 
 ### Que queda por mejorar ?
-  La planificación del proyecto, tiempo invertido y constancia en el mismo.
+  Planificar de manera más adecuada los sprints del proyecto, estipular mejor cuanto tiempo dedicarle a cada issue y constancia en el mismo.
