@@ -16,7 +16,7 @@
           <!-- Nombre del producto -->
           <div>
           <label for="productName" class="form__label">Nombre del producto:</label>
-          <input type="text" name="productName" placeholder="<%= product.productName %>" class ="form__input"><br>
+          <input type="text" name="productName" value="<%= product.productName %>" class ="form__input"><br>
         </div>
         <!-- Categoria del producto -->
           <div>
@@ -33,7 +33,7 @@
           <!-- Medidas del producto -->
             <div>
           <label for="productSize" class="form__label">Medidas del producto:</label>
-          <input type="text" name="productSize" placeholder="<%= product.productSize %>" class ="form__input"><br>
+          <input type="text" name="productSize" value="<%= product.productSize %>" class ="form__input"><br>
         </div>
         
           <!-- Img del producto -->
@@ -49,12 +49,12 @@
           <!-- Precio del producto -->
           <div>
           <label for="productPrice" class="form__label">Precio:</label>
-          <input type="text" name="productPrice" id="productPrice" class ="form__input" placeholder="$<%= product.productPrice %>"><br>
+          <input type="text" name="productPrice" id="productPrice" class ="form__input" value="$<%= product.productPrice %>"><br>
         </div>
           <!-- Descripción del producto -->
           <div>
           <label for="productDescription" class="form__label">Escriba una descripción del producto</label>
-          <textarea maxlength="500" type="text" name="productDescription" id="productDescription" class ="form__input" placeholder= "<%= product.productDescription %>"></textarea>
+          <textarea maxlength="500" type="text" name="productDescription" id="productDescription" class ="form__input" placeholder= "<%= product.productDescription %>" value="<%= product.productDescription %>"></textarea>
         </div>
           <div class="create__products-btn">
           <input type="submit" value="Modificar" class="main__btn card__btn-green">

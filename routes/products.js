@@ -29,11 +29,11 @@ const upload = multer({ storage,fileFilter: multerFileFilter });
 
 /** CREATE PRODUCT: Validations **/
 const createProductsValidations = [
-  body('productName').notEmpty().withMessage('Debe ingresar un nombre para el producto.'),
-  body('productCategory').notEmpty().withMessage('Debe seleccionar una categoria para el producto.'),
-  body('productSize').notEmpty().withMessage('Debe especificar las medidas del producto.'),
-  body('productPrice').notEmpty().withMessage('Debe ingresar el precio.').bail().isNumeric().withMessage('Solo se permiten números en el campo "Precio:"'),
-  body('productDescription').notEmpty().withMessage('Por favor escriba una descripción para su producto.'),
+  body('productName', 'Debes ingresar un nombre para el producto').notEmpty(),
+  body('productCategory','Debe seleccionar una categoria para el producto.').notEmpty(),
+  body('productSize','Debe especificar las medidas del producto.').notEmpty(),
+  body('productPrice','Debe ingresar el precio.').notEmpty().bail().isNumeric().withMessage('Solo se permiten números en el campo "Precio:"'),
+  body('productDescription','Por favor escriba una descripción para su producto.').notEmpty(),
   body('productImg').custom((value, { req }) => {
     let file = req.file;
 
