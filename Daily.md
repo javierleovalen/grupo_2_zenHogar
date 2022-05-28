@@ -48,5 +48,5 @@ Fernando:
 Javier: agregue las validaciones al formulario de crear usuario
 Fernando:
 ## 28/02/2022:
-Javier: trabaje en las validaciones del login para el usuario y contrasena, no he terminado
+Javier: trabaje en las validaciones del login para el usuario y contrasena, agregue la encriptacion de contrasena en el formulario de creacion de usaurio
 Fernando:
