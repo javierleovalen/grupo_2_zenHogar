@@ -30,6 +30,16 @@ const validations = [
       throw new Error('la contrasena no coincide');
     }
     return true;
+  }),
+  body('avatar').custom((value, { req }) => {
+    let file = req.file
+    let acceptedExtentions = ['.jpg','.png','.gif'];
+    let fileExtentions = path.extname(file.originalname);
+
+    if (!acceptedExtentions.includes(fileExtentions) ) {
+      throw new Error(`las extensiones de archivo permitas son: ${acceptedExtentions.join(', ')}`);
+    }
+    return true;
   })
 
 ]
