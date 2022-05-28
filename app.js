@@ -14,7 +14,11 @@ app.use(express.urlencoded({extended:false}));
 app.use(express.json())
 
 //middleware Session
-app.use(session({secret: 'Secreto!!'}))
+app.use(session({
+secret: 'Secreto!!',
+resave: false,
+saveUninitialized: false
+}));
 
   
 // asignando la ruta para archivos publicos //
