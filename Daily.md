@@ -44,3 +44,6 @@ Fernando:
 ## 20/02/2022:
 Javier: Continuando en la elaboracion de la logica del carrito de compras, mirando videos turoriales, mi conclusion, el carrito es 90% JS y 10% flexbox
 Fernando:
+## 27/02/2022:
+Javier: agregue las validaciones al formulario de crear usuario
+Fernando:

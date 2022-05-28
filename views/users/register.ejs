@@ -14,7 +14,18 @@
           <h3>Crear cuenta</h3>
           <p>Accede a promociones y descuentos exclusivos por estar registrado.</p>
           </div>
-          <form action="/users/register" method="POST">
+           <!-- ERRORS -->
+           <% if (locals.errors) { %>
+            <div class="errors__container">
+              <ul>
+                <% for (let error in errors) {%>
+                  <li class="error-msg__text"><%= errors[error].msg%></li>
+                <% } %>
+              </ul>
+            </div>
+            <% } %>
+            <!-- ERRORS END -->
+          <form action="/users/register" method="POST" enctype="multipart/form-data">
             <label for="firstName" class="form__label">Nombre: *</label><br>
             <input type="text" name="firstName" placeholder="Ingrese su nombre" class ="form__input" required><br>
             <label for="lastName" class="form__label">Apellido: *</label><br>
@@ -26,6 +37,10 @@
             <!-- Pendiente boton para mostrar contraseña -->
             <label for="confirmPassword" class="form__label">Confirmar contraseña: *</label><br>
             <input type="password" name="confirmPassword" placeholder="Ingrese su contraseña" class ="form__input" required><br>
+
+            <label for="images" class="form__label">Foto de Perfil *</label><br>
+            <input type="file" name="avatar" class="form__input" accept=".jpg" multiple>
+
             <p class="register__help-text">Los campos que contengan ( * ) son obligatorios.</p><br>
             <input type="submit" value="Crear cuenta" class="main__btn card__btn-green"><br>
           </form>
