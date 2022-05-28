@@ -4,6 +4,7 @@ const app = express();
 const expressPort = 3030
 const mainRouter = require('./routes/index');
 const methodOverride = require('method-override');
+const session = require ('express-session');
 
 // Argumento para usar put y delete //
 app.use(methodOverride('_method'));
@@ -11,6 +12,9 @@ app.use(methodOverride('_method'));
 // Argumento para usar post
 app.use(express.urlencoded({extended:false}));
 app.use(express.json())
+
+//middleware Session
+app.use(session({secret: 'Secreto!!'}))
 
   
 // asignando la ruta para archivos publicos //

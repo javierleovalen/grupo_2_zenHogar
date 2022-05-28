@@ -13,7 +13,18 @@
           <h3>Iniciar sesión</h3>
           <p>Bievenid@ nuevamente.</p>
           </div>
-          <form action="/users/register" method="POST">
+           <!-- ERRORS -->
+           <% if (locals.errors) { %>
+            <div class="errors__container">
+              <ul>
+                <% for (let error in errors) {%>
+                  <li class="error-msg__text"><%= errors[error].msg%></li>
+                <% } %>
+              </ul>
+            </div>
+            <% } %>
+            <!-- ERRORS END -->
+          <form action="/users/login" method="POST">
             <label for="email" class="form__label">Correo electronico:</label><br>
             <input type="email" name="email" placeholder="Ingrese su correo electronico" class ="form__input" required><br>
             <label for="password" class="form__label">Contraseña:</label><br>

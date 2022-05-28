@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage })
 
 // VALIDACIONES
-const { body } = require('express-validator');
+const { body, check } = require('express-validator');
 
 const validations = [
   body('firstName','Por favor completa este campo').notEmpty(),
@@ -44,6 +44,11 @@ const validations = [
 
 ]
 
+const loginValidation =[
+  check('email','El email ingresado no es invalido').toLowerCase().isEmail().normalizeEmail(),  // validar mail no registrado
+  check('password', 'contrasena invalida').isLength({min:2, max:16}), //cambiar minimo de contrasena
+]
+
 
 
 
@@ -55,7 +60,7 @@ router.get('/register/success', UsersController.registerSuccessful)
 
 //HTTP: POST
 router.post('/register', upload.single('avatar'), validations, UsersController.create)
-router.post('/login', UsersController.loginValidation)
+router.post('/login', loginValidation, UsersController.loginValidation)
 
 //HTTP: PUT
 router.put('/profile/:id', upload.single('avatar'), UsersController.profileUpdate)

@@ -47,3 +47,6 @@ Fernando:
 ## 27/02/2022:
 Javier: agregue las validaciones al formulario de crear usuario
 Fernando:
+## 28/02/2022:
+Javier: trabaje en las validaciones del login para el usuario y contrasena, no he terminado
+Fernando:
