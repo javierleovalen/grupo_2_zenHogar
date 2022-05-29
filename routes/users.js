@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const UsersController = require('../controllers/UsersController')
+const UsersController = require('../controllers/UsersController');
 const multer = require('multer')
 const path = require('path')
+const loginValidation = require('../middlewares/loginValidations');
+const validations = require ('../middlewares/registerValidations')
 
 // Configuración de multer
 const storage = multer.diskStorage({
@@ -17,38 +19,19 @@ const storage = multer.diskStorage({
 // Cargando variables de entorno de multer
 const upload = multer({ storage })
 
+const multerFileFilter = (req, file, cb) => { 
+  let ext = path.extname(file.originalname)
+  let acceptedExtensions = ['.jpg', '.png', '.jpeg']
+  if(!acceptedExtensions.includes(ext)) {
+    return cb(null,false)
+  }
+  return cb(null,true)
+}
+
+
+
 // VALIDACIONES
-const { body, check } = require('express-validator');
-
-const validations = [
-  body('firstName','Por favor completa este campo').notEmpty(),
-  body('lastName','Por favor completa este campo').notEmpty(),
-  body('email','El email ingresado no es invalido').toLowerCase().isEmail().normalizeEmail(),  // validar mail no registrado
-  body('password', 'contrasena invalida').isLength({min:2, max:16}), //cambiar minimo de contrasena
-  body('confirmPassword').custom((value, { req }) => {
-    if (value !== req.body.password) {
-      throw new Error('la contrasena no coincide');
-    }
-    return true;
-  }),
-  body('avatar').custom((value, { req }) => {
-    let file = req.file
-    let acceptedExtentions = ['.jpg','.png','.gif'];
-    let fileExtentions = path.extname(file.originalname);
-
-    if (!acceptedExtentions.includes(fileExtentions) ) {
-      throw new Error(`las extensiones de archivo permitas son: ${acceptedExtentions.join(', ')}`);
-    }
-    return true;
-  })
-
-]
-
-const loginValidation =[
-  check('email','El email ingresado no es invalido').toLowerCase().isEmail().normalizeEmail(),  // validar mail no registrado
-  check('password', 'contrasena invalida').isLength({min:2, max:16}), //cambiar minimo de contrasena
-]
-
+const { required } = require('nodemon/lib/config');  //Preguntar para que sirve esta linea (J)
 
 
 

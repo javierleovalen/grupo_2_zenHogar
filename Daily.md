@@ -51,5 +51,5 @@ Fernando:
 Javier: trabaje en las validaciones del login para el usuario y contrasena, agregue la encriptacion de contrasena en el formulario de creacion de usaurio
 Fernando:
 ## 29/02/2022:
-Javier: agregue el check de recordame, sigo trabajando en la logica de la session
+Javier: agregue el check de recordame, sigo trabajando en la logica de la session, agregue carpera middleware para hacer mas ordenada las validaciones, tengo que arreglar la validacion de archivos permitidos en formulario de registro, no se crea el usario pero si se esta subiendo el archivo, debo usar multerfilter
 Fernando:
