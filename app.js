@@ -5,6 +5,8 @@ const expressPort = 3030
 const mainRouter = require('./routes/index');
 const methodOverride = require('method-override');
 const session = require ('express-session');
+const cookieParser = require('cookie-parser')
+
 
 // Argumento para usar put y delete //
 app.use(methodOverride('_method'));
@@ -19,6 +21,7 @@ secret: 'Secreto!!',
 resave: false,
 saveUninitialized: false
 }));
+app.use(cookieParser())
 
   
 // asignando la ruta para archivos publicos //
