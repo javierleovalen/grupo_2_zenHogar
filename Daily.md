@@ -50,3 +50,6 @@ Fernando:
 ## 28/02/2022:
 Javier: trabaje en las validaciones del login para el usuario y contrasena, agregue la encriptacion de contrasena en el formulario de creacion de usaurio
 Fernando:
+## 29/02/2022:
+Javier: agregue el check de recordame, sigo trabajando en la logica de la session
+Fernando:
