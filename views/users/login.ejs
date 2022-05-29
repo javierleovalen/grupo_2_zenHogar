@@ -14,10 +14,10 @@
           <p>Bievenid@ nuevamente.</p>
           </div>
            <!-- ERRORS -->
-           <% if (locals.errors) { %>
+           <% if (typeof errors != 'undefined') { %>
             <div class="errors__container">
               <ul>
-                <% for (let error in errors) {%>
+                <% for (let i=0; i<errors.length; i++) {%>
                   <li class="error-msg__text"><%= errors[error].msg%></li>
                 <% } %>
               </ul>

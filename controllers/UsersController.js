@@ -8,12 +8,17 @@ let usersFilePath = path.join(__dirname, '../data/users/users.json')
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
+  //########### LOGIN ##########
   login: (req, res) => {
     res.render('./users/login')
   },
+
+  //########### REGISTRAR USAURIO ###########
   register: (req, res) => {
     res.render('./users/register')
   },
+
+  //############# CREAR USUARIO ############
   create: (req, res) => {
     const resultValidation = validationResult(req)
     if (resultValidation.errors.length > 0) {
@@ -37,49 +42,95 @@ const usersController = {
     res.redirect('/users/register/success')
 
   },
+
+  //############# REGISTRO EXITOSO ##############
   registerSuccessful: (req, res) => {
     res.render('./users/register_success')
   },
 
+  //############# LOGIN EXITOSO ################
   loginValidation: (req, res) => {
+    let errors = validationResult(req);
 
-    for (let i = 0; i < users.length; i++) {
+    if (errors.isEmpty()) {
 
-      if (req.body.email === users[i].email && bcrypt.compareSync(req.body.password, users[i].password)) {
+      for (let i = 0; i < users.length; i++) {
 
-        return res.render('./users/login_success');
+        if (req.body.email === users[i].email && bcrypt.compareSync(req.body.password, users[i].password)) {
+          let userToLogin = users[i]
+
+          return res.render('./users/login_success', { userToLogin: userToLogin });
+        }
+
       }
+
     }
 
+    // req.session.userToLogin = userToLogin;
 
-    res.send ('error')
+    // console.log(req.session.userToLogin);
+    // if (userToLogin == undefined) {
+    //   res.send('no existe')
+
+    // return res.render('./users/login', { errors: errors.errors })
+
+    // }
+
+    //   req.session.userToLogin = userToLogin;
 
 
+    //   else {
 
+    // //   return res.render('./users/login', { errors: errors.errors })
 
+    //   }
 
-},
+  },
 
-
+  //########## PERFIL DE USUARIO ################
   profile: (req, res) => {
     let currentUser = users.find(user => {
-    return user.id == req.params.id
-  })
-res.render('./users/profile', { user: currentUser })
+      return user.id == req.params.id
+    })
+    res.render('./users/profile', { user: currentUser })
   },
-profileUpdate: (req, res) => {
-  let user = users.findIndex((element => {
-    return element.id === parseInt(req.params.id)
-  }))
 
-  users[user].firstName = req.body.firstName
-  users[user].lastName = req.body.lastName
-  users[user].email = req.body.email
-  users[user].passwrod = req.body.password
-  users[user].avatar = req.file.filename ? req.file.filename : 'default.png';
-  fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
-  res.redirect('/users/profile/' + req.params.id)
-}
+  //############ ACTUALIZAR PERFIL USUARIO ##############
+  profileUpdate: (req, res) => {
+    let user = users.findIndex((element => {
+      return element.id === parseInt(req.params.id)
+    }))
+
+    users[user].firstName = req.body.firstName
+    users[user].lastName = req.body.lastName
+    users[user].email = req.body.email
+    users[user].passwrod = req.body.password
+    users[user].avatar = req.file.filename ? req.file.filename : 'default.png';
+    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
+    res.redirect('/users/profile/' + req.params.id)
+  },
+
+  testSession: (req, res) => {
+    if (req.session.numeroVisitas == undefined) {
+      req.session.numeroVisitas = 0;
+    }
+
+    req.session.numeroVisitas++
+
+    res.send('session tiene el numero: ' + req.session.numeroVisitas)
+
+  },
+
+  testSession2: (req, res) => {
+    if (req.session.numeroVisitas == undefined) {
+      req.session.numeroVisitas = 0;
+    }
+
+    req.session.numeroVisitas++
+
+    res.send('session tiene el numero: ' + req.session.numeroVisitas)
+
+  }
 
 }
 

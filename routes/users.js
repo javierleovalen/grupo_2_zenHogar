@@ -19,15 +19,6 @@ const storage = multer.diskStorage({
 // Cargando variables de entorno de multer
 const upload = multer({ storage })
 
-const multerFileFilter = (req, file, cb) => { 
-  let ext = path.extname(file.originalname)
-  let acceptedExtensions = ['.jpg', '.png', '.jpeg']
-  if(!acceptedExtensions.includes(ext)) {
-    return cb(null,false)
-  }
-  return cb(null,true)
-}
-
 
 
 // VALIDACIONES
@@ -41,12 +32,19 @@ router.get('/profile/:id', UsersController.profile)
 router.get('/register', UsersController.register)
 router.get('/register/success', UsersController.registerSuccessful)
 
+// Test session
+router.get('/pruebaSession',UsersController.testSession)
+router.get('/MostrarNumero',UsersController.testSession2)
+
+
 //HTTP: POST
 router.post('/register', upload.single('avatar'), validations, UsersController.create)
 router.post('/login', loginValidation, UsersController.loginValidation)
 
 //HTTP: PUT
 router.put('/profile/:id', upload.single('avatar'), UsersController.profileUpdate)
+
+
 
 
 
