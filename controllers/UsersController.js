@@ -1,7 +1,8 @@
 const fs = require('fs')
 const path = require('path')
-const { validationResult } = require('express-validator')
-const bcrypt = require('bcrypt')
+const { validationResult, body } = require('express-validator')
+const bcryptjs = require('bcryptjs')
+const User = require('../models/User')
 
 
 let usersFilePath = path.join(__dirname, '../data/users/users.json')
@@ -27,20 +28,26 @@ const usersController = {
       })
     }
 
-    let newAccount = {
-      id: Date.now(),
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email.toLowerCase(),
-      password: bcrypt.hashSync(req.body.password, 10),
-      isAdmin: false,
-      avatar: req.file ? req.file.filename : 'default.png'
-
+    let emailInUse = User.findByField('email', req.body.email);
+    if (emailInUse) {
+      return res.render('./users/register', {
+        errors: {
+          email: {
+            msg: 'Este email ya está en uso.'
+          }
+        }
+      })
     }
-    users.push(newAccount);
-    fs.writeFileSync(usersFilePath, JSON.stringify(users));
-    res.redirect('/users/register/success')
+    delete req.body.confirmPassword
 
+    let userToCreate = {
+      ...req.body,
+      password: bcryptjs.hashSync(req.body.password, 10),
+      avatar: req.file ? req.file.filename : 'default.png'
+    }
+
+    User.create(userToCreate);
+    res.redirect('/users/register/success')
   },
 
   //############# REGISTRO EXITOSO ##############
@@ -48,51 +55,33 @@ const usersController = {
     res.render('./users/register_success')
   },
 
-  //############# LOGIN EXITOSO ################
+
+  // Procesando login
   loginValidation: (req, res) => {
-    let errors = validationResult(req);
-
-    if (errors.isEmpty()) {
-
-      for (let i = 0; i < users.length; i++) {
-
-        if (req.body.email === users[i].email && bcrypt.compareSync(req.body.password, users[i].password)) {
-          let userToLogin = users[i]
-
-          return res.render('./users/login_success', { userToLogin: userToLogin });
+    let userToLogin = User.findByField('email', req.body.email)
+    if (userToLogin) {
+      let passwordCheck = bcryptjs.compareSync(req.body.password, userToLogin.password)
+      if (passwordCheck) {
+        delete userToLogin.password;
+        req.session.userLogged = userToLogin;
+        if(req.body.remember_me) {
+          res.cookie('userKey',req.body.email, {maxAge: (1000 * 60) * 60})
         }
-
+        return res.redirect('/users/profile')
       }
-
     }
-
-    // req.session.userToLogin = userToLogin;
-
-    // console.log(req.session.userToLogin);
-    // if (userToLogin == undefined) {
-    //   res.send('no existe')
-
-    // return res.render('./users/login', { errors: errors.errors })
-
-    // }
-
-    //   req.session.userToLogin = userToLogin;
-
-
-    //   else {
-
-    // //   return res.render('./users/login', { errors: errors.errors })
-
-    //   }
-
+    return res.render('./users/login', {
+      errors: {
+        email: {
+          msg: 'Los datos ingresados no son correctos, por favor intente nuevamente.'
+        }
+      }
+    })
   },
 
   //########## PERFIL DE USUARIO ################
   profile: (req, res) => {
-    let currentUser = users.find(user => {
-      return user.id == req.params.id
-    })
-    res.render('./users/profile', { user: currentUser })
+    res.render('./users/profile', { user: req.session.userLogged })
   },
 
   //############ ACTUALIZAR PERFIL USUARIO ##############
@@ -109,27 +98,10 @@ const usersController = {
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
     res.redirect('/users/profile/' + req.params.id)
   },
-
-  testSession: (req, res) => {
-    if (req.session.numeroVisitas == undefined) {
-      req.session.numeroVisitas = 0;
-    }
-
-    req.session.numeroVisitas++
-
-    res.send('session tiene el numero: ' + req.session.numeroVisitas)
-
-  },
-
-  testSession2: (req, res) => {
-    if (req.session.numeroVisitas == undefined) {
-      req.session.numeroVisitas = 0;
-    }
-
-    req.session.numeroVisitas++
-
-    res.send('session tiene el numero: ' + req.session.numeroVisitas)
-
+  logout : (req,res) => {
+    res.clearCookie('userKey');
+    req.session.destroy();
+    return res.redirect('/')
   }
 
 }

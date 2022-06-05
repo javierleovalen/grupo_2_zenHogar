@@ -5,7 +5,10 @@ const expressPort = 3030
 const mainRouter = require('./routes/index');
 const methodOverride = require('method-override');
 const session = require ('express-session');
-const cookieParser = require('cookie-parser')
+const cookies = require('cookie-parser');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+
+
 
 
 // Argumento para usar put y delete //
@@ -15,13 +18,18 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended:false}));
 app.use(express.json())
 
-//middleware Session
+//Session Middleware
 app.use(session({
-secret: 'Secreto!!',
-resave: false,
-saveUninitialized: false
+  secret: "shhh, it's a secret",
+  resave: true,
+  saveUninitialized: false
 }));
-app.use(cookieParser())
+
+// Cookie middleware
+app.use(cookies())
+
+// User logged middleware
+app.use(userLoggedMiddleware);
 
   
 // asignando la ruta para archivos publicos //

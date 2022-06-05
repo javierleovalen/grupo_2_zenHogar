@@ -1,51 +1,42 @@
 const express = require('express');
 const router = express.Router();
 const UsersController = require('../controllers/UsersController');
-const multer = require('multer')
-const path = require('path')
+const multer = require('multer');
+const path = require('path');
 const loginValidation = require('../middlewares/loginValidations');
-const validations = require ('../middlewares/registerValidations')
+const validations = require ('../middlewares/registerValidations');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
-// Configuración de multer
+/* Multer Settings */
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, './public/img/uploads/users/avatars');
   },
   filename: (req, file, cb) => {
-    cb(null, Date.now() + '-userImg' + path.extname(file.originalname))
-  }
-})
+    cb(null, Date.now() + '-userImg' + path.extname(file.originalname));
+  },
+});
 
-// Cargando variables de entorno de multer
-const upload = multer({ storage })
-
-
-
-// VALIDACIONES
-const { required } = require('nodemon/lib/config');  //Preguntar para que sirve esta linea (J)
+/* Multer Env */
+const upload = multer({ storage });
 
 
+/* Login */
+router.get('/login',guestMiddleware, UsersController.login);
+router.post('/login', UsersController.loginValidation);
 
-// HTTP: GET
-router.get('/login', UsersController.login)
-router.get('/profile/:id', UsersController.profile)
-router.get('/register', UsersController.register)
-router.get('/register/success', UsersController.registerSuccessful)
+/* Logout */
+router.get('/logout', UsersController.logout)
+/* Register */
+router.get('/register',guestMiddleware, UsersController.register);
+router.post('/register', upload.single('avatar'), validations, UsersController.create);
+router.get('/register/success', UsersController.registerSuccessful);
 
-// Test session
-router.get('/pruebaSession',UsersController.testSession)
-router.get('/MostrarNumero',UsersController.testSession2)
+/* Profile */
+router.get('/profile/', authMiddleware, UsersController.profile);
 
-
-//HTTP: POST
-router.post('/register', upload.single('avatar'), validations, UsersController.create)
-router.post('/login', loginValidation, UsersController.loginValidation)
-
-//HTTP: PUT
-router.put('/profile/:id', upload.single('avatar'), UsersController.profileUpdate)
-
-
-
-
+/* Editar perfil (work in progress) */
+router.put('/profile/:id', upload.single('avatar'), UsersController.profileUpdate);
 
 module.exports = router;
