@@ -79,9 +79,9 @@ const productController = {
 
 
   /*** EDITAR UN PRODUCTO ***/
-  modifyproduct: (req, res) => {
-    let productToModify = products.find(element => { return element.id === parseInt(req.params.id) })
-    res.render('./products/modify', { product: productToModify })
+  editproduct: (req, res) => {
+    let productToEdit = products.find(element => { return element.id === parseInt(req.params.id) })
+    res.render('./products/modify', { product: productToEdit })
   },
 
   /*** ACTUALIZAR DETALLE PRODUCTO ***/
@@ -95,6 +95,9 @@ const productController = {
     products[product].productSize = req.body.productSize === "" ? products[product].productSize : req.body.productSize;
     products[product].productPrice = req.body.productPrice === "" ? products[product].productPrice : parseInt(req.body.productPrice);
     products[product].productDescription = req.body.productDescription === "" ? products[product].productDescription : req.body.productDescription;
+    products[product].productImg = req.file.filename === "" ? products[product].productImg : req.file.filename;
+    
+
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, '\t'));
     res.redirect('/products/detail/' + req.params.id)
   },

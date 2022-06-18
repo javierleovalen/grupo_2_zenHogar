@@ -59,8 +59,8 @@ router.get('/create', ProductsController.createProduct);
 router.post('/create',upload.single('productImg'),createProductsValidations,ProductsController.uploadProduct);
 
 // MODIFICAR PRODUCTO //
-router.get('/modify/:id', ProductsController.modifyproduct);
-router.put('/modify/:id', upload.single('productImg'), ProductsController.update);
+router.get('/edit/:id', ProductsController.editproduct);
+router.put('/edit/:id', upload.single('productImg'), ProductsController.update);
 
 // DETALLE DEL PRODUCTO //
 router.get('/detail/:id', ProductsController.productDetail);

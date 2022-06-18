@@ -299,15 +299,6 @@
 		"avatar": "1653827645034-userImg.jpg"
 	},
 	{
-		"id": 1653828169800,
-		"firstName": "pablo",
-		"lastName": "perez",
-		"email": "p@p.com",
-		"password": "$2b$10$9g1ON6YtwS9wd0TQ1Pzpj.TnUeYaxD2ZX2GxR/J3e175yZCCERcam",
-		"isAdmin": false,
-		"avatar": "1653828169785-userImg.jpg"
-	},
-	{
 		"id": 1653839627691,
 		"firstName": "javi",
 		"lastName": "valen",

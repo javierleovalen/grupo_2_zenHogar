@@ -42,5 +42,13 @@
 		"productImg": "1653523995274-img.jpg",
 		"productPrice": 800,
 		"productDescription": "validación 123"
+	},
+	{
+		"id": 1655558586991,
+		"productName": "Compresor",
+		"productSize": "10x10x10",
+		"productPrice": 6000,
+		"productDescription": "un buen compresor",
+		"productImg": "1655566108650-img.jpg"
 	}
 ]
