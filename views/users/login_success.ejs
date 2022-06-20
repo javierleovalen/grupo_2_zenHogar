@@ -20,10 +20,16 @@
               <ul>
                 <li><a href="/products">Ver productos</a></li><br><br>
                 <li><a href="/users/profile/<%= user.id %>">Editar perfil</a></li>
-              </ul>
+              </ul><br><br>
+
+              <form action="/users/logout" method="GET">
+                <input type="submit" value="Cerrar Sesion" class="main__btn card__btn-green"><br>
+              </form>
            
             </article>
           </section>
+
+          
 
         
       </main>

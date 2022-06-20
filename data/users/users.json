@@ -384,5 +384,13 @@
 		"email": "pe@pe.com",
 		"password": "$2a$10$JdxWvI5GoOMCwuJ4Dz8isOr17ACjCVzj5Enpfqs5j5JNXVcoEM42G",
 		"avatar": "1655575759373-userImg.jpg"
+	},
+	{
+		"id": 1654454297976,
+		"firstName": "javier",
+		"lastName": "brug",
+		"email": "j@gmail.com",
+		"password": "$2a$10$I42bTCBIL0bha2Cd1pwH6ObytDFS8GZxn6cEssqtcilxG27tI0tk2",
+		"avatar": "1655755127639-userImg.jpg"
 	}
 ]

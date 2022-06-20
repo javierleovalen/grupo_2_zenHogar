@@ -41,4 +41,7 @@ router.get('/profile/:id', UsersController.profileAccess);
 /* Editar perfil (work in progress) */
 router.put('/profile/:id', upload.single('avatar'), UsersController.profileUpdate);
 
+router.get('/logout', UsersController.logout);
+
+
 module.exports = router;
