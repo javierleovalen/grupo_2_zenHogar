@@ -12,12 +12,16 @@
             <article class="article__container register__success">
 
               <!-- pendiente aplicar nombre EJS -->
-              <h2>Bienvenid@ <%= userToLogin.firstName + " " + userToLogin.lastName %>
+              <h2>Bienvenid@ <%= user.firstName + " " + user.lastName %>
 
               </h2>
              
               <h3><i class="fa-solid fa-circle-check"></i></h3>
-              <a href="/products">Ver productos</a>
+              <ul>
+                <li><a href="/products">Ver productos</a></li><br><br>
+                <li><a href="/users/profile/<%= user.id %>">Editar perfil</a></li>
+              </ul>
+           
             </article>
           </section>
 

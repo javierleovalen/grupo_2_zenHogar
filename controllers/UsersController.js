@@ -80,9 +80,17 @@ const usersController = {
   },
 
   //########## PERFIL DE USUARIO ################
+
+
+
   profile: (req, res) => {
+    res.render('./users/login_success', { user: req.session.userLogged })
+  },
+
+  profileAccess: (req, res) => {
     res.render('./users/profile', { user: req.session.userLogged })
   },
+
 
   //############ ACTUALIZAR PERFIL USUARIO ##############
   profileUpdate: (req, res) => {
@@ -90,11 +98,13 @@ const usersController = {
       return element.id === parseInt(req.params.id)
     }))
 
-    users[user].firstName = req.body.firstName
-    users[user].lastName = req.body.lastName
-    users[user].email = req.body.email
-    users[user].passwrod = req.body.password
-    users[user].avatar = req.file.filename ? req.file.filename : 'default.png';
+    users[user].firstName = req.body.firstName === "" ? users[user].productName : req.body.firstName;
+    users[user].lastName = req.body.lastName === "" ? users[user].lastName : req.body.lastName;
+    users[user].email = req.body.email === "" ? users[user].email : req.body.email;
+    users[user].password = bcryptjs.hashSync(req.body.password, 10);
+    users[user].avatar = req.file.filename ? req.file.filename : users[user].avatar;
+// revisar el campo de ingresar imagen, si esta vacio da error
+
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
     res.redirect('/users/profile/' + req.params.id)
   },
@@ -102,7 +112,9 @@ const usersController = {
     res.clearCookie('userKey');
     req.session.destroy();
     return res.redirect('/')
-  }
+  },
+
+  
 
 }
 

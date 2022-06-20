@@ -273,21 +273,22 @@
 	},
 	{
 		"id": 1653773062543,
-		"firstName": "shepard",
+		"firstName": "javier",
 		"lastName": "commander ",
 		"email": "j@j.com",
-		"password": "$2b$10$3HIjURM/8ZoHzq9Yd8opw.1p1MGRY.Ck4JfSizzvNxdugxTp8wfcu",
+		"password": "1234",
 		"isAdmin": false,
-		"avatar": "1653773062522-userImg.jpg"
+		"avatar": "1655573860717-userImg.jpg",
+		"passwrod": "1234"
 	},
 	{
 		"id": 1653827181676,
 		"firstName": "test",
-		"lastName": "vali",
+		"lastName": "valid",
 		"email": "t@t.com",
-		"password": "$2b$10$/Izpw5gfyLx8i1ss4kpof.3fKP2vLexiPWAqsnRBmAV.RWgLDeJHe",
+		"password": "hola",
 		"isAdmin": false,
-		"avatar": "1653827181655-userImg.jpg"
+		"avatar": "1655574272375-userImg.jpg"
 	},
 	{
 		"id": 1653827645043,
@@ -359,5 +360,29 @@
 		"email": "fer@session.com",
 		"password": "$2a$10$llsepB66kE9Tn/bBgvYRhexFizrrTY8mTry18KaeijrhJjousKibK",
 		"avatar": "1654462304139-userImg.jpg"
+	},
+	{
+		"id": 1654454297973,
+		"firstName": "javier",
+		"lastName": "valeen",
+		"email": "r@r.com",
+		"password": "$2a$10$Y4D57vqG0BTA4.iIaDBuYe/n1dz5G7reHrvoYiuZ.u0y9PSnVSOpC",
+		"avatar": "1655575389557-userImg.jpg"
+	},
+	{
+		"id": 1654454297974,
+		"firstName": "juann",
+		"lastName": "perezz",
+		"email": "j@p.com",
+		"password": "$2a$10$2stlmsvRr3TTHMFYX3W8BeP.ZxZeRM34ZESj0mzHlG/3o1X9BWr/y",
+		"avatar": "1655575505505-userImg.jpg"
+	},
+	{
+		"id": 1654454297975,
+		"firstName": "pedro pablo",
+		"lastName": "perez",
+		"email": "pe@pe.com",
+		"password": "$2a$10$JdxWvI5GoOMCwuJ4Dz8isOr17ACjCVzj5Enpfqs5j5JNXVcoEM42G",
+		"avatar": "1655575759373-userImg.jpg"
 	}
 ]

@@ -35,6 +35,8 @@ router.get('/register/success', UsersController.registerSuccessful);
 
 /* Profile */
 router.get('/profile/', authMiddleware, UsersController.profile);
+router.get('/profile/:id', UsersController.profileAccess);
+
 
 /* Editar perfil (work in progress) */
 router.put('/profile/:id', upload.single('avatar'), UsersController.profileUpdate);

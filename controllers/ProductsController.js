@@ -95,8 +95,11 @@ const productController = {
     products[product].productSize = req.body.productSize === "" ? products[product].productSize : req.body.productSize;
     products[product].productPrice = req.body.productPrice === "" ? products[product].productPrice : parseInt(req.body.productPrice);
     products[product].productDescription = req.body.productDescription === "" ? products[product].productDescription : req.body.productDescription;
-    products[product].productImg = req.file.filename === "" ? products[product].productImg : req.file.filename;
+    // revisar cuando no cargo una imagen en el formulario genera un error, debo cargar siempre una imagen
+    products[product].productImg = req.file.productImg === "" ? products[product].productImg : req.file.filename;
     
+
+
 
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, '\t'));
     res.redirect('/products/detail/' + req.params.id)

@@ -20,7 +20,7 @@
               <h3><%= product.productName %></h3>
               <p class="price__final">$<%= product.productPrice %></p>
               <a href="/products/detail/<%=product.id%>" class="mini__btn">+ Más info...</a>
-              <a href="/products/modify/<%=product.id%>"class="main__btn card__btn">Modificar</a>
+              <a href="/products/edit/<%=product.id%>"class="main__btn card__btn">Modificar</a>
               <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
                 <button type="submit" class="main__btn card__btn card__btn-red">Eliminar</button>
               </form>
