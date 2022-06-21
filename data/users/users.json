@@ -392,5 +392,14 @@
 		"email": "j@gmail.com",
 		"password": "$2a$10$I42bTCBIL0bha2Cd1pwH6ObytDFS8GZxn6cEssqtcilxG27tI0tk2",
 		"avatar": "1655755127639-userImg.jpg"
+	},
+	{
+		"id": 1654454297977,
+		"firstName": "PruebaFinDeSprint",
+		"lastName": "Sprint5",
+		"email": "sprint5@prueba.com",
+		"password": "$2a$10$1F8UOPc2WrcGWCF43wSm6uuvYffqtp.qHFJPEQjQE/WoEmzFc/lzm",
+		"avatar": "1655769545521-userImg.jpg",
+		"isAdmin": true
 	}
 ]
