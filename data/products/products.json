@@ -36,11 +36,27 @@
 	},
 	{
 		"id": 1653523995277,
-		"productName": "Test123",
-		"productCategory": "iluminacion",
+		"productName": "Sillon Gris",
 		"productSize": "120 x 60 x 180",
-		"productImg": "1653523995274-img.jpg",
-		"productPrice": 800,
-		"productDescription": "validación 123"
+		"productImg": "1655754040589-img.jpg",
+		"productPrice": 8000,
+		"productDescription": "Sillón gris"
+	},
+	{
+		"id": 1655558586991,
+		"productName": "Compresor",
+		"productSize": "10x10x10",
+		"productPrice": 9000,
+		"productDescription": "un buen compresor",
+		"productImg": "1655576384731-img.png"
+	},
+	{
+		"id": 1655754127536,
+		"productName": "sillon L",
+		"productCategory": "sofa-l",
+		"productSize": "100x100x100",
+		"productImg": "1655754127519-img.jpg",
+		"productPrice": 9500,
+		"productDescription": "Un sillon muy comodo"
 	}
 ]

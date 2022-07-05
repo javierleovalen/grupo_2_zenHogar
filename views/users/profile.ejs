@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <%- include('../partials/head', {title:'Perfil', styles:['normalize','styles','partials/footer','partials/header_test']}) %>
+  <%- include('../partials/head', {title:'Formulario de registro', styles:['normalize','styles','partials/footer','partials/header_test']}) %>
 </head>
 
 <body>
     <%- include('../partials/header_test') %>
     <main>
-      <%= user.id %>
-      <%= user.firstName %>
-      <%= user.LastName %>
-      <%= user.email %>
-      <img src="/img/uploads/users/avatars/<%= user.avatar %>" alt="">
+
+      <section class="section__container register__container">
+        <article class="article__container">
+          <div class="register__text-title">
+          <h3>Bienvenid@ a tu perfil</h3>
+          <p>Accede a promociones y descuentos exclusivos por estar registrado.</p>
+          </div>
+           <!-- ERRORS -->
+           <% if (locals.errors) { %>
+            <div class="errors__container">
+              <ul>
+                <% for (let error in errors) {%>
+                  <li class="error-msg__text"><%= errors[error].msg%></li>
+                <% } %>
+              </ul>
+            </div>
+            <% } %>
+            <!-- ERRORS END -->
+          <form action="/users/profile/<%=user.id%>?_method=PUT"" method="POST" enctype="multipart/form-data">
+
+            <section class="avatar__container">
+              <img src="/img/uploads/users/avatars/<%= user.avatar %>" alt="">
+            </section>
+
+            <label for="firstName" class="form__label">Nombre:</label><br>
+            <input type="text" name="firstName" placeholder="" class ="form__input" value="<%= user.firstName %>" required><br>
+            <label for="lastName" class="form__label">Apellido:</label><br>
+            <input type="text" name="lastName" placeholder="" value="<%= user.lastName %>" class ="form__input" required><br>
+            <label for="email" class="form__label">Correo electronico:</label><br>
+            <input type="email" name="email" placeholder="" value="<%= user.email %>" class ="form__input" required><br>
+            <label for="password" class="form__label">Nueva Contraseña:</label><br>
+            <input type="password" name="password" placeholder="" value="<%= user.password %>" class ="form__input" required><br>
+            <!-- Pendiente boton para mostrar contraseña -->
+           
+            <label for="images" class="form__label">Foto de Perfil *</label><br>
+            <input type="file" name="avatar" class="form__input" accept=".jpg" multiple>
+
+            <input type="submit" value="Actualizar" class="main__btn card__btn-green"><br>
+          </form>
+          <div class="register__utility-links">
+            <p><a href="#">XXXXXX</a></p>
+            <p>XXXXX<a href="#">XXXX</a></p>
+          </div>
+        </article>
+      </section>
 
     </main>
     <%- include('../partials/footer') %>

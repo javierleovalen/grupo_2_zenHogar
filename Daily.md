@@ -1,3 +1,6 @@
+## 18/06/2022
+Javier: Modifique la vista de perfil de usuario, saque el $ en la vista de modificar, ver porque se generaba  un nan, agregue una parte que faltaba en la vista de modificar producto, no se guardaba la imagen entrante, cambie la ruta modify por edit
+
 ## SRINT 4
 ***
 ## 10/05/2022:
