@@ -3,10 +3,12 @@ const path = require('path');
 const app = express();
 const expressPort = 3030
 const mainRouter = require('./routes/index');
+const apiRouter = require('./routes/api/index');
 const methodOverride = require('method-override');
 const session = require ('express-session');
 const cookies = require('cookie-parser');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const devMiddleware = require('./middlewares/devMiddleware');
 
 
 
@@ -50,6 +52,10 @@ app.set('view engine', 'ejs');
 // ROUTER PRINCIPAL //
 
 app.use(mainRouter);
+
+// API ROUTER
+
+app.use(apiRouter)
 
 
 

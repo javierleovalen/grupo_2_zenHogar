@@ -367,6 +367,24 @@
 		"lastName": "Gorordo session",
 		"email": "fer@session.com",
 		"password": "$2a$10$llsepB66kE9Tn/bBgvYRhexFizrrTY8mTry18KaeijrhJjousKibK",
-		"avatar": "1654462304139-userImg.jpg"
+		"avatar": "1654462304139-userImg.jpg",
+		"isDev": true
+	},
+	{
+		"id": 1654454297973,
+		"firstName": "ferdev",
+		"lastName": "ferdev",
+		"email": "ferdev@dev.com",
+		"password": "$2a$10$knIQoTvywj8dHSQPnxxbzOea2KognXJ/zOoIT1r0wPQktpKYN3fg.",
+		"avatar": "1654471071655-userImg.jpg",
+		"isDev": true
+	},
+	{
+		"id": 1654454297974,
+		"firstName": "test",
+		"lastName": "test",
+		"email": "testtt123@gmail.com",
+		"password": "$2a$10$XVqutKDk3K8NzA8GGlgtFuP/Rz0Mg3ZzqUrafDAQIh6i.RD6PWH5C",
+		"avatar": "1654472190610-userImg.jpg"
 	}
 ]

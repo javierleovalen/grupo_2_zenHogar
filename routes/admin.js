@@ -4,7 +4,7 @@ const path = require('path')
 
 const AdminController = require('../controllers/AdminController')
 
-router.get('/dashboard', AdminController.index)
+router.get('/dashboard',AdminController.index)
 router.get('/products', AdminController.productsList)
 router.get('/users', AdminController.usersList)
 
