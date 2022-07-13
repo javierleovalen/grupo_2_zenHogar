@@ -7,9 +7,7 @@ const apiRouter = require('./routes/api/index');
 const methodOverride = require('method-override');
 const session = require ('express-session');
 const cookies = require('cookie-parser');
-const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
-const devMiddleware = require('./middlewares/devMiddleware');
-
+const loggedMiddleware = require('./middlewares/loggedMiddleware');
 
 
 
@@ -30,19 +28,13 @@ app.use(session({
 // Cookie middleware
 app.use(cookies())
 
-// User logged middleware
-app.use(userLoggedMiddleware);
+app.use(loggedMiddleware);
 
-  
+
 // asignando la ruta para archivos publicos //
 app.use(express.static(path.resolve(__dirname, './public')))
 
 
-// levantando el servidor //
-app.listen(process.env.PORT || expressPort, () => {
-  console.log(`Servidor inciado en puerto ${expressPort}`)
-  console.log(`Link al sitio: http://localhost:3030`)
-})
 
 
 // seteando el uso de plantillas ejs //
@@ -56,6 +48,12 @@ app.use(mainRouter);
 // API ROUTER
 
 app.use(apiRouter)
+
+// levantando el servidor //
+app.listen(process.env.PORT || expressPort, () => {
+  console.log(`Servidor inciado en puerto ${expressPort}`)
+  console.log(`Link al sitio: http://localhost:3030`)
+})
 
 
 

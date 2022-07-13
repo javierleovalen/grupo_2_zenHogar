@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head', {title:'Proyecto integrador - Editar información',
+  styles:['normalize','new_styles','partials/header']}) %>
+
+  <body class="body-account">
+    <%- include('../partials/header') %>
+      <main>
+        <section class="section">
+          <article class="article-container user-panel">
+            <h1 class="user-panel__title">Editar información</h1>
+            <form action="/users/profile/edit/save/<%=locals.data.id%>?_method=PUT" method="POST" class="form" enctype="multipart/form-data">
+              <div class="user-panel__avatar">
+                <img src="/img/uploads/users/<%= locals.data.avatar %>"  alt="Foto de perfil" class="user-panel__avatar-img" id="profileAvatar">
+                
+              </div>
+              <label for="avatarInput" class="form__upload-avatar-btn"><i class="fa-solid fa-camera"></i> Cambiar foto</label>
+              <input type="file" name="avatar" id="avatarInput" class="form_file-input">
+              <div class="form__layer">
+                <!-- <label for="nombre" class="form__label">Email:</label><br> -->
+                <i class="fa-solid fa-user"></i>
+                <% if (locals.data && locals.data.nombre) { %>
+                  <input type="text" name="nombre" class="form__input" placeholder="Nombre"
+                    value="<%= locals.data.nombre %> " required>
+                  <% } else { %>
+                    <input type="nombre" name="nombre" class="form__input" placeholder="Nombre" required>
+                    <% } %>
+              </div>
+              <div class="form__layer">
+                <!-- <label for="nombre" class="form__label">Email:</label><br> -->
+                <i class="fa-solid fa-user"></i>
+                <% if (locals.data && locals.data.apellido) { %>
+                  <input type="text" name="apellido" class="form__input" placeholder="Apellido"
+                    value="<%= locals.data.apellido %> " required>
+                  <% } else { %>
+                    <input type="apellido" name="apellido" class="form__input" placeholder="Apellido" required>
+                    <% } %>
+              </div>
+              <div class="form__layer">
+                <!-- <label for="email" class="form__label">Email:</label><br> -->
+                <i class="fa-solid fa-envelope"></i>
+                <% if (locals.data && locals.data.email) { %>
+                  <input type="email" name="email" class="form__input" placeholder="Email"
+                    value="<%= locals.data.email %> " required>
+                  <% } else { %>
+                    <input type="email" name="email" class="form__input" placeholder="Email" required>
+                    <% } %>
+              </div>
+              <div class="form__layer">
+                <!-- <label for="email" class="form__label">Email:</label><br> -->
+                <i class="fa-solid fa-phone"></i>
+                <% if (locals.data && locals.data.celular) { %>
+                  <input type="text" name="telefono" class="form__input" placeholder="Celular"
+                    value="<%= locals.data.celular %> " required>
+                  <% } else { %>
+                    <input type="text" name="celular" class="form__input" placeholder="Celular" required>
+                    <% } %>
+              </div>
+              <div class="form__layer">
+                <p><i class="fa-solid fa-plus"></i> Agregar datos de envio</p>
+                <p style="text-align:center;">(Work in progress)</p>
+              </div>
+              <div class="buttons">
+                <button type="submit" class="button button--green">Confirmar</button>
+              </div>
+            </form>
+        </section>
+        </article>
+      </main>
+      <script src="/js/editprofile.js"></script>
+  </body>
+</html>

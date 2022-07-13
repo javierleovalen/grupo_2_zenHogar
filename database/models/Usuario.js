@@ -12,14 +12,23 @@ module.exports = (sequelize, dataTypes) => {
       unique: true,
     },
     password: {
-      type: dataTypes.STRING(45),
+      type: dataTypes.TEXT,
       allowNull: false,
     },
     nombre: {
       type: dataTypes.STRING(45),
+      allowNull: false,
     },
     apellido: {
       type: dataTypes.STRING(45),
+    },
+    celular: {
+      type: dataTypes.STRING(45),
+    },
+    avatar: {
+      type: dataTypes.STRING(100),
+      allowNull: false,
+      defaultValue: 'default.jpg'
     },
     rol_id: {
       type: dataTypes.INTEGER,

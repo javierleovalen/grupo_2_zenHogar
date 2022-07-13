@@ -3,6 +3,7 @@ const path = require('path')
 const { validationResult, body } = require('express-validator')
 const bcryptjs = require('bcryptjs')
 const User = require('../models/User')
+const db = require('../database/models/index')
 
 
 let usersFilePath = path.join(__dirname, '../data/users/users.json')
@@ -11,7 +12,7 @@ let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const usersController = {
   //########### LOGIN ##########
   login: (req, res) => {
-    res.render('./users/login')
+    res.render('./users/login');
   },
 
   //########### REGISTRAR USAURIO ###########
@@ -21,33 +22,24 @@ const usersController = {
 
   //############# CREAR USUARIO ############
   create: (req, res) => {
-    const resultValidation = validationResult(req)
-    if (resultValidation.errors.length > 0) {
-      return res.render('./users/register', {
-        errors: resultValidation.mapped()
-      })
-    }
-
-    let emailInUse = User.findByField('email', req.body.email);
-    if (emailInUse) {
-      return res.render('./users/register', {
-        errors: {
-          email: {
-            msg: 'Este email ya está en uso.'
-          }
+    let emailInUse = db.Usuarios.findOne({ where: { email: req.body.email } })
+      .then(function (email) {
+        if (email) {
+          return res.render('./users/register', {
+            data: req.body,
+            errors: {
+              msg: 'El email ya se encuentra en uso'
+            }
+          });
+        } else {
+          db.Usuarios.create({
+            ...req.body,
+            avatar: 'default.jpg',
+          }).then(() => {
+            res.redirect('/users/login')
+          });
         }
-      })
-    }
-    delete req.body.confirmPassword
-
-    let userToCreate = {
-      ...req.body,
-      password: bcryptjs.hashSync(req.body.password, 10),
-      avatar: req.file ? req.file.filename : 'default.png'
-    }
-
-    User.create(userToCreate);
-    res.redirect('/users/register/success')
+      });
   },
 
   //############# REGISTRO EXITOSO ##############
@@ -58,25 +50,19 @@ const usersController = {
 
   // Procesando login
   loginValidation: (req, res) => {
-    let userToLogin = User.findByField('email', req.body.email)
-    if (userToLogin) {
-      let passwordCheck = bcryptjs.compareSync(req.body.password, userToLogin.password)
-      if (passwordCheck) {
-        delete userToLogin.password;
-        req.session.userLogged = userToLogin;
-        if(req.body.remember_me) {
-          res.cookie('userKey',req.body.email, {maxAge: (1000 * 60) * 60})
+    db.Usuarios.findOne({ where: { email: req.body.email } })
+      .then((user) => {
+        if (user.dataValues.password === req.body.password) {
+          delete user.dataValues.password
+          req.session.userLogged = user.dataValues
+          if (req.body.remember_me) {
+            res.cookie('token', req.body.email, { maxAge: (1000 * 60) * 60 })
+          }
+          res.redirect('/')
+        } else {
+          return res.render('./users/login', { data: req.body.email });
         }
-        return res.redirect('/users/profile')
-      }
-    }
-    return res.render('./users/login', {
-      errors: {
-        email: {
-          msg: 'Los datos ingresados no son correctos, por favor intente nuevamente.'
-        }
-      }
-    })
+      })
   },
 
   //########## PERFIL DE USUARIO ################
@@ -84,38 +70,48 @@ const usersController = {
 
 
   profile: (req, res) => {
-    res.render('./users/login_success', { user: req.session.userLogged })
+    res.render('./users/profile', { user: req.session.userLogged });
   },
 
-  profileAccess: (req, res) => {
-    res.render('./users/profile', { user: req.session.userLogged })
+  editInfo: function (req, res) {
+    db.Usuarios.findOne({ where: { id: req.params.id } })
+      .then((data) => {
+        delete data.dataValues.password
+        return res.render('./users/editinfo', { data: data.dataValues })
+      })
+      .catch((error) => {
+        return res.send('Ooops! Algo salio muy mal')
+      })
   },
 
 
   //############ ACTUALIZAR PERFIL USUARIO ##############
-  profileUpdate: (req, res) => {
-    let user = users.findIndex((element => {
-      return element.id === parseInt(req.params.id)
-    }))
+  saveNewInfo: async (req, res) => {
+    try {
+      let userId = req.params.id;
 
-    users[user].firstName = req.body.firstName === "" ? users[user].productName : req.body.firstName;
-    users[user].lastName = req.body.lastName === "" ? users[user].lastName : req.body.lastName;
-    users[user].email = req.body.email === "" ? users[user].email : req.body.email;
-    users[user].password = bcryptjs.hashSync(req.body.password, 10);
-    users[user].avatar = req.file.filename ? req.file.filename : users[user].avatar;
-// revisar el campo de ingresar imagen, si esta vacio da error
+      let updatedUser = {...oldData,...req.body};
 
-    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, '\t'));
-    res.redirect('/users/profile/' + req.params.id)
+      if(req.file) {
+        updatedUser.avatar = req.file.filename
+      };
+
+      await db.Usuarios.update(updatedUser,{
+          where: { id: userId }
+        });
+        
+      req.session.userLogged = updatedUser;
+      return res.redirect('/users/profile');
+
+    } catch (error) {
+      return res.send('Ooops! algo salio muy mal...')
+    }
   },
-  logout : (req,res) => {
-    res.clearCookie('userKey');
+  logout: (req, res) => {
+    res.clearCookie('token');
     req.session.destroy();
-    return res.redirect('/')
+    return res.redirect('/');
   },
-
-  
-
 }
 
 module.exports = usersController

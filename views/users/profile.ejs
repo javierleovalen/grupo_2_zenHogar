@@ -1,59 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <%- include('../partials/head', {title:'Formulario de registro', styles:['normalize','styles','partials/footer','partials/header_test']}) %>
-</head>
+<%- include('../partials/head', {title:'Formulario de registro', styles:['normalize','new_styles','partials/header']})
+  %>
 
-<body>
-    <%- include('../partials/header_test') %>
-    <main>
-
-      <section class="section__container register__container">
-        <article class="article__container">
-          <div class="register__text-title">
-          <h3>Bienvenid@ a tu perfil</h3>
-          <p>Accede a promociones y descuentos exclusivos por estar registrado.</p>
-          </div>
-           <!-- ERRORS -->
-           <% if (locals.errors) { %>
-            <div class="errors__container">
-              <ul>
-                <% for (let error in errors) {%>
-                  <li class="error-msg__text"><%= errors[error].msg%></li>
-                <% } %>
-              </ul>
+  <body class="body-account">
+    <%- include('../partials/header') %>
+      <main>
+        <section class="section">
+          <article class="article-container user-panel">
+            <h1 class="user-panel__title">Panel de usuario</h1>
+            <div class="user-panel__avatar">
+              <img src="/img/uploads/users/<%= locals.user.avatar %>"  alt="Foto de perfil" class="user-panel__avatar-img">
             </div>
-            <% } %>
-            <!-- ERRORS END -->
-          <form action="/users/profile/<%=user.id%>?_method=PUT"" method="POST" enctype="multipart/form-data">
+            <div class="user-panel__options">
+              <nav class="mobile-menu__navbar">
+                <ul class="mobile-menu__menu-list">
+                  <li class="mobile-menu__items"><a href="/users/profile/edit/<%=locals.user.id%>" class="mobile-menu__links"><i class="fa-solid fa-pen"></i> Editar información</a></li>
+                  <li class="mobile-menu__items"><a href="#" class="mobile-menu__links"><i class="fa-solid fa-key"></i> Cambiar contraseña</a></li>
+                  <li class="mobile-menu__items"><a href="#" class="mobile-menu__links"><i class="fa-solid fa-book"></i> Historial de compras</a></li>
+                  <li class="mobile-menu__items"><a href="#" class="mobile-menu__links"><i class="fa-solid fa-star"></i> Mis favoritos</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="user-panel__exit">
+              <form action="/users/logout">
+                <button class="button button--red" type="submit"><i class="fa-solid fa-xmark"></i> Cerrar sesión</button>
+              </form>
+            </div>
+          </article>
+        </section>
+      </main>
+  </body>
 
-            <section class="avatar__container">
-              <img src="/img/uploads/users/avatars/<%= user.avatar %>" alt="">
-            </section>
-
-            <label for="firstName" class="form__label">Nombre:</label><br>
-            <input type="text" name="firstName" placeholder="" class ="form__input" value="<%= user.firstName %>" required><br>
-            <label for="lastName" class="form__label">Apellido:</label><br>
-            <input type="text" name="lastName" placeholder="" value="<%= user.lastName %>" class ="form__input" required><br>
-            <label for="email" class="form__label">Correo electronico:</label><br>
-            <input type="email" name="email" placeholder="" value="<%= user.email %>" class ="form__input" required><br>
-            <label for="password" class="form__label">Nueva Contraseña:</label><br>
-            <input type="password" name="password" placeholder="" value="<%= user.password %>" class ="form__input" required><br>
-            <!-- Pendiente boton para mostrar contraseña -->
-           
-            <label for="images" class="form__label">Foto de Perfil *</label><br>
-            <input type="file" name="avatar" class="form__input" accept=".jpg" multiple>
-
-            <input type="submit" value="Actualizar" class="main__btn card__btn-green"><br>
-          </form>
-          <div class="register__utility-links">
-            <p><a href="#">XXXXXX</a></p>
-            <p>XXXXX<a href="#">XXXX</a></p>
-          </div>
-        </article>
-      </section>
-
-    </main>
-    <%- include('../partials/footer') %>
-</body>
 </html>

@@ -1,46 +1,134 @@
-<!-- Contenedor del header -->
-  <section class="header__container">
-    <!-- Menu hamburguesa -->
-    <nav class="h-menu__wrap">
-      <input type="checkbox" class="h-menu__toggler">
-      <div class="hamburger">
-        <div></div>
+<header>
+  <div class="mobile-header">
+    <figure class="mobile-header__logo">
+      <a href="/" class="mobile-header__link">
+        <img src="/img/logo/logo_zen_hogar.svg" alt="Zen Hogar Logo" class="mobile-header__img">
+      </a>
+    </figure>
+    <nav class="mobile-header__nav">
+      <button class="mobile-header__menu-btn" id="mobileMenuBtn"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenuToggle">
+    <nav class="mobile-menu__navbar">
+      <ul class="mobile-menu__menu-list">
+        <% if (locals.isLogged) { %>
+          <div class="logged-menu">
+            <div class="user-logged__avatar">
+              <img src="/img/uploads/users/<%= locals.userLogged.avatar %>" alt="Foto de perfil"
+                class="user-logged__img">
+            </div>
+            <div class="logged-menu__msg">
+              <p>Bienvenido/a</p>
+              <h2 class="logged-menu__name">
+                <%= locals.userLogged.nombre %>
+              </h2>
+            </div>
+          </div>
+          <li class="mobile-menu__items"><a href="/users/profile" class="mobile-menu__links"><i
+                class="fa-solid fa-gear"></i> Opciones de cuenta</a></li>
+          <% } else { %>
+            <li class="mobile-menu__items"><a href="/users/login" class="mobile-menu__links"><i
+                  class="fa-solid fa-arrow-right-to-bracket"></i> Iniciar sesión</a></li>
+            <li class="mobile-menu__items"><a href="/users/register" class="mobile-menu__links"><i
+                  class="fa-solid fa-address-card"></i> Crear cuenta</a></li>
+            <% } %>
+              <li class="mobile-menu__items"><a href="/products" class="mobile-menu__links"><i
+                    class="fa-solid fa-book-open"></i> Catálogo</a></li>
+              <li class="mobile-menu__items"><a href="/offers" class="mobile-menu__links"><i
+                    class="fa-solid fa-percent"></i> Ofertas</a></li>
+              <li class="mobile-menu__items"><a href="/products/cart" class="mobile-menu__links"><i
+                    class="fa-solid fa-cart-shopping"></i> Carrito</a></li>
+              <li class="mobile-menu__items"><a href="/products/help" class="mobile-menu__links"><i
+                    class="fa-solid fa-question"></i> Ayuda</a></li>
+              <% if (locals.isLogged) { %>
+                <form action="/users/logout">
+                  <button class="button button--red" type="submit"><i class="fa-solid fa-xmark"></i> Cerrar
+                    sesión</button>
+                </form>
+                <% } %>
+      </ul>
+    </nav>
+  </div>
+  <!-- <div class="desktop-header">
+    <figure class="desktop-header__logo">
+      <a href="/">
+        <img class="desktop-header__logo-img" src="/img/logo/logo_zen_hogar.svg" alt="Logo Zen Hogar">
+      </a>
+    </figure>
+    <div class="desktop-header__search">
+      <form action="#" class="desktop-header__searchbar-form">
+        <input type="search" name="search" class="desktop-header__search-input" placeholder="Busquemos algo">
+        <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </div>
+    <div class="desktop-header__fast-menu">
+      <div class="desktop-header__fast-menu-button">
+        <button id="desktopHeaderBtn"><i class="fa-solid fa-bars"></i></button>
+        <div class="account-panel"></div>
       </div>
-      <div class="menu">
-        <div>
-          <div>
-            <img src="/img/logo/logo_zen_hogar.svg" alt="">
-            <ul>
-              <li><a href="/contacto">Contacto</a></li>
-              <li><a href="/ofertas">Ofertas</a></li>
-              <li><a href="/catalogo">Shop</a></li>
-            </ul>
-            <ul>
-              <li><a href="/login">Cuenta<i class="fa-solid fa-user"></i></a></li>
-              <li><a href="/cart">Carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
+    </div>
+  </div>
+  <div class="desktop-main-menu" id="desktopSlideMenu">
+    <button class="closeBtn"><i class="fa-solid fa-xmark"></i></button>
+    <ul>
+      <% if (locals.isLogged) { %>
+        <div class="logged-menu">
+          <div class="user-logged__avatar">
+            <img src="/img/uploads/users/<%= locals.userLogged.avatar %>" alt="Foto de perfil"
+              class="user-logged__img">
+          </div>
+          <div class="logged-menu__msg">
+            <p>Bienvenido/a</p>
+            <h2 class="logged-menu__name">
+              <%= locals.userLogged.nombre %>
+            </h2>
           </div>
         </div>
-      </div>
-    </nav>
-    </nav>
-    <nav class="menu__container">
-      <ul>
-        <li><a href="/contacto">Contacto</a></li>
-        <li><a href="/ofertas">Ofertas</a></li>
-        <li><a href="/catalogo">Shop</a></li>
+        <li class="mobile-menu__items"><a href="/users/profile" class="mobile-menu__links"><i
+              class="fa-solid fa-gear"></i> Opciones de cuenta</a></li>
+        <% } else { %>
+          <li class="mobile-menu__items"><a href="/users/login" class="mobile-menu__links"><i
+                class="fa-solid fa-arrow-right-to-bracket"></i> Iniciar sesión</a></li>
+          <li class="mobile-menu__items"><a href="/users/register" class="mobile-menu__links"><i
+                class="fa-solid fa-address-card"></i> Crear cuenta</a></li>
+          <% } %>
+            <li class="mobile-menu__items"><a href="/products" class="mobile-menu__links"><i
+                  class="fa-solid fa-book-open"></i> Catálogo</a></li>
+            <li class="mobile-menu__items"><a href="/offers" class="mobile-menu__links"><i
+                  class="fa-solid fa-percent"></i> Ofertas</a></li>
+            <li class="mobile-menu__items"><a href="/products/cart" class="mobile-menu__links"><i
+                  class="fa-solid fa-cart-shopping"></i> Carrito</a></li>
+            <li class="mobile-menu__items"><a href="/products/help" class="mobile-menu__links"><i
+                  class="fa-solid fa-question"></i> Ayuda</a></li>
+            <% if (locals.isLogged) { %>
+              <form action="/users/logout">
+                <button class="button button--red" type="submit"><i class="fa-solid fa-xmark"></i> Cerrar
+                  sesión</button>
+              </form>
+              <% } %>
+    </ul>
+  </div> -->
+  <div class="desktop-header">
+    <h1 class="desktop-header__logo"><a href="/">LOGO</a></h1>
+    <nav class="desktop-header__nav">
+      <ul class="desktop-header__menu-list">
+        <li class="desktop-header__menu-items"><a href="#">Shop</a></li>
+        <li class="desktop-header__menu-items"><a href="#">Ofertas</a></li>
+        <li class="desktop-header__menu-items"><a href="#">Categorias</a></li>
+        <li class="desktop-header__menu-items"><a href="#">Contacto</a></li>
       </ul>
     </nav>
-    <nav class="header__logo">
-      <a href="/">
-      <img src="/img/logo/logo_zen_hogar.svg" alt="Logo del sitio">
-    </a>
-    </nav>
-    <nav class="menu__container">
-      <ul>
-        <li><a href="/login">Cuenta<i class="fa-solid fa-user"></i></a></li>
-        <li><a href="/cart">Carrito<i class="fa-solid fa-cart-shopping"></i></a></li>
-      </ul>
-    </nav>
-  </section>
-<!-- Fin del header -->
+    <div class="desktop-header__user-buttons">
+      <button class="header__button">Login</button>
+      <button class="header__button header__button--secondayBtn">Registrarse</button>
+    </div>
+  </div>
+  <div class="search-bar">
+    <form action="#">
+      <input type="search" name="keyword" class="search-bar__input" placeholder="Busquemos algo">
+      <button type="submit" class="search-bar__button"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+  </div>
+  <script src="/js/partials/header.js"></script>
+</header>
