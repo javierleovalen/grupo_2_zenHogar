@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <%- include('../../partials/head', {title:'Panel de administrador | Productos', styles:['normalize','styles','partials/footer','partials/header_test']}) %>
+  <%- include('../../partials/head', {title:'Panel de administrador', styles:['normalize','new_styles','partials/footer','partials/header','adminDashboard']}) %>
 </head>
+
 <body>
-  <%- include('../../partials/header_test') %>
-  <main>
-    <section class="section__container admin__list-section">
-      <article class="article__container admin__list-article">
-        <h2>Todos los usuarios</h2>
-        <form action="/products/search" method="GET">
-          <input type="search" name ="keyword" placeholder="Filtrar usuarios" class="search__input admin__search-input">
-          <button type="submit" class="search__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-        <div class="admin-product__list">
-          <% users.forEach(user => { %>
-            <div class="product__card">
-              <img src="/img/uploads/users/avatars/<%= user.avatar %>" alt="asd">
-              <h3>Nombre: <%= user.firstName %></h3>
-              <h3>Apellido: <%= user.lastName %></h3>
-              <p style="margin-bottom: 1em">ID: <%= user.id %></p>
-              <a href="/users/profile/<%=user.id%>"class="main__btn card__btn">Modificar</a>
-              <form action="/admin/delete/user/<%= user.id %>?_method=DELETE" method="POST">
-                <button type="submit" class="main__btn card__btn card__btn-red">Eliminar</button>
-              </form>
+    <%- include('../../partials/header') %>
+    <main class="admin-dashboard__container">
+     <section class="admin-main-menu__container">
+      <nav>
+        <ul>
+          <li><a href="/admin/dashboard/users">Administrar usuarios</a></li>
+          <li><a href="/admin/dashboard">Administrar productos</a></li>
+          <li><a href="#">Administrar categorias</a></li>
+        </ul>
+      </nav>
+     </section>
+     <section class="admin-workbench__container">
+        <nav class="admin-workbench__nav">
+          <div class="search-bar">
+            <form action="#">
+            <input type="search" name="search" class="search-bar__input" placeholder="Busquemos algo...">
+            <button class="search-bar__btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+          </div>
+          <div class="admin-workbench__btns">
+          <a href="/admin/products/create" class="new-btn">Crear producto</a>
+          </div>
+        </nav>
+        <article class="admin-list__container">
+
+
+          <% locals.users.forEach(element => { %>
+            <div class="list-item">
+              <figure class="item__figure">
+                <img class="item__img" src="/img/uploads/users/<%=element.profileImg%>" alt="">
+              </figure>
+              <div class="item__info">
+                <p>Nombre: <span class="items-props"><%= element.name %> </span></p>
+                <p>Apellido: <span class="items-props"><%= element.lastname %> </span></p>
+                <p>ID: <span class="items-props"><%= element.id %> </span></p>
+              </div>
+              <div class="item__info-extra">
+                <p>Email: <span class="items-props"><%= element.email %> </span></p>
+                <p>Telefono: <span class="items-props"><%= element.phone %></span></p>
+                <p>Fecha creación: <span class="items-props"><%= new Date(element.createdAt).toLocaleDateString() %> </span></p>
+              </div>
+              <div class="item__btns">
+                <a href="/admin/users/edit/<%= element.id%>" class="new-btn">Modificar</a>
+                <form action="/admin/users/delete/<%= element.id%>?_method=DELETE" method="POST">
+                <input type="submit" class="new-btn" value="Eliminar" />
+                </form>
+              </div>
             </div>
-            <% }) %>
-        </div>
-      </article>
-    </section>
-  </main>
-  <%- include('../../partials/footer') %>
+          <% }) %>
+        </article>
+     </section>
+    </main>
+    <%- include('../../partials/footer') %>
 </body>
 
 </html>

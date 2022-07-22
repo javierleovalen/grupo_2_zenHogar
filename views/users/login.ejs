@@ -1,25 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include('../partials/head', {title:'Formulario de registro', styles:['normalize','new_styles','partials/header']}) %>
+    <%- include('../partials/head', {title:'Formulario de registro', styles:['normalize','new_styles','/partials/header','/partials/footer']}) %>
   </head>
-  <body class="body-account">
+  <body>
     <%- include('../partials/header') %>
     <main>
-      <section class="section">
-        <article class="article-container">
-          <h1 class="login__title">Login</h1>
-          <p class="login__speach">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam mollitia beatae nesciunt tenetur voluptatem tempore eligendi. Aspernatur nisi quisquam reiciendis minima inventore eligendi, quam eaque et facilis a nostrum quos.</p>
-          <% if (locals.errors && locals.errors.email) { %>
-            <div class="form__error">
-              <ul>
-                  <li class="error-msg__text"><%= errors.email.msg %> </li>
-                </ul>
-            </div>
+      <section class="login">
+        <article class="form-box">
+          <figure>
+            <img src="/img/backgrounds/background_3.jpg" alt="">
+          </figure>
+          <div>
+          <h1>Formulario de ingreso</h1>
+          <form action="/users/login" method="POST" class="form">
+            <% if (locals.oldReqData) { %>
+              <div class="form__layer">
+                <!-- <label for="email" class="form__label">Email</label> -->
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" name="email" class="form__input form__input--black" placeholder="Email" value="<%=locals.oldReqData.email%>">
+              </div>
+            <% } else {  %>
+              <div class="form__layer">
+                <!-- <label for="email" class="form__label">Email</label> -->
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" name="email" class="form__input form__input--black" placeholder="Email">
+              </div>
             <% } %>
-          <form action="/users/login" class="form" method="POST">
             <div class="form__layer">
-              <!-- <label for="email" class="form__label">Email:</label><br> -->
+              <!-- <label for="email" class="form__label">Email</label> -->
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" name="password" class="form__input form__input--black" placeholder="Password">
+            </div>
+            <div class="form__layer form__rememberMe">
+              <input type="checkbox" name="remember_me">
+              <label for="remember_me" class="form__label">Mantener sesión iniciada</label>
+            </div>
+            <% if (locals.loginError) { %>
+              <p style="color: #ff0000;"><%= locals.loginError.msg %> </p>
+            <% } %>
+            <div class="form__buttons">
+              <button type="submit" class="form-btn">Enviar</button>
+            </div>
+            <span class="register-cta">¿Aún no eres miembro? <a href="#">¡Click aquí!</a></span>
+            <span class="register-cta"><a href="#">¿Olvidaste tu contraseña?</a></span>
+          </form>
+        </div>
+        </article>
+      </section>
+      <!-- <section class="section">
+        <figure class="section__figure">
+          <img class="section__img" src="/img/backgrounds/background_a.jpg" alt="">
+        </figure>
+        <article class="article">
+          <h1 class="form__title">Login</h1>
+          <form action="/" class="form">
+            <div class="form__layer">
               <i class="fa-solid fa-envelope"></i>
               <% if (locals && locals.data) { %>
                 <input type="email" name="email" class="form__input" placeholder="Email" value="<%= locals.data%>" required>
@@ -28,7 +64,6 @@
               <% } %>
             </div>
             <div class="form__layer">
-              <!-- <label for="password" class="form__label">Contraseña:</label><br> -->
               <i class="fa-solid fa-key"></i>
               <input type="password" name="password" class="form__input" required placeholder="Contraseña">
             </div>
@@ -37,7 +72,7 @@
               <label for="remember_me" class="form__label">Mantener sesión iniciada</label>
             </div>
             <div class="buttons">
-              <button type="submit" class="button button--green">Iniciar sesión</button>
+              <button type="submit" class="btn btn--secondayBtn">Iniciar sesión</button>
             </div>
           </form>
           <div class="form__help">
@@ -45,7 +80,8 @@
             <a href="/users/register">¿Olvidaste tu contraseña?</a>
           </div>
         </article>
-      </section>
+      </section> -->
     </main>
+    <%- include('../partials/footer') %>
   </body>
 </html>

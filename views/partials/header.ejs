@@ -1,5 +1,5 @@
 <header>
-  <div class="mobile-header">
+  <!-- <div class="mobile-header">
     <figure class="mobile-header__logo">
       <a href="/" class="mobile-header__link">
         <img src="/img/logo/logo_zen_hogar.svg" alt="Zen Hogar Logo" class="mobile-header__img">
@@ -49,7 +49,7 @@
                 <% } %>
       </ul>
     </nav>
-  </div>
+  </div> -->
   <!-- <div class="desktop-header">
     <figure class="desktop-header__logo">
       <a href="/">
@@ -109,7 +109,11 @@
               <% } %>
     </ul>
   </div> -->
-  <div class="desktop-header">
+
+
+
+
+  <!-- <div class="desktop-header">
     <h1 class="desktop-header__logo"><a href="/">LOGO</a></h1>
     <nav class="desktop-header__nav">
       <ul class="desktop-header__menu-list">
@@ -120,15 +124,139 @@
       </ul>
     </nav>
     <div class="desktop-header__user-buttons">
-      <button class="header__button">Login</button>
-      <button class="header__button header__button--secondayBtn">Registrarse</button>
+      <a href="/users/login" class="btn">Login</a>
+      <a href="/users/register" class="btn btn--secondayBtn">Registrarse</a>
     </div>
-  </div>
-  <div class="search-bar">
+  </div> -->
+  <!-- <div class="search-bar">
     <form action="#">
       <input type="search" name="keyword" class="search-bar__input" placeholder="Busquemos algo">
       <button type="submit" class="search-bar__button"><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
-  </div>
+  </div> -->
+
+  <section class="desktop-header">
+    <article class="desktop-header__nav">
+      <a href="/" class="desktop-header__home">
+        <!-- <h1 class="desktop-header__home-btn">Zen Hogar</h1> -->
+        <img src="/img/logo/logo_zen_hogar.svg" alt="Logo Zen Hogar" class="desktop-header__home-btn">
+      </a>
+      <nav class="desktop-header__menu">
+        <button href="#" class="desktop-header__items">Nosotros <i class="fa-solid fa-caret-down"></i>
+          <ul class="desktop-header__dropdown-container">
+            <li class="desktop-header__dropdown-items">
+              <a href="#" class="desktop-header__dropdown-links">
+                <div class="desktop-header__dropdown-links-icon">
+                  <i class="fa-solid fa-house"></i>
+                </div>
+                <div class="desktop-header__dropdown-links-text">
+                  <span class="links-text__title">Showroom</span>
+                  <span class="links-text__text">Coordina con nosotros y te invitamos a conocer nuestro showroom.</span>
+                </div>
+              </a>
+            </li>
+            <li class="desktop-header__dropdown-items">
+              <a href="#" class="desktop-header__dropdown-links">
+                <div class="desktop-header__dropdown-links-icon">
+                  <i class="fa-solid fa-people-group"></i>
+                </div>
+                <div class="desktop-header__dropdown-links-text">
+                  <span class="links-text__title">El equipo</span>
+                  <span class="links-text__text">¿Alguna vez te preguntaste quienes estan detras de Zen Hogar?</span>
+                </div>
+              </a>
+            </li>
+            <li class="desktop-header__dropdown-items">
+              <a href="#" class="desktop-header__dropdown-links">
+                <div class="desktop-header__dropdown-links-icon">
+                  <i class="fa-solid fa-hammer"></i>
+                </div>
+                <div class="desktop-header__dropdown-links-text">
+                  <span class="links-text__title">Nuestro trabajo</span>
+                  <span class="links-text__text">Conoce testimonios de clientes que confiaron sus espacios a nuestro equipo.</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </button>
+        <a href="#" class="desktop-header__items">Blog</a>
+        <button href="#" class="desktop-header__items">Tienda <i class="fa-solid fa-caret-down"></i>
+          <ul class="desktop-header__dropdown-container">
+            <li class="desktop-header__dropdown-items">
+              <a href="#" class="desktop-header__dropdown-links">
+                <div class="desktop-header__dropdown-links-icon">
+                  <i class="fa-brands fa-readme"></i>
+                </div>
+                <div class="desktop-header__dropdown-links-text">
+                  <span class="links-text__title">Catálogo</span>
+                  <span class="links-text__text">Ven a ver la amplia gama de productos perfectos para ese ambiente en tu hogar.</span>
+                </div>
+              </a>
+            </li>
+            <li class="desktop-header__dropdown-items">
+              <a href="#" class="desktop-header__dropdown-links">
+                <div class="desktop-header__dropdown-links-icon">
+                  <i class="fa-solid fa-dollar-sign"></i>
+                </div>
+                <div class="desktop-header__dropdown-links-text">
+                  <span class="links-text__title">Ofertas</span>
+                  <span class="links-text__text">¡No te podes perder estas oportunidades! ¡Haz click!</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </button>
+        <a href="#" class="desktop-header__items">Lo nuevo</a>
+        <button href="#" class="desktop-header__items">Contacto <i class="fa-solid fa-caret-down"></i>
+          <ul class="desktop-header__dropdown-container">
+            <li class="desktop-header__dropdown-items">
+              <a href="#" class="desktop-header__dropdown-links">
+                <div class="desktop-header__dropdown-links-icon">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="desktop-header__dropdown-links-text">
+                  <span class="links-text__title">WhatsApp</span>
+                  <span class="links-text__text">Dejanos un mensaje y un asesor se pondra en contacto con usted lo antes posible.</span>
+                </div>
+              </a>
+            </li>
+            <li class="desktop-header__dropdown-items">
+              <a href="#" class="desktop-header__dropdown-links">
+                <div class="desktop-header__dropdown-links-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="desktop-header__dropdown-links-text">
+                  <span class="links-text__title">Email</span>
+                  <span class="links-text__text">Ponte en contacto a nuestro email para recibir nuestro catálogo ampliado y nuestra presentación.</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </button>
+      </nav>
+    </article>
+    <% if (locals.isLogged) { %>
+     <article class="profile-btn">
+      <figure>
+        <a href="/users/profile">
+        <img src="/img/uploads/users/<%=locals.userLogged.profileImg%>" alt="">
+        </a>
+      </figure>
+      <div>
+        <p><a href="/users/profile"><%= locals.userLogged.name %></a></p>
+        <div>
+          <a href="/users/profile">Cuenta</a>
+          <a href="/users/logout">Cerra sesión</a>
+        </div>
+      </div>
+     </article>
+    <% } else { %>
+      <article class="desktop-header__user-btns">
+        <a href="#" class="btn"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a>
+        <a  href="/users/login"class="btn">Login</a>
+        <a href="/users/register" class="btn btn--white">Registrarse</a>
+      </article>
+    <% } %>
+  </section>
   <script src="/js/partials/header.js"></script>
 </header>

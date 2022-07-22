@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head', {title:'Proyecto Integrador - Perfil de usuario',
+<%- include('../../partials/head', {title:'Proyecto Integrador - Perfil de usuario',
   styles:['normalize','new_styles','partials/header','partials/footer']}) %>
 
   <body>
-    <%- include('../partials/header') %>
+    <%- include('../../partials/header') %>
       <main>
         <section class="user-panel">
           <article class="panel-container">
-            <h2>Bienvenido nuevamente: <%= locals.userLogged.name %> </h2>
+            <h2>Información de usuario: <%= locals.user.name +" " +locals.user.lastname %> </h2>
             <div class="panel-container__top">
-              <form action="/users/profile/update/<%= locals.userLogged.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
+              <form action="/admin/users/edit/<%= locals.user.id %>?_method=PATCH" method="POST">
                 <div class="profile-top__left">
                   <!-- Formulario TEST -->
                   <div class="form-layer">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" name="name" class="form-input" placeholder="Nombre" value="<%= locals.userLogged ? locals.userLogged.name : "" %>" />
+                    <input type="text" name="name" class="form-input" placeholder="Nombre" value="<%= locals.user ? locals.user.name : "" %>" />
                     <!-- <p class="form-error">Aca va el error del campo</p> -->
                   </div>
                   <div class="form-layer">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="text" name="lastname" class="form-input" placeholder="Apellido" value="<%= locals.userLogged ? locals.userLogged.lastname : "" %>">
+                    <input type="text" name="lastname" class="form-input" placeholder="Apellido" value="<%= locals.user ? locals.user.lastname : "" %>">
                     <!-- <p class="form-error">Aca va el error del campo</p> -->
                   </div>
                   <div class="form-layer">
                     <i class="fa-solid fa-phone"></i>
-                    <input type="text" name="phone" class="form-input" placeholder="Celular" value="<%= locals.userLogged ? locals.userLogged.phone : "" %>">
+                    <input type="text" name="phone" class="form-input" placeholder="Celular" value="<%= locals.user ? locals.user.phone : "" %>">
                     <!-- <p class="form-error">Aca va el error del campo</p> -->
                   </div>
                   <div class="form-layer">
                     <i class="fa-solid fa-envelope"></i>
-                    <input type="email" name="email" class="form-input" placeholder="Email" value="<%= locals.userLogged ? locals.userLogged.email : "" %>">
+                    <input type="email" name="email" class="form-input" placeholder="Email" value="<%= locals.user ? locals.user.email : "" %>">
+                    <!-- <p class="form-error">Aca va el error del campo</p> -->
+                  </div>
+                  <div class="form-layer">
+                    <i class="fa-solid fa-list"></i>
+                    <select name="rolId" id="" class="form-input">
+                      <option disabled selected>Seleccione un rol</option>
+                      <% locals.roles.forEach(element => { %>
+                      <% if (element.id == user.rolId) { %>
+                      <option value="<%=element.id%>" selected><%= element.name %></option>
+                      <% } else { %>
+                      <option value="<%=element.id%>"><%= element.name %></option>
+                      <% } %>
+                      <% }) %>
+                    </select>
                     <!-- <p class="form-error">Aca va el error del campo</p> -->
                   </div>
                   <div class="form-btn__container">
@@ -39,7 +53,7 @@
                 </div>
                 <div class="profile-top__right">
                   <figure class="profile-avatar__container">
-                    <img src="/img/uploads/users/<%= locals.userLogged.profileImg %> " alt="" class="profile-avatar__img" />
+                    <img src="/img/uploads/users/<%= locals.user.profileImg %> " alt="" class="profile-avatar__img" />
                   </figure>
                   <label for="avatarImg" class="form-btn--test">Cambiar foto</label>
                   <input type="file" name="avatarImg" id="avatarImg">
@@ -53,23 +67,14 @@
                   <li><a href="#">Cambiar contraseña</a></li>
                   <li><a href="#">Ver compras realizadas</a></li>
                   <li><a href="#">Mis favoritos</a></li>
-                  <li><a href="#">Borrar mi cuenta</a></li>
+                  <li><a href="#">Borrar esta cuenta</a></li>
                 </ul>
               </nav>
             </div>
-            <% if (locals.userLogged.rolId === 4) { %>
-              <h2>Opciones de administrador</h2>
-              <div class="admin-opt">
-               <a href="/admin/dashboard">Ir al panel del administrador</a>
-              </div>
-             <% } %>
-            <form action="/users/logout" class="logout-form">
-              <input type="submit" value="Cerrar sesión" class="logout-btn" />
-            </form>
           </article>
         </section>
       </main>
-      <%- include('../partials/footer') %>
+      <%- include('../../partials/footer') %>
   </body>
 
 </html>

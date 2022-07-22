@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include('../partials/head', {title:'Proyecto integrador - Crear producto',styles:['normalize','styles','partials/header','partials/footer','new_styles','adminDashboard']}) %>
+  <%- include('../partials/head', {title:'Proyecto integrador - Editar producto',styles:['normalize','styles','partials/header','partials/footer','new_styles','adminDashboard']}) %>
   <body>
     <%- include('../partials/header') %>
       <main class="admin-dashboard__container">
         <section class="admin-workbench__container crate-product-dash">
           <div class="create-product">
-            <h2>Formulario de creación de producto</h2>
+            <h2>Formulario de edición para: <%= product.name %> </h2>
             <div class="create-product__form">
-              <form action="/admin/products/create" method="POST" enctype="multipart/form-data">
+              <form action="/admin/products/edit/<%= product.id%>?_method=PATCH" method="POST" enctype="multipart/form-data">
                 <div>
                 <div class="create-product__left-form">
                 <div class="form-layer">
                   <i class="fa-solid fa-i-cursor"></i>
-                  <input type="text" name="name" class="form-input" placeholder="Nombre del producto"/>
+                  <input type="text" name="name" class="form-input" placeholder="Nombre del producto" value="<%= product.name ? product.name : "" %>"/>
                   <!-- <p class="form-error">Aca va el error del campo</p> -->
                 </div>
                 <div class="form-layer">
                   <i class="fa-solid fa-dollar-sign"></i>
-                  <input type="text" name="price" class="form-input" placeholder="Precio"/>
+                  <input type="text" name="price" class="form-input" placeholder="Precio" value="<%= product.price ? product.price : "" %>"/>
                   <!-- <p class="form-error">Aca va el error del campo</p> -->
                 </div>
                 <div class="form-layer">
                   <i class="fa-solid fa-cubes-stacked"></i>
-                  <input type="text" name="stock" class="form-input" placeholder="Stock"/>
+                  <input type="text" name="stock" class="form-input" placeholder="Stock" value="<%= product.stock ? product.stock : "" %>"/>
                   <!-- <p class="form-error">Aca va el error del campo</p> -->
                 </div>
                 <div class="form-layer">
@@ -31,7 +31,11 @@
                   <select name="categoryId" id="" class="form-input">
                     <option disabled selected>Seleccione una categoria</option>
                     <% locals.categories.forEach(element => { %>
+                    <% if (element.id == product.CategoryId) { %>
+                    <option value="<%=element.id%>" selected><%= element.name %></option>
+                    <% } else { %>
                     <option value="<%=element.id%>"><%= element.name %></option>
+                    <% } %>
                     <% }) %>
                   </select>
                   <!-- <p class="form-error">Aca va el error del campo</p> -->
@@ -39,9 +43,9 @@
               </div>
               <div class="create-product__photo">
                 <figure>
-                  <img src="/img/uploads/products/default.jpg" alt="">
+                  <img src="/img/uploads/products/<%= product.productImg%>" alt="">
                 </figure>
-                <label for="productImg" class="form-btn--test">Elegir una foto</label>
+                <label for="productImg" class="form-btn--test">Cambiar foto</label>
                 <input type="file" name="productImg" id="productImg">
               </div>
             </div>

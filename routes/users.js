@@ -35,7 +35,7 @@ router.get('/profile/', loginCheckMiddleware, UsersController.profile);
 
 /* Profile: edit info */
 router.get('/profile/edit/:id',loginCheckMiddleware, UsersController.editInfo)
-router.put('/profile/edit/save/:id',upload.single('avatar'), UsersController.saveNewInfo)
+router.put('/profile/update/:id',upload.single('avatarImg'), UsersController.updateProfile)
 
 
 router.get('/logout', UsersController.logout);

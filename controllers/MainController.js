@@ -1,14 +1,19 @@
-const fs = require('fs');
-const path = require('path');
-const promoProductsFilePath = path.join(__dirname, '../data/products/promoProducts.json');
-let promoProducts = JSON.parse(fs.readFileSync(promoProductsFilePath, 'utf-8'));
+const db = require("../database/models");
 
 const MainController = {
 
     home: (req, res) => {
-        res.render('home', {
-            promoProducts: promoProducts
-        });
+        db.Product.findAll({limit: 5})
+        .then(data => {
+            let cleanData = [];
+            data.forEach(element => {
+                cleanData.push(element.toJSON())
+            })
+            return res.render('home', {data: cleanData})
+        })
+        .catch(error => {
+            console.log(error)
+        })
     },
 
     login: (req, res) => {

@@ -53,7 +53,6 @@ router.get('/', ProductsController.index);
 router.get('/search', ProductsController.search);
 
 /** CREATE PRODUCT: Sending form to view **/ 
-router.get('/create', ProductsController.createProduct);
 
 /** CREATE PRODUCT: Process product **/
 router.post('/create',upload.single('productImg'),createProductsValidations,ProductsController.uploadProduct);

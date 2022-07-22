@@ -1,13 +1,7 @@
-const fs = require('fs')
-const path = require('path')
 const { validationResult, body } = require('express-validator')
 const bcryptjs = require('bcryptjs')
-const User = require('../models/User')
 const db = require('../database/models/index')
 
-
-let usersFilePath = path.join(__dirname, '../data/users/users.json')
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
   //########### LOGIN ##########
@@ -21,25 +15,23 @@ const usersController = {
   },
 
   //############# CREAR USUARIO ############
-  create: (req, res) => {
-    let emailInUse = db.Usuarios.findOne({ where: { email: req.body.email } })
-      .then(function (email) {
-        if (email) {
-          return res.render('./users/register', {
-            data: req.body,
-            errors: {
-              msg: 'El email ya se encuentra en uso'
-            }
-          });
-        } else {
-          db.Usuarios.create({
-            ...req.body,
-            avatar: 'default.jpg',
-          }).then(() => {
-            res.redirect('/users/login')
-          });
-        }
-      });
+  create: async (req, res) => {
+    try {
+      db.User.create({
+        ...req.body,
+        password: bcryptjs.hashSync(req.body.password, 10),
+        profileImg: 'default.jpg',
+      })
+      .then(data => {
+        delete data.password;
+        delete data.createdAt;
+        delete data.updatedAt;
+        req.session.userLogged = data.toJSON()
+        return res.redirect('/')
+      })
+    } catch(error) {
+      console.log(error)
+    }
   },
 
   //############# REGISTRO EXITOSO ##############
@@ -49,20 +41,30 @@ const usersController = {
 
 
   // Procesando login
-  loginValidation: (req, res) => {
-    db.Usuarios.findOne({ where: { email: req.body.email } })
-      .then((user) => {
-        if (user.dataValues.password === req.body.password) {
-          delete user.dataValues.password
-          req.session.userLogged = user.dataValues
-          if (req.body.remember_me) {
-            res.cookie('token', req.body.email, { maxAge: (1000 * 60) * 60 })
-          }
-          res.redirect('/')
-        } else {
-          return res.render('./users/login', { data: req.body.email });
+  loginValidation: async (req, res) => {
+    try {
+      let user = await db.User.findOne({where: {email: req.body.email},include: ['accountCart','Rol']})
+      let cleanData = user.toJSON();
+      console.log(cleanData.rolId)
+      if(bcryptjs.compareSync(req.body.password,cleanData.password)) {
+        delete cleanData.password
+        delete cleanData.createdAt
+        delete cleanData.updatedAt
+        req.session.userLogged = cleanData
+        if(req.body.remember_me) {
+          res.cookie('token', req.body.email,{maxAge: (1000 * 60) * 60})
+        }
+        return res.redirect('/')
+      }
+      return res.render('./users/login',{
+        oldReqData: req.body,
+        loginError: {
+          msg: 'Los datos ingresados no son válidos'
         }
       })
+    } catch (error) {
+      console.log(error)
+    }
   },
 
   //########## PERFIL DE USUARIO ################
@@ -86,24 +88,29 @@ const usersController = {
 
 
   //############ ACTUALIZAR PERFIL USUARIO ##############
-  saveNewInfo: async (req, res) => {
+  updateProfile: async (req, res) => {
     try {
-      let userId = req.params.id;
+      let user = await db.User.findOne({where:{id: req.params.id},include:['accountCart']})
+      let oldUserData = user.toJSON()
+      let updatedData = {
+        ...oldUserData,
+        ...req.body
+      }
 
-      let updatedUser = {...oldData,...req.body};
+      delete updatedData.password;
 
       if(req.file) {
-        updatedUser.avatar = req.file.filename
+        updatedData.profileImg = req.file.filename
       };
 
-      await db.Usuarios.update(updatedUser,{
-          where: { id: userId }
-        });
-        
-      req.session.userLogged = updatedUser;
+      await db.User.update(updatedData,{
+        where: { id: req.params.id }
+      });
+      req.session.userLogged = updatedData;
       return res.redirect('/users/profile');
 
     } catch (error) {
+      console.log(error)
       return res.send('Ooops! algo salio muy mal...')
     }
   },

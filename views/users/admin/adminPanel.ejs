@@ -1,30 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <%- include('../../partials/head', {title:'Panel de administrador', styles:['normalize','styles','partials/footer','partials/header_test']}) %>
+  <%- include('../../partials/head', {title:'Panel de administrador', styles:['normalize','new_styles','partials/footer','partials/header','adminDashboard']}) %>
 </head>
 
 <body>
-    <%- include('../../partials/header_test') %>
-    <main>
-     <section class="section__container admin__section">
-       <article class="article__container admin__menu">
-         <div class="admin__search">
-           <h2>¿Buscas algun producto en particular?</h2>
-          <form action="/products/search" method="GET">
-            <input type="search" name ="keyword" placeholder="Ingresa el nombre del producto" class="search__input admin__search-input">
-            <button type="submit" class="search__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <%- include('../../partials/header') %>
+    <main class="admin-dashboard__container">
+     <section class="admin-main-menu__container">
+      <nav>
+        <ul>
+          <li><a href="/admin/dashboard">Administrar productos</a></li>
+          <li><a href="/admin/dashboard/users">Administrar usuarios</a></li>
+          <li><a href="/admin/dashboard/categories">Administrar categorias</a></li>
+        </ul>
+      </nav>
+     </section>
+     <section class="admin-workbench__container">
+        <nav class="admin-workbench__nav">
+          <div class="search-bar">
+            <form action="#">
+            <input type="search" name="search" class="search-bar__input" placeholder="Busquemos algo...">
+            <button class="search-bar__btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
-         </div>
-         <div class="admin__shortcuts">
-           <ul>
-             <li><a href="/admin/products" class="main__btn card__btn card__btn-green">Listar productos</a></li>
-             <li><a href="/admin/users" class="main__btn card__btn card__btn-green">Listar usuarios</a></li>
-             <li><a href="/products/create" class="main__btn card__btn card__btn-green">Crear producto</a></li>
-             <li><a href="#" class="main__btn card__btn card__btn-green">Crear categoria</a></li>
-           </ul>
-         </div>
-       </article>
+          </div>
+          <div class="admin-workbench__btns">
+          <a href="/admin/products/create" class="new-btn">Crear producto</a>
+          </div>
+        </nav>
+        <article class="admin-list__container">
+
+
+          <% locals.products.forEach(element => { %>
+            <div class="list-item">
+              <figure class="item__figure">
+                <img class="item__img" src="/img/uploads/products/<%=element.productImg%>" alt="">
+              </figure>
+              <div class="item__info">
+                <p>Nombre del producto: <span class="items-props"><%= element.name %> </span></p>
+                <p>Precio: <span class="items-props">$<%= element.price %> </span></p>
+                <p>ID: <span class="items-props"><%= element.id %> </span></p>
+              </div>
+              <div class="item__info-extra">
+                <p>Stock: <span class="items-props"><%= element.stock %> </span></p>
+                <p>Creado por: <span class="items-props"><%= `${element.User.name} ${element.User.lastname}` %></span></p>
+                <p>Fecha creación: <span class="items-props"><%= new Date(element.createdAt).toLocaleDateString() %> </span></p>
+              </div>
+              <div class="item__btns">
+                <a href="/admin/products/edit/<%= element.id%>" class="new-btn">Modificar</a>
+                <form action="/admin/products/delete/<%= element.id%>?_method=DELETE" method="POST">
+                <input type="submit" class="new-btn" value="Eliminar" />
+                </form>
+              </div>
+            </div>
+          <% }) %>
+
+
+
+
+          
+        </article>
      </section>
     </main>
     <%- include('../../partials/footer') %>

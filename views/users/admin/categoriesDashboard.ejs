@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../../partials/head', {title:'Panel de administrador',
+        styles:['normalize','new_styles','partials/footer','partials/header','adminDashboard']}) %>
+</head>
+
+<body>
+    <%- include('../../partials/header') %>
+        <main class="admin-dashboard__container">
+            <section class="admin-main-menu__container">
+                <nav>
+                    <ul>
+                        <li><a href="/admin/dashboard/users">Administrar usuarios</a></li>
+                        <li><a href="/admin/dashboard">Administrar productos</a></li>
+                        <li><a href="#">Administrar categorias</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="admin-workbench__container">
+                <nav class="admin-workbench__nav">
+                    <div class="search-bar">
+                        <form action="#">
+                            <input type="search" name="search" class="search-bar__input"
+                                placeholder="Busquemos algo...">
+                            <button class="search-bar__btn" type="submit"><i
+                                    class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                    <div class="admin-workbench__btns">
+                        <a href="/admin/products/create" class="new-btn">Crear producto</a>
+                    </div>
+                </nav>
+                <article class="admin-list__container">
+                    <div class="category-form">
+                        <div class="form-layer">
+                            <i class="fa-solid fa-list"></i>
+                            <select name="rolId" id="" class="form-input">
+                                <option disabled selected>Listado de categorias</option>
+                                <% locals.categories.forEach(element=> { %>
+                                    <option value="<%=element.id%>">
+                                        <%= element.name %>
+                                    </option>
+                                    <% }) %>
+                            </select>
+                            <!-- <p class="form-error">Aca va el error del campo</p> -->
+                        </div>
+                        <form action="/admin/categories/add" method="POST">
+                            <div class="form-layer">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="text" name="name" class="form-input" placeholder="Nueva categoria" />
+                                <!-- <p class="form-error">Aca va el error del campo</p> -->
+                            </div>
+                            <div class="form-btn__container">
+                                <button type="submit" class="form-btn--test">Crear categoria</button>
+                            </div>
+                        </form>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <%- include('../../partials/footer') %>
+</body>
+
+</html>

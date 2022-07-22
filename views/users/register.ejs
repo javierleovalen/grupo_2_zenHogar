@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <%- include('../partials/head', {title:'Formulario de registro',
     styles:['normalize','new_styles','partials/footer','partials/header']}) %>
 </head>
-<body class="body-account">
+
+<body>
   <%- include('../partials/header') %>
-  <main>
-    <section class="section">
-      <article class="article-container">
-        <h1 class="login__title">Registrarse</h1>
-        <p class="login__speach">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam mollitia beatae nesciunt tenetur voluptatem tempore eligendi. Aspernatur nisi quisquam reiciendis minima inventore eligendi, quam eaque et facilis a nostrum quos.</p>
-        <% if (locals.errors && locals.errors.email) { %>
-          <div class="form__error">
-            <ul>
-                <li class="error-msg__text"><%= errors.email.msg %> </li>
-              </ul>
+    <main>
+      <section class="login">
+        <article class="form-box">
+          <div>
+            <h1>Formulario de registro</h1>
+            <form action="/users/register" method="POST" class="form">
+              <div class="form__layer">
+                <!-- <label for="email" class="form__label">Email</label> -->
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="name" class="form__input form__input--black" placeholder="Nombre">
+              </div>
+              <div class="form__layer">
+                <!-- <label for="email" class="form__label">Email</label> -->
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" name="email" class="form__input form__input--black" placeholder="Email">
+              </div>
+              <div class="form__layer">
+                <!-- <label for="email" class="form__label">Email</label> -->
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" name="password" class="form__input form__input--black" placeholder="Contraseña">
+              </div>
+              <div class="form__layer">
+                <!-- <label for="email" class="form__label">Email</label> -->
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" name="repassword" class="form__input form__input--black"
+                  placeholder="Confirmar contraseña">
+              </div>
+              <div class="form__layer form__rememberMe">
+                <input type="checkbox" name="terms_conditions">
+                <label for="remember_me" class="form__label register-cta">Acepto los <a href="#">terminos y
+                    condiciones</a></label>
+              </div>
+              <div class="form__buttons">
+                <button type="submit" class="form-btn">Enviar</button>
+              </div>
+              <span class="register-cta">¿Ya eres miembro? <a href="#">¡Click aquí!</a></span>
+              <span class="register-cta"><a href="#">¿Olvidaste tu contraseña?</a></span>
+            </form>
           </div>
-          <% } %>
-        <form action="/users/register" class="form" method="POST">
-          <div class="form__layer">
-            <!-- <label for="email" class="form__label">Email:</label><br> -->
-            <i class="fa-solid fa-user"></i>
-            <% if (locals.data && locals.data.nombre) { %>
-              <input type="text" name="nombre" class="form__input" placeholder="Nombre" value="<%=locals.data.nombre %>" required>
-            <% } else { %>
-            <input type="text" name="nombre" class="form__input" placeholder="Nombre" required>
-            <% } %>
-          </div>
-          <div class="form__layer">
-            <!-- <label for="email" class="form__label">Email:</label><br> -->
-            <i class="fa-solid fa-envelope"></i>
-            <% if (locals.data && locals.data.email) { %>
-              <input type="email" name="email" class="form__input" placeholder="Email" value="<%= locals.data.email %> "required>
-            <% } else { %>
-            <input type="email" name="email" class="form__input" placeholder="Email" required>
-            <% } %> 
-          </div>
-          <div class="form__layer">
-            <!-- <label for="password" class="form__label">Contraseña:</label><br> -->
-            <i class="fa-solid fa-key"></i>
-            <input type="password" name="password" class="form__input" required placeholder="Contraseña">
-          </div>
-          <div class="form__layer">
-            <!-- <label for="password" class="form__label">Contraseña:</label><br> -->
-            <i class="fa-solid fa-key"></i>
-            <input type="password" name="repeat_password" class="form__input" required placeholder="Confirmar contraseña">
-          </div>
-          <div class="buttons">
-            <button type="submit" class="button button--green">Crear cuenta</button>
-          </div>
-        </form>
-        <div class="form__help">
-          <p>¿Ya tienes cuenta? <a href="/users/login">¡Click aquí!</a></p>
-          <a href="/users/register">¿Olvidaste tu contraseña?</a>
-        </div>
-      </article>
-    </section>
-  </main>
+          <figure>
+            <img src="/img/backgrounds/background_2.jpg" alt="">
+          </figure>
+        </article>
+      </section>
+    </main>
+    <%- include('../partials/footer') %>
 </body>
+
 </html>

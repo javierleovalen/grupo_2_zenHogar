@@ -7,6 +7,9 @@ const categoriesFilePath = path.join(__dirname, '../data/products/categories.jso
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 let categories = JSON.parse(fs.readFileSync(categoriesFilePath, 'utf-8'))
 
+//DB Sequelize
+const db = require('../database/models')
+
 
 
 const productController = {
@@ -22,9 +25,14 @@ const productController = {
 
 
   /*** CREAR PRODUCTO ***/
-  createProduct: (req, res) => {
-    res.render('./products/create', {
-      categories:categories[0]
+  createProduct: async (req, res) => {
+    let data = await db.Category.findAll()
+    let cleanData = [];
+    data.forEach(element => {
+      cleanData.push(element.toJSON());
+    })
+    return res.render('./products/create', {
+      categories: cleanData
     })
   },
 

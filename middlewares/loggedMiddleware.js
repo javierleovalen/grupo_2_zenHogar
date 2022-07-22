@@ -4,8 +4,10 @@ async function loggedMiddleware(req, res, next) {
   try {
     res.locals.isLogged = false;
     if (!req.session.userLogged && req.cookies.token) {
-      let userToLogin = await db.Usuarios.findOne({ where: { email: req.cookies.token } })
+      let userToLogin = await db.User.findOne({ where: { email: req.cookies.token } })
       delete userToLogin.dataValues.password
+      delete userToLogin.dataValues.createdAt
+      delete userToLogin.dataValues.updatedAt
       req.session.userLogged = userToLogin.dataValues
     }
 

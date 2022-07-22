@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head', {title:'Zen Hogar | Welcome', styles:['normalize','styles','partials/footer','partials/header']}) %>
+  <%- include('./partials/head', {title:'Zen Hogar | Welcome', styles:['normalize','new_styles','partials/footer','partials/header','partials/login']}) %>
 <body>
     <%- include('./partials/header') %>
-    <main>
-    <section class="section__container welcome__container">
-      <article class="article__container welcome__article">
-        <div class="welcome-text__container">
-        <h3>El cuidado de nuestro planeta depende de nosotros y comienza desde nuestra casa.</h3>
-        <p>En Zen Hogar estamos comprometidos en ayudar a construir un mundo mejor trabajando 
-          con productos sostenibles y procesos más respetuosos con el medio ambiente.</p>
-        <a href="/products" class="main__btn welcome__btn">Ir al catálogo</i></a>
-      </div>
-      </article>
-    </section>
-    <section class="section__container offers__section">
-      <div class="article__container offers__title">
-        <h2>Ofertas rápidas</h2>
-      </div>
-      <article class="article__container offers__list">
-        <% promoProducts.forEach(product => { %>
-          <div class="product__card">
-          <img src="/img/uploads/products/<%= product.productImg %>" alt="<%= product.productName %>">
-          <h3><%= product.productName %></h3>
-          <p class="price__before">$ <%= product.productPrice %></p>
-          <span>% <%= product.productDiscount %> OFF</span>
-          <% let finalPrice = product.productPrice  * ( (100-product.productDiscount) / 100 ) %>
-          <p class="price__final">$ <%= finalPrice.toFixed(2)%></p>
-          <a href="/products/detail/<%= product.id %>" class="mini__btn">+ Más info...</a>
-          <button class="main__btn card__btn">Añadir al carrito</button>
-          <button class="main__btn card__btn card__btn-green">Comprar ahora</button>
+    <main class="home">
+      <section class="welcome">
+        <div class="welcome__text-container">
+        <h1 class="welcome__main-title">Nueva coleccion</h1>
+        <p class="welcome__sub-title">Los matices entre los diferentes materiales, las texturas y el diseño haran de tu hogar un espacio inolvidable</p>
+        <a href="#" class="welcome__cta btn btn--white">Ver ahora</a>
         </div>
-        <% }) %>   
-      </article>
-    </section>
+      </section>
+      <section class="destacados">
+        <h2 class="section-title">Productos destacados</h2>
+        <article class="products-card__container products-card__container--destacados">
+          <% data.forEach(element => { %>
+            <div class="product-card">
+              <figure class="product-card__header">
+                <img src="/img/uploads/products/<%=element.productImg%>" alt="Lorem picsum">
+                <a href="#" class="product-card__float-btn"><i class="fa-solid fa-info"></i></a>
+              </figure>
+              <div class="product-card__body">
+                <span class="product-card__title"><%= element.name %> </span>
+                <span class="product-card__price"><%= element.price %> </span>
+                <button class="btn card-btn"><i class="fa-solid fa-cart-plus"></i> Añadir al carrito</button>
+              </div>
+            </div>
+          <% }) %>
+          </div>
+        </article>
+      </section>
+      <section class="speech">
+        <h2 class="section-title section-title--white">Nosotros</h2>
+        <article class="speech__container">
+          <figure class="speech__photo">
+            <img class="speech__img" src="/img/backgrounds/background_a.jpg" alt="#">
+          </figure>
+          <div class="speech__text">
+            <h3 class="speech__title">Un poco de historia</h3>
+            <p class="speech__p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, amet velit accusamus labore vitae excepturi vel aut consequatur ratione tempore fugiat nihil sequi cum vero magni possimus aliquam aperiam rem laudantium ea adipisci odit accusantium enim veniam. Pariatur magnam nemo magni autem laboriosam odit, libero veritatis hic quam optio, delectus molestiae? Impedit recusandae consequatur vitae quia, consequuntur quod sint exercitationem itaque laboriosam est porro esse amet nihil ex quae tenetur, mollitia ab! Temporibus nam excepturi sit minima praesentium qui blanditiis asperiores rem neque eaque, reiciendis pariatur inventore commodi at error, tempora facilis fugiat corrupti doloribus maiores possimus? Deserunt, nesciunt quas.</p>
+            <span class="speech__sign">Zen Hogar</span>
+            <div class="speech__btn">
+            <a href="#" class="btn btn--black">Contacto</a>
+            </div>
+          </div>
+        </article>
+      </section>
   </main>
     <%- include('./partials/footer') %>
 </body>
